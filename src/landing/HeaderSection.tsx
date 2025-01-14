@@ -62,6 +62,7 @@ const HeaderSection = () => {
       x: number;
       y: number;
       size: number;
+      sizeMultiplier: number;
       opacity: number;
       speed: number;
       hue: number;
@@ -78,6 +79,7 @@ const HeaderSection = () => {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         size: Math.random() * 2 + 1,
+        sizeMultiplier: 1,
         opacity: 0.6 + Math.random() * 0.2,
         speed: Math.random() * 0.5 + 0.1,
         hue: 220 + Math.random() * 40,
@@ -99,12 +101,83 @@ const HeaderSection = () => {
       ctx.stroke();
     };
 
+    // Add score tracking
+    let score = 0;
+    let scoreElement: HTMLDivElement | null = null;
+
+    const createScoreElement = () => {
+      // Check if element already exists
+      if (document.getElementById("star-score")) return;
+
+      scoreElement = document.createElement("div");
+      scoreElement.id = "star-score";
+      scoreElement.style.cssText = `
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 24px;
+        color: white;
+        z-index: 100;
+        transition: transform 0.3s;
+      `;
+      document.body.appendChild(scoreElement);
+    };
+
+    // Define score thresholds and effects
+    const SCORE_THRESHOLDS = {
+      START: 30,
+      WOBBLE: 40,
+      CHAOS: 70,
+      WIN: 100,
+    };
+
+    const updateScoreDisplay = () => {
+      if (!scoreElement) return;
+
+      const chaos = Math.min(
+        1,
+        (score - SCORE_THRESHOLDS.WOBBLE) / (SCORE_THRESHOLDS.CHAOS - SCORE_THRESHOLDS.WOBBLE)
+      );
+
+      if (score >= SCORE_THRESHOLDS.WOBBLE) {
+        const shake = Math.sin(Date.now() / 100) * (10 * chaos);
+        const rotate = Math.sin(Date.now() / 150) * (5 * chaos);
+        scoreElement.style.transform = `translateX(-50%) translate(${shake}px, ${shake}px) rotate(${rotate}deg)`;
+      } else {
+        scoreElement.style.transform = "translateX(-50%)";
+      }
+
+      scoreElement.textContent = `Stars: ${score}`;
+    };
+
+    const checkVictory = () => {
+      if (score >= SCORE_THRESHOLDS.WIN) {
+        // Victory animation
+        stars.forEach((star) => {
+          star.sizeMultiplier = 3.0;
+          star.hue = (Date.now() / 10) % 360;
+        });
+
+        if (scoreElement) {
+          scoreElement.textContent = "YOU WIN! 🌟";
+          scoreElement.style.fontSize = "32px";
+          scoreElement.style.transform = `
+            translateX(-50%)
+            scale(${1 + Math.sin(Date.now() / 200) * 0.2})
+            rotate(${Math.sin(Date.now() / 300) * 10}deg)
+          `;
+          scoreElement.style.color = `hsl(${(Date.now() / 10) % 360}, 80%, 80%)`;
+        }
+      }
+    };
+
     const drawStars = () => {
       if (!ctx) return;
-
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Update and draw stars
+      let interactiveStars = 0;
+
       stars.forEach((star, i) => {
         // Move star
         star.y = (star.y + star.speed) % canvas.height;
@@ -151,7 +224,7 @@ const HeaderSection = () => {
 
         // Draw star with color based on interactive state
         ctx.beginPath();
-        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+        ctx.arc(star.x, star.y, star.size * star.sizeMultiplier, 0, Math.PI * 2);
         const hue = star.hue + star.interactive * 40;
         ctx.fillStyle = `hsla(${hue}, 80%, 80%, ${star.opacity})`;
         ctx.fill();
@@ -165,7 +238,23 @@ const HeaderSection = () => {
             drawLines(star, otherStar, distance);
           }
         });
+
+        // Count interactive stars
+        if (star.interactive > 0.5) {
+          interactiveStars++;
+        }
       });
+
+      // Update score based on interactive stars
+      score = interactiveStars;
+
+      // Show score element when threshold reached
+      if (score >= SCORE_THRESHOLDS.START && !scoreElement) {
+        createScoreElement();
+      }
+
+      updateScoreDisplay();
+      checkVictory();
 
       requestAnimationFrame(drawStars);
     };
@@ -179,6 +268,9 @@ const HeaderSection = () => {
       canvas.removeEventListener("touchmove", handleTouchMove);
       canvas.removeEventListener("touchend", handleTouchEnd);
       canvas.removeEventListener("touchcancel", handleTouchEnd);
+      if (scoreElement) {
+        document.body.removeChild(scoreElement);
+      }
     };
   }, []);
   return (
