@@ -18,6 +18,11 @@ export const navigationConfig: NavigationConfig[] = [
   //   isExternal: false,
   // },
   {
+    name: "Forum",
+    link: "https://forum.kscale.dev",
+    isExternal: true,
+  },
+  {
     name: "Discord",
     link: "https://discord.com/invite/kscale",
     isExternal: true,
