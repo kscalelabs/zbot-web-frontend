@@ -7,6 +7,7 @@ import ResearchSection from "@/landing/ResearchSection";
 import RobotSection from "@/landing/RobotSection";
 import SpecSection from "@/landing/SpecSection";
 import Sponsors from "@/landing/Sponsors";
+import WhatCanItDoSection from "@/landing/WhatCanItDoSection";
 import { useLenis } from "lenis/dist/lenis-react";
 import { useEffect } from "react";
 
@@ -39,6 +40,7 @@ export default function Home() {
         <HeaderSection />
         <ResearchSection />
         <SpecSection />
+        <WhatCanItDoSection />
         <RobotSection />
         <GallerySection />
         <CommunitySection />

@@ -273,6 +273,7 @@ const HeaderSection = () => {
       }
     };
   }, []);
+
   return (
     <header className="col-span-full grid grid-cols-subgrid min-h-[90svh] auto-rows-auto items-center text-foreground bg-background relative overflow-hidden -mx-[5vw] px-[5vw]">
       <div className="absolute inset-0">
@@ -291,13 +292,13 @@ const HeaderSection = () => {
         />
       </div>
       <hgroup className="z-10 text-filament col-span-full flex flex-col items-center text-center mb-12 gap-4 max-w-3xl mx-auto">
-        <h1 className="text-heading-lg font-apparat mb-4">K-Scale AI Day</h1>
+        <h1 className="text-heading-lg font-apparat mb-4">k-scale ai day</h1>
         <CTASubtitleButton
           className="w-fit min-w-[200px]"
           mode={FillMode.FILL}
           href={REGISTRATION_URL}
         >
-          Apply Now
+          apply here
         </CTASubtitleButton>
       </hgroup>
     </header>

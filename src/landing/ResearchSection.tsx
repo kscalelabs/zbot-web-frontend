@@ -291,8 +291,7 @@ const ResearchSection = () => {
         <span className="text-caption uppercase text-foreground70 relative y-1/2">Research</span>
         <h2 className="text-heading-md">The humanoid robot is as strong as its brain.</h2>
         <p>
-          While we provide robust, accessible hardware, our end-to-end model is what makes K-Bot
-          perform. Here&apos;s some of the progress we&apos;ve made:
+          
         </p>
       </hgroup>
       {/* <ResearchCarousel /> */}

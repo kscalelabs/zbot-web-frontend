@@ -1,8 +1,8 @@
 import { InlineCTA } from "@/components/buttons/CTAButtons";
 import { ExpressiveArrow } from "@/components/iconography/Iconography";
-import Image from "next/image";
-import { motion } from "motion/react";
 import { photoPathAltText, photoPaths } from "@/components/util/photoPaths";
+import { motion } from "motion/react";
+import Image from "next/image";
 
 const SpecSection = () => {
   return (
@@ -12,7 +12,7 @@ const SpecSection = () => {
           <hgroup>
             <span className="text-heading-md text-foreground60 font-apparat">What is K-Bot?</span>
             <h2 className="text-heading-md">
-              A 4.5 foot humanoid robot, optimized for our approach to software for embodied AI.
+              A general-purpose humanoid robot optimized for the K-Scale software stack.
             </h2>
           </hgroup>
           <InlineCTA href="https://docs.kscale.dev/robot/intro">
@@ -22,7 +22,8 @@ const SpecSection = () => {
       </motion.aside>
       <article className="col-span-full lg:col-span-5 2xl:col-span-6 2xl:-col-end-1 4xl:col-span-7 4xl:-col-end-1 grid grid-cols-subgrid gap-y-4">
         <h3 className="col-span-full sm:col-span-5 sm:col-start-2 md:col-span-5 md:col-start-4 lg:col-span-4 lg:col-start-2 xl:col-span-3 xl:col-start-2 2xl:col-span-5 2xl:col-start-2 3xl:col-span-5 3xl:col-start-2 4xl:col-span-4 4xl:col-start-2 text-heading-sm">
-          {`We've built K-Bot with an aerospace-grade aluminium body, anodized in a protective matte black finish.`}
+          We built K-Bot with an aerospace-grade aluminium body, anodized in a protective matte
+          black finish.
         </h3>
         <figure className="col-span-full sm:col-span-5 sm:col-start-2 md:col-span-5 md:col-start-4 lg:col-span-4 lg:col-start-2 xl:col-span-3 xl:col-start-2 2xl:col-span-5 2xl:col-start-2 3xl:col-span-5 3xl:col-start-2 4xl:col-span-4 4xl:col-start-2 aspect-video relative rounded-md overflow-hidden">
           <Image
@@ -39,7 +40,7 @@ const SpecSection = () => {
       <article className="col-span-full lg:col-span-5 2xl:col-span-6 2xl:-col-end-1 4xl:col-span-7 4xl:-col-end-1 grid grid-cols-subgrid gap-y-4">
         <h3 className="col-span-full sm:col-span-5 sm:col-start-2 md:col-span-5 md:col-start-4 lg:col-span-4 lg:col-start-2 xl:col-span-3 xl:col-start-2 2xl:col-span-5 2xl:col-start-2 3xl:col-span-5 3xl:col-start-2 4xl:col-span-4 4xl:col-start-2 text-heading-sm">
           Equipped with high-torque quasi-direct drive electric actuators running high-frequency
-          closed-loop control
+          closed-loop control.
         </h3>
         <figure className="col-span-full sm:col-span-5 sm:col-start-2 md:col-span-5 md:col-start-4 lg:col-span-4 lg:col-start-2 xl:col-span-3 xl:col-start-2 2xl:col-span-5 2xl:col-start-2 3xl:col-span-5 3xl:col-start-2 4xl:col-span-4 4xl:col-start-2 aspect-video relative rounded-md overflow-hidden">
           <Image
@@ -55,8 +56,8 @@ const SpecSection = () => {
       </article>
       <article className="col-span-full lg:col-span-5 2xl:col-span-6 2xl:-col-end-1 4xl:col-span-7 4xl:-col-end-1 grid grid-cols-subgrid gap-y-4">
         <h3 className="col-span-full sm:col-span-5 sm:col-start-2 md:col-span-5 md:col-start-4 lg:col-span-4 lg:col-start-2 xl:col-span-3 xl:col-start-2 2xl:col-span-5 2xl:col-start-2 3xl:col-span-5 3xl:col-start-2 4xl:col-span-4 4xl:col-start-2 text-heading-sm">
-          Get dependable, blazing-fast end-to-end neural network inference with our custom
-          high-performance kernel image for NVIDIA&apos;s Jetson AGX Orin.
+          Dependable, blazing-fast end-to-end neural network inference with our custom
+          high-performance operating system.
         </h3>
         <figure className="col-span-full sm:col-span-5 sm:col-start-2 md:col-span-5 md:col-start-4 lg:col-span-4 lg:col-start-2 xl:col-span-3 xl:col-start-2 2xl:col-span-5 2xl:col-start-2 3xl:col-span-5 3xl:col-start-2 4xl:col-span-4 4xl:col-start-2 aspect-video relative rounded-md overflow-hidden">
           <Image

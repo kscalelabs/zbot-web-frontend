@@ -1,10 +1,16 @@
-import { ExpressiveArrow } from "@/components/iconography/Iconography";
-import { ColorVariant, FillMode, TeamCol1, TeamCol2 } from "@/components/util/constants";
+import { CTAButton, InlineCTA } from "@/components/buttons/CTAButtons";
 import { Discord } from "@/components/footer/socialMediaSvgs";
-import { InlineCTA, CTAButton } from "@/components/buttons/CTAButtons";
-import { IconMode, Size } from "@/components/util/constants";
-import Image from "next/image";
+import { ExpressiveArrow } from "@/components/iconography/Iconography";
+import {
+  ColorVariant,
+  FillMode,
+  IconMode,
+  Size,
+  TeamCol1,
+  TeamCol2,
+} from "@/components/util/constants";
 import { photoPathAltText, photoPaths } from "@/components/util/photoPaths";
+import Image from "next/image";
 
 const TeamColumn = ({ members, styling }: { members: string[]; styling: string }) => (
   <ul className={styling + " col-span-2 whitespace-nowrap"}>
@@ -27,8 +33,8 @@ const CommunitySection = () => {
         </p>
 
         <p>
-          {`We're actively publishing papers and researching deeper into the potential of
-            embodied AI tools.`}
+          We are actively publishing papers and collectively exploring the frontier of embodied
+          intelligence.
         </p>
       </hgroup>
       <menu className="col-span-full sm:col-span-4 sm:col-start-2 md:col-span-5 md:col-start-2 h-min flex flex-row flex-wrap gap-4">
@@ -91,12 +97,12 @@ const CommunitySection = () => {
       >
         <h2 className="text-caption uppercase text-foreground70 relative y-1/2">About us</h2>
         <p>
-          {`We're hackers, engineers, and researchers that believe in a world where robots are
-            made for everyone.`}
+          We&apos;re hackers, engineers, and researchers that believe in a world where robots are
+          made for everyone.
         </p>
         <p>
-          {`We're from Tesla AI, Google, Meta FAIR, Stanford, and Xiaomi building opportunities
-            for robots to be more than workers.`}
+          We&apos;re from Tesla AI, Google, Meta FAIR, Tencent, and Xiaomi building opportunities
+          for robots to be more than workers.
         </p>
       </article>
       <TeamColumn

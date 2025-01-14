@@ -16,9 +16,11 @@ const RobotSection = () => {
           (width >= 768 ? "text-filament" : " text-foreground")
         }
       >
-        <h2 className="text-heading-sm">Work with your robot in our dashboard</h2>
+        <h2 className="text-heading-sm">
+          The best humanoid robot platform for the K-Scale software ecosystem
+        </h2>
         <p className="text-body">
-          Interact with your robot through our toolkit, supporting real-time ML application.
+          Bringing high-performance, real-time teleoperation and machine learning into every robot
         </p>
       </hgroup>
       <div
