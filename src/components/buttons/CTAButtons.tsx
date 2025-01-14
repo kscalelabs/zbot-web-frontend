@@ -1,10 +1,9 @@
+import { ColorVariant, FillMode, Size } from "@/components/util/constants";
+import clsx from "clsx";
 import { motion } from "motion/react";
 import { useRouter } from "next/router";
-import clsx from "clsx";
-import { ColorVariant, FillMode } from "@/components/util/constants";
-import { Size } from "@/components/util/constants";
 
-const SHOP_URL = "https://discord.gg/4skdbdtCw8";
+const CTA_URL = "https://discord.gg/kscale";
 
 const getVariantClass = (variant: ColorVariant, mode: FillMode): string => {
   if (mode === FillMode.FILL) {
@@ -106,7 +105,7 @@ const hoverVariants = {
 
 export const NavCTAButton = ({
   children,
-  href = SHOP_URL,
+  href = CTA_URL,
   className,
   variant = ColorVariant.RUST,
   mode = FillMode.DEFAULT,
@@ -173,7 +172,7 @@ export const NavCTAButton = ({
         duration: 0.2,
         ease: "circOut",
       }}
-      onClick={() => router.push(href ? href : SHOP_URL)}
+      onClick={() => router.push(href ? href : CTA_URL)}
     >
       {children}
     </motion.button>
@@ -182,7 +181,7 @@ export const NavCTAButton = ({
 
 export const CTAButton = ({
   children,
-  href = SHOP_URL,
+  href = CTA_URL,
   className,
   variant = ColorVariant.RUST,
   mode = FillMode.DEFAULT,
@@ -248,7 +247,7 @@ export const CTAButton = ({
         duration: 0.2,
         ease: "circOut",
       }}
-      onClick={() => router.push(href ? href : SHOP_URL)}
+      onClick={() => router.push(href ? href : CTA_URL)}
     >
       {children}
     </motion.button>
@@ -259,12 +258,12 @@ export const CTASubtitleButton = ({
   className,
   children,
   subtitle,
-  href = SHOP_URL,
+  href = CTA_URL,
   target = "_self",
 }: {
   className?: string;
   children: React.ReactNode;
-  subtitle: string;
+  subtitle?: string;
   href?: string;
   variant?: ColorVariant;
   mode?: FillMode;
@@ -298,7 +297,9 @@ export const CTASubtitleButton = ({
         className="select-none flex flex-col pointer pointer-events-auto"
       >
         {children}
-        <span className="block text-caption pointer opacity-60 select-none">{subtitle}</span>
+        {subtitle && (
+          <span className="block text-caption pointer opacity-60 select-none">{subtitle}</span>
+        )}
       </a>
     </motion.button>
   ) : (
@@ -320,7 +321,7 @@ export const CTASubtitleButton = ({
         duration: 0.2,
         ease: "circOut",
       }}
-      onClick={() => router.push(href ? href : SHOP_URL)}
+      onClick={() => router.push(href ? href : CTA_URL)}
     >
       {children}
       <span className="block text-caption opacity-60 pointer select-none ">{subtitle}</span>
