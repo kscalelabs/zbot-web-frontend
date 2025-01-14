@@ -183,13 +183,13 @@ const HeaderSection = () => {
   }, []);
   return (
     <header className="col-span-full grid grid-cols-subgrid min-h-[90svh] auto-rows-auto items-center text-foreground bg-background relative overflow-hidden -mx-[5vw] px-[5vw]">
-      <div className="absolute inset-0 backdrop-blur-md bg-black/50">
+      <div className="absolute inset-0">
         <Image
           sizes={"100vw"}
           src={photoPaths.LANDING_IMAGE}
           alt={photoPathAltText.LANDING_IMAGE_ALT}
           fill
-          className="object-cover brightness-50 mix-blend-overlay blur-md scale-110"
+          className="object-cover"
           priority={true}
           loading={"eager"}
         />
@@ -200,7 +200,6 @@ const HeaderSection = () => {
       </div>
       <hgroup className="z-10 text-filament col-span-full flex flex-col items-center text-center mb-12 gap-4 max-w-3xl mx-auto">
         <h1 className="text-heading-lg font-planar mb-4">K-Scale AI Day</h1>
-        <h2 className="text-heading-sm font-planar mb-4">February 15th</h2>
         <CTASubtitleButton
           className="w-fit min-w-[200px]"
           mode={FillMode.FILL}

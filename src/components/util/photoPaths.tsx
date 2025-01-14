@@ -2,7 +2,7 @@
  * To change the image, just change the name, do not change the folder name, thank you.
  */
 export const photoPaths = {
-  LANDING_IMAGE: "/photos/landing.png",
+  LANDING_IMAGE: "/photos/kbot.png",
   WHAT_IS_K_BOT_1: "/photos/aluminium.png",
   WHAT_IS_K_BOT_2: "/photos/actuators.png",
   WHAT_IS_K_BOT_3: "/photos/2.png",
