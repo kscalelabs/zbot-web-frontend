@@ -290,9 +290,7 @@ const ResearchSection = () => {
       <hgroup className="col-span-full sm:col-span-4 2xl:col-span-4 flex flex-col mb-12 gap-4">
         <span className="text-caption uppercase text-foreground70 relative y-1/2">Research</span>
         <h2 className="text-heading-md">The humanoid robot is as strong as its brain.</h2>
-        <p>
-          
-        </p>
+        <p></p>
       </hgroup>
       {/* <ResearchCarousel /> */}
       <SwipeCarousel />
