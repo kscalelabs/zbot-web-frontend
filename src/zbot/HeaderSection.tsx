@@ -30,7 +30,7 @@ const HeaderSection = () => {
             type="email"
             name="EMAIL"
             className="w-full px-4 py-2 text-sm rounded-md bg-background/10 border border-filament/20 backdrop-blur-sm text-rust placeholder:text-filament/50"
-            placeholder="Enter your email for updates"
+            placeholder="Enter your email for launch" 
           />
           <div aria-hidden="true" style={{ position: "absolute", left: "-5000px" }}>
             <input type="text" name="b_a090115c9a76e96d327360f7d_8a6ee81bb8" tabIndex={-1} />

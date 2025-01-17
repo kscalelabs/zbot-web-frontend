@@ -132,8 +132,8 @@ const CommunitySection = () => {
                 <h3 className="text-sm font-medium">Our Mission</h3>
                 <p className="text-foreground80 leading-relaxed">
                   Now, the team is proudly partnered with K-Scale Labs and Grand Journey to bring
-                  Zeroth Bots to production and make it possible for anyone to program and own a
-                  physical AI here to make your life easier.
+                  Zeroth Bots to production and make it possible for anybody that can write
+                  Python to program robots.
                 </p>
               </div>
             </div>
