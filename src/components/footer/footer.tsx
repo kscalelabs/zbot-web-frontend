@@ -126,7 +126,7 @@ export default function Footer() {
             whileHover="hover"
             whileTap="tap"
           >
-            <p className="opacity-[77%]">inquiries@kscale.dev</p>
+            <p className="opacity-70 text-sm">inquiries@kscale.dev</p>
             <motion.button
               className="mt-2 bg-filament text-rust text-code--caption px-1.5 py-[0.15rem] rounded-sm w-20 h-4 flex flex-colitems-center justify-center overflow-hidden"
               variants={{
