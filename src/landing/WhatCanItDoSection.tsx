@@ -68,12 +68,10 @@ interface RequestItemProps {
 
 const RequestItem = ({ request }: RequestItemProps) => {
   const ref = useRef<HTMLDivElement>(null);
-
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
-
   // Transform scrollYProgress to opacity and scale
   const opacity = useTransform(scrollYProgress, [0, 0.4, 0.5, 0.6, 1], [0.3, 0.8, 1, 0.8, 0.3]);
   const scale = useTransform(scrollYProgress, [0, 0.4, 0.5, 0.6, 1], [0.95, 1, 1.05, 1, 0.95]);
@@ -94,12 +92,6 @@ const RequestItem = ({ request }: RequestItemProps) => {
 };
 
 const WhatCanItDoSection = () => {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
   return (
     <section className="relative col-span-full grid grid-cols-subgrid py-16 gap-y-16">
       <motion.aside className="col-span-full sm:col-span-5 md:col-span-6 lg:col-span-4 xl:col-span-4 2xl:col-span-6 4xl:col-span-5 flex flex-col gap-8">

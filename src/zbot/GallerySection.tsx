@@ -55,31 +55,23 @@ const GalleryItem = ({ src, alt, index }: { src: string; alt: string; index: num
   );
 };
 
-const ScrollContext = createContext(new MotionValue());
+const ScrollContext = createContext<MotionValue<number>>(null!);
 
 const GallerySection = () => {
-  const scrollRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: scrollRef,
-    offset: ["start start", "end start"],
-  });
+  const containerRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ container: containerRef });
 
   return (
-    <section
-      className="relative col-span-full lg:col-span-5 lg:col-start-3 2xl:col-span-8 2xl:col-start-3 flex flex-col gap-y-32"
-      ref={scrollRef}
-    >
-      <ScrollContext.Provider value={scrollYProgress}>
+    <ScrollContext.Provider value={scrollYProgress}>
+      <section
+        ref={containerRef}
+        className="col-span-full grid grid-cols-subgrid auto-rows-min gap-y-4 py-16"
+      >
         {Images.map((image, index) => (
-          <GalleryItem
-            key={`gallery-image-${index}`}
-            src={image.src}
-            alt={image.alt}
-            index={index}
-          />
+          <GalleryItem key={index} {...image} index={index} />
         ))}
-      </ScrollContext.Provider>
-    </section>
+      </section>
+    </ScrollContext.Provider>
   );
 };
 

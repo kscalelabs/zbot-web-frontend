@@ -123,6 +123,7 @@ const HeaderSection = () => {
       `;
       document.body.appendChild(scoreElement);
     };
+    createScoreElement();
 
     // Define score thresholds and effects
     const SCORE_THRESHOLDS = {
