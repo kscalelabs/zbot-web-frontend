@@ -16,7 +16,7 @@ export const TargetCustomersSection = () => {
 
   return (
     <div className="py-16 col-span-full">
-      <div className="text-center text-heading-md">Who is it for?</div>
+      <h2 className="text-center ">Who is it for?</h2>
       <div className="flex gap-6 mt-8">
         {cardItems.map((item, index) => (
           <div key={index} className="flex flex-col flex-1 gap-4 bg-white rounded-2xl p-5 min-h-80">

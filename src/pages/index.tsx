@@ -15,6 +15,7 @@ import { SimToRealSection } from "@/landing/SimToRealSection";
 import { TargetCustomersSection } from "@/landing/TargetCustomersSection";
 import { RobotPicturesSection } from "@/landing/RobotPicturesSection";
 import { RotatingBanner } from "@/landing/RotatingBanner";
+import { BuiltInFeaturesSection } from "@/landing/BuiltInFeaturesSection";
 
 export default function ZBot() {
   const lenis = useLenis();
@@ -58,11 +59,14 @@ export default function ZBot() {
       <main className="gap-y-4">
         <HeaderSection />
         <SubscribeSection />
+
         <HeroTextSection />
+
         <RotatingBanner />
         <SimToRealSection />
         <TargetCustomersSection />
         <RobotPicturesSection />
+        <BuiltInFeaturesSection />
 
         {/*<ResearchSection />*/}
         {/*<SpecSection />*/}

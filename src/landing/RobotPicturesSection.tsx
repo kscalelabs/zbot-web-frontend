@@ -3,7 +3,7 @@ export const RobotPicturesSection = () => {
     <div className="col-span-full py-16 relative grid grid-cols-subgrid">
       <div className="col-span-6">
         <div className="lg:sticky top-32">
-          <div className="text-heading-md">See Your Robot in Action</div>
+          <h2>See Your Robot in Action</h2>
           <div className="text-sm text-gray-500 mt-4">
             Your robot isn’t just programmable—it’s expressive. Watch it walk, animate, and move
             from every angle: side-view, upper-view, and more. The possibilities are endless when

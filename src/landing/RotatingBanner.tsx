@@ -9,8 +9,8 @@ const Marquee = ({
   textClassName = "",
 }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const containerRef = useRef<HTMLElement>(null);
-  const marqueeRef = useRef<HTMLElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const marqueeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -69,7 +69,7 @@ const Marquee = ({
 
 export const RotatingBanner: React.FC = () => {
   return (
-    <div className="col-span-full">
+    <div className="col-span-full -mx-[5vw]">
       <Marquee text="Join our jorney" textClassName="text-rust text-heading-sm"></Marquee>
     </div>
   );
