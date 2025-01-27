@@ -1,26 +1,10 @@
 import { CTAButton, InlineCTA } from "@/components/buttons/CTAButtons";
-import { Discord } from "@/components/footer/socialMediaSvgs";
+import { ColorVariant, FillMode, IconMode, Size } from "@/components/util/constants";
 import { ExpressiveArrow } from "@/components/iconography/Iconography";
-import {
-  ColorVariant,
-  FillMode,
-  IconMode,
-  Size,
-  TeamCol1,
-  TeamCol2,
-} from "@/components/util/constants";
-import { photoPathAltText, photoPaths } from "@/components/util/photoPaths";
+import { Discord } from "@/components/footer/socialMediaSvgs";
 import Image from "next/image";
+import { photoPathAltText, photoPaths } from "@/components/util/photoPaths";
 
-const TeamColumn = ({ members, styling }: { members: string[]; styling: string }) => (
-  <ul className={styling + " col-span-2 whitespace-nowrap"}>
-    {members.map((member, index) => (
-      <li className="list-none" key={index}>
-        {member}
-      </li>
-    ))}
-  </ul>
-);
 const CommunitySection = () => {
   return (
     <section className="col-span-full grid grid-cols-subgrid auto-rows-min gap-y-4 py-16 ">
@@ -39,7 +23,7 @@ const CommunitySection = () => {
       </hgroup>
       <menu className="col-span-full sm:col-span-4 sm:col-start-2 md:col-span-5 md:col-start-2 h-min flex flex-row flex-wrap gap-4">
         <CTAButton
-          href="https://discord.com/invite/kscale"
+          href="https://discord.gg/G6KP76uha5"
           variant={ColorVariant.PLASMA}
           size={Size.NORMAL}
           mode={FillMode.FILL}
@@ -56,8 +40,8 @@ const CommunitySection = () => {
       <aside className="my-8 grid grid-cols-subgrid gap-y-4 md:gap-y-[2.5vw] 2xl:gap-y-[1.25vw] col-span-full md:col-span-7 md:col-start-2 2xl:col-span-10 2xl:col-start-2">
         <figure className="col-span-full md:col-span-5 2xl:col-span-7 aspect-square sm:aspect-video rounded-md relative overflow-hidden">
           <Image
-            src={photoPaths.COMMUNITY_MAIN_BIG}
-            alt={photoPathAltText.COMMUNITY_MAIN_BIG_ALT}
+            src={photoPaths.ZBOT_COMMUNITY_MAIN_BIG}
+            alt={photoPathAltText.ZBOT_COMMUNITY_MAIN_BIG_ALT}
             fill
             className="object-cover"
             loading={"eager"}
@@ -67,8 +51,8 @@ const CommunitySection = () => {
         </figure>
         <figure className="col-span-full  md:col-span-2 2xl:col-span-3 aspect-square sm:aspect-video rounded-md relative overflow-hidden">
           <Image
-            src={photoPaths.COMMUNITY_UPPER_RIGHT}
-            alt={photoPathAltText.COMMUNITY_UPPER_RIGHT_ALT}
+            src={photoPaths.ZBOT_COMMUNITY_UPPER_RIGHT}
+            alt={photoPathAltText.ZBOT_COMMUNITY_UPPER_RIGHT_ALT}
             fill
             className="object-cover object-[50%_15%]"
             loading={"eager"}
@@ -78,8 +62,8 @@ const CommunitySection = () => {
         </figure>
         <figure className="col-span-full md:col-span-5 md:col-start-2 2xl:col-span-5 2xl:col-start-4 aspect-square sm:aspect-video rounded-md relative overflow-hidden">
           <Image
-            src={photoPaths.COMMUNITY_BOTTOM}
-            alt={photoPathAltText.COMMUNITY_BOTTOM_ALT}
+            src={photoPaths.ZBOT_COMMUNITY_BOTTOM}
+            alt={photoPathAltText.ZBOT_COMMUNITY_BOTTOM_ALT}
             fill
             className="object-cover"
             loading={"eager"}
@@ -89,30 +73,71 @@ const CommunitySection = () => {
         </figure>
       </aside>
 
-      <article
-        className="col-span-full sm:col-span-5 sm:col-start-2 md:col-span-5 md:col-start-4
-      lg:col-span-4 lg:col-start-5 xl:col-span-3 xl:col-start-6 2xl:col-span-5 2xl:col-start-7
-      3xl:col-span-4 3xl:col-start-8 4xl:col-span-4 4xl:col-start-8 5xl:col-span-3 5xl:col-start-9
-      flex flex-col gap-y-4 pt-16 pb-6"
-      >
-        <h2 className="text-caption uppercase text-foreground70 relative y-1/2">About us</h2>
-        <p>
-          We&apos;re hackers, engineers, and researchers that believe in a world where robots are
-          made for everyone.
-        </p>
-        <p>
-          We&apos;re from Tesla AI, Google, Meta FAIR, Tencent, and Xiaomi building opportunities
-          for robots to be more than workers.
-        </p>
+      <article className="col-span-full grid grid-cols-subgrid gap-y-4">
+        <span className="text-caption uppercase text-foreground70 col-span-full px-4 sm:px-0 sm:col-span-8 sm:col-start-2 md:col-span-10 md:col-start-2 lg:col-span-10 lg:col-start-2 2xl:col-span-10 2xl:col-start-2">
+          About
+        </span>
+
+        <div className="col-span-full grid grid-cols-subgrid">
+          <div className="col-span-full px-4 sm:px-0 sm:col-span-8 sm:col-start-2 md:col-span-5 md:col-start-2 lg:col-span-5 lg:col-start-2 2xl:col-span-5 2xl:col-start-2 flex flex-col gap-4">
+            <h2 className="text-heading-md">Our Team</h2>
+            <figure className="aspect-[2/1] relative rounded-md overflow-hidden">
+              <Image
+                src={photoPaths.ZBOT_TEAM}
+                alt={photoPathAltText.ZBOT_TEAM_ALT}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+            </figure>
+            <div className="flex flex-col items-center mt-4 mb-12 sm:mb-8">
+              <h3 className="text-heading-sm font-medium">Our Partners</h3>
+              <figure className="w-full h-20 relative rounded-md overflow-hidden translate-x-8 mr-16">
+                <Image
+                  src={photoPaths.ZBOT_PARTNERS_SVG_WHITE}
+                  alt={photoPathAltText.ZBOT_PARTNERS_SVG_WHITE_ALT}
+                  width={2688}
+                  height={768}
+                  className="w-full h-full object-cover object-[10%_30%] hidden dark:block"
+                  quality={100}
+                  priority
+                />
+                <Image
+                  src={photoPaths.ZBOT_PARTNERS_SVG_BLACK}
+                  alt={photoPathAltText.ZBOT_PARTNERS_SVG_BLACK_ALT}
+                  width={2688}
+                  height={768}
+                  className="w-full h-full object-cover object-[10%_30%] dark:hidden"
+                  quality={100}
+                  priority
+                />
+              </figure>
+            </div>
+          </div>
+
+          <div className="col-span-full px-4 sm:mt-4 md:mt-4 sm:px-0 sm:col-span-8 sm:col-start-2 md:col-span-5 md:col-start-7 lg:col-span-5 lg:col-start-7 2xl:col-span-5 2xl:col-start-7 md:pl-8">
+            <div className="flex flex-col gap-4 text-xs md:mt-4 sm:mt-4">
+              <div className="flex flex-col gap-2">
+                <h3 className="text-heading-sm font-medium">Our Story</h3>
+                <p className="text-foreground80 leading-relaxed">
+                  Previously, it was incredibly expensive and time-consuming for programmers,
+                  researchers, and students to build the mechanical, electrical, software, and ML
+                  stack by themselves. Jingxiang, Kelsey, and Denys made the first Zeroth Bots as an
+                  open-source project aimed at making robotics and AI accessible to everyone.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2">
+                <h3 className="text-heading-sm font-medium">Our Mission</h3>
+                <p className="text-foreground80 leading-relaxed">
+                  Now, the team is proudly partnered with K-Scale Labs and Grand Journey to bring
+                  Zeroth Bots to production and make it possible for anybody that can write Python
+                  to program robots.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </article>
-      <TeamColumn
-        members={TeamCol1()}
-        styling={
-          " sm:col-start-2 md:col-start-4 " +
-          " lg:col-start-5 xl:col-start-6 2xl:col-start-7 3xl:col-start-8 4xl:col-start-8 5xl:col-start-9 "
-        }
-      />
-      <TeamColumn members={TeamCol2()} styling={""} />
     </section>
   );
 };
