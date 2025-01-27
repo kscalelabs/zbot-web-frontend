@@ -12,6 +12,9 @@ import { useEffect } from "react";
 import SubscribeSection from "@/landing/SubscribeSection";
 import { HeroTextSection } from "@/landing/HeroTextSection";
 import { SimToRealSection } from "@/landing/SimToRealSection";
+import { TargetCustomersSection } from "@/landing/TargetCustomersSection";
+import { RobotPicturesSection } from "@/landing/RobotPicturesSection";
+import { RotatingBanner } from "@/landing/RotatingBanner";
 
 export default function ZBot() {
   const lenis = useLenis();
@@ -56,7 +59,11 @@ export default function ZBot() {
         <HeaderSection />
         <SubscribeSection />
         <HeroTextSection />
+        <RotatingBanner />
         <SimToRealSection />
+        <TargetCustomersSection />
+        <RobotPicturesSection />
+
         {/*<ResearchSection />*/}
         {/*<SpecSection />*/}
         {/*<RobotSection />*/}

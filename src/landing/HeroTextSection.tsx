@@ -20,7 +20,10 @@ export const HeroTextSection = () => {
     <div className="col-span-full">
       {textArray.map((item) => {
         return (
-          <div className="min-h-[50svh] flex items-center justify-center text-center">
+          <div
+            key={item.text}
+            className="min-h-[100svh] flex items-center justify-center text-center"
+          >
             <p className={clsx("max-w-5xl leading-tight", item.className)}>{item.text}</p>
           </div>
         );

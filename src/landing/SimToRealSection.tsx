@@ -1,6 +1,6 @@
 export const SimToRealSection = () => {
   return (
-    <div className="col-span-full grid grid-cols-subgrid py-28 gap-10">
+    <div className="col-span-full grid grid-cols-subgrid py-16 gap-10">
       <div className="col-span-7">
         <div className="text-heading-md">What is Sim-to-Real?</div>
         <div className="text-sm mt-2 mb-4">
