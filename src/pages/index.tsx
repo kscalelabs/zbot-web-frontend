@@ -10,6 +10,8 @@ import RobotSection from "@/zbot/RobotSection";
 import { useLenis } from "lenis/dist/lenis-react";
 import { useEffect } from "react";
 import SubscribeSection from "@/zbot/SubscribeSection";
+import { HeroTextSection } from "@/zbot/HeroTextSection";
+import { SimToRealSection } from "@/zbot/SimToRealSection";
 
 export default function ZBot() {
   const lenis = useLenis();
@@ -53,11 +55,13 @@ export default function ZBot() {
       <main className="gap-y-4">
         <HeaderSection />
         <SubscribeSection />
-        <ResearchSection />
-        <SpecSection />
-        <RobotSection />
-        <GallerySection />
-        <CommunitySection />
+        <HeroTextSection />
+        <SimToRealSection />
+        {/*<ResearchSection />*/}
+        {/*<SpecSection />*/}
+        {/*<RobotSection />*/}
+        {/*<GallerySection />*/}
+        {/*<CommunitySection />*/}
       </main>
       <Footer />
     </div>
