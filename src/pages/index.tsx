@@ -9,9 +9,9 @@ import SpecSection from "@/landing/SpecSection";
 import RobotSection from "@/landing/RobotSection";
 import { useLenis } from "lenis/dist/lenis-react";
 import { useEffect } from "react";
-import SubscribeSection from "@/zbot/SubscribeSection";
-import { HeroTextSection } from "@/zbot/HeroTextSection";
-import { SimToRealSection } from "@/zbot/SimToRealSection";
+import SubscribeSection from "@/landing/SubscribeSection";
+import { HeroTextSection } from "@/landing/HeroTextSection";
+import { SimToRealSection } from "@/landing/SimToRealSection";
 
 export default function ZBot() {
   const lenis = useLenis();
