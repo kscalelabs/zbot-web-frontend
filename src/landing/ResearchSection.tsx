@@ -16,15 +16,6 @@ import { ColorVariant, FillMode, Size } from "@/components/util/constants";
 
 const RESEARCH_ITEMS = [
   {
-    title: "Edge VLA",
-    description:
-      "We’re collaboratively training a foundation for general purpose robots, that gets faster with more contributions from the open-source community",
-    image: "/images/research/edge-vla.png",
-    link: "https://github.com/kscalelabs/evla",
-    icon: <EVLAIcon />,
-    variant: ColorVariant.METHYL,
-  },
-  {
     title: "K-OS",
     description: "Work with reliable real-time ML inference using our Rust-based operating system.",
     image: "/images/research/edge-vla.png",
@@ -49,6 +40,15 @@ const RESEARCH_ITEMS = [
     link: "https://github.com/kscalelabs/krec",
     icon: <KRECIcon />,
     variant: ColorVariant.RUST,
+  },
+  {
+    title: "Edge VLA",
+    description:
+      "We’re collaboratively training a foundation for general purpose robots, that gets faster with more contributions from the open-source community",
+    image: "/images/research/edge-vla.png",
+    link: "https://github.com/kscalelabs/evla",
+    icon: <EVLAIcon />,
+    variant: ColorVariant.METHYL,
   },
   {
     title: "kSim",

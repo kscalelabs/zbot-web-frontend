@@ -9,8 +9,6 @@ either 1 singular purpose or 1 abstracted singular purpose.
 As you will see, the code structure and files are compartmentalized
 as much as possible so that it is simple to locate things.
 
-> Clean code is always a win.
-
 Don't let deadlines be an excuse for sloppiness.
 
 ## Tech Stack
