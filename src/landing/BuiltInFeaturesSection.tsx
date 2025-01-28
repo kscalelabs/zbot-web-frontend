@@ -160,7 +160,7 @@ const FeatsSwipeCarousel = () => {
 };
 export const BuiltInFeaturesSection = () => {
   return (
-    <div className="col-span-full py-16 grid grid-cols-subgrid">
+    <section className="col-span-full py-16 grid grid-cols-subgrid">
       <div className="col-span-6">
         <h2>20 Built-In Features to Get Started</h2>
         <p className="mt-4 mb-4 text-gray-500">
@@ -171,6 +171,6 @@ export const BuiltInFeaturesSection = () => {
       </div>
 
       <FeatsSwipeCarousel />
-    </div>
+    </section>
   );
 };

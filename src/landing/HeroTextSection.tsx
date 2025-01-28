@@ -57,7 +57,7 @@ export const HeroTextSection = () => {
   // });
 
   return (
-    <div ref={scrollRef} className="col-span-full h-[300vh]">
+    <section ref={scrollRef} className="col-span-full h-[300vh]">
       <ScrollContext.Provider value={scrollYProgress}>
         {TEXT_LIST.map((item, index) => {
           return (
@@ -65,6 +65,6 @@ export const HeroTextSection = () => {
           );
         })}
       </ScrollContext.Provider>
-    </div>
+    </section>
   );
 };

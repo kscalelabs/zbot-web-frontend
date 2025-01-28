@@ -15,7 +15,7 @@ export const TargetCustomersSection = () => {
   ];
 
   return (
-    <div className="py-16 col-span-full">
+    <section className="py-16 col-span-full">
       <h2 className="text-center ">Who is it for?</h2>
       <div className="flex gap-6 mt-8">
         {cardItems.map((item, index) => (
@@ -25,6 +25,6 @@ export const TargetCustomersSection = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };

@@ -3,7 +3,7 @@ import { photoPathAltText, photoPaths } from "@/components/util/photoPaths";
 
 const SubscribeSection = () => {
   return (
-    <div className="col-span-full grid grid-cols-subgrid py-8">
+    <section className="col-span-full grid grid-cols-subgrid py-8">
       <div className="rounded-2xl p-9 col-span-full grid grid-cols-subgrid relative overflow-hidden">
         <div className="absolute inset-0 bg-white">
           {/* <Image
@@ -58,7 +58,7 @@ const SubscribeSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

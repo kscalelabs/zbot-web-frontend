@@ -1,3 +1,7 @@
+import { motion, AnimatePresence } from "motion/react";
+import { useState } from "react";
+import clsx from "clsx";
+
 const CAROUSEL_ITEMS = [
   {
     title: "Motion-to-motion",
@@ -26,30 +30,58 @@ const CAROUSEL_ITEMS = [
 ];
 
 export const InteractiveCarouselSection = () => {
-  // const [selectedIndex, setSelectedIndex] = useState(0);
-  //
-  // const handleItemClick = (index) => {
-  //   setSelectedIndex(index);
-  // };
-  //
-  // const selectedItem = items[selectedIndex];
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const handleItemClick = (index) => {
+    setSelectedIndex(index);
+  };
+
+  const selectedItem = CAROUSEL_ITEMS[selectedIndex];
 
   return (
-    <div className="py-16 col-span-full ">
+    <section className="py-16 col-span-full ">
       <h2 className="text-center">Interactive Carousel</h2>
       <div className="mt-6 flex flex-row gap-4 relative">
         <div className="w-[26vw] flex flex-col gap-2">
           {CAROUSEL_ITEMS.map((item, index) => (
-            <div key={index} className="bg-white rounded-2xl p-5">
+            <motion.div
+              key={index}
+              layout
+              className={clsx(
+                "bg-white rounded-2xl p-5 cursor-pointer",
+                index === selectedIndex ? "opacity-100" : "opacity-50"
+              )}
+              onClick={() => handleItemClick(index)}
+              transition={{ duration: 0.3 }}
+            >
               <div className="text-lg font-bold">{item.title}</div>
-              <div className="text-xs mt-1">{item.desc}</div>
-            </div>
+
+              <AnimatePresence>
+                {index === selectedIndex && (
+                  <motion.p
+                    className="text-xs mt-1"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {item.desc}
+                  </motion.p>
+                )}
+              </AnimatePresence>
+            </motion.div>
           ))}
         </div>
         <div className="flex-1 ">
-          <div className="sticky top-16 bg-white rounded-2xl aspect-[1.77]"></div>
+          <div className="sticky top-16 bg-white rounded-2xl aspect-[1.77] overflow-hidden">
+            {selectedItem && (
+              <video muted autoPlay className="w-full h-full object-cover">
+                <source src={selectedItem.src} poster={selectedItem.poster} />
+              </video>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
