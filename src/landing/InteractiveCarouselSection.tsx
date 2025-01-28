@@ -32,7 +32,7 @@ const CAROUSEL_ITEMS = [
 export const InteractiveCarouselSection = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const handleItemClick = (index) => {
+  const handleItemClick = (index: number) => {
     setSelectedIndex(index);
   };
 
@@ -73,11 +73,16 @@ export const InteractiveCarouselSection = () => {
           ))}
         </div>
         <div className="flex-1 ">
-          <div className="sticky top-16 bg-white rounded-2xl aspect-[1.77] overflow-hidden">
+          <div className="sticky top-16   aspect-[1.77] overflow-hidden">
             {selectedItem && (
-              <video muted autoPlay className="w-full h-full object-cover">
-                <source src={selectedItem.src} poster={selectedItem.poster} />
-              </video>
+              <video
+                muted
+                autoPlay
+                className="w-full h-full object-cover rounded-2xl"
+                src={selectedItem.src}
+                poster={selectedItem.poster}
+                controls
+              ></video>
             )}
           </div>
         </div>

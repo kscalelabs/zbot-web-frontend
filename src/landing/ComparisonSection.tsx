@@ -1,6 +1,13 @@
 import clsx from "clsx";
 
-const COMPARISON_LIST = [
+type ComparisonItem = {
+  label: string;
+  children: {
+    content: string;
+  }[];
+};
+
+const COMPARISON_LIST: ComparisonItem[] = [
   {
     label: "型号",
     children: [{ content: "Zeroth Bot" }, { content: "Bruce" }, { content: "OP3" }],
@@ -101,7 +108,7 @@ const COMPARISON_LIST = [
   },
 ];
 
-const ComparisonRow = ({ item, index }) => {
+const ComparisonRow = ({ item, index }: { item: ComparisonItem; index: number }) => {
   return (
     <div className="flex flex-row gap-10">
       <div className="w-1/6 rounded-full bg-background flex items-center justify-center text-xs">

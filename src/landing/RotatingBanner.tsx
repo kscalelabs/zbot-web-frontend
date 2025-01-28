@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const Marquee = ({
-  text,
+  text = "",
   speed = 5,
   direction = "left",
   pauseOnHover = true,
