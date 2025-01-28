@@ -27,7 +27,7 @@ export const ForWhoSection = () => {
           <div
             key={index}
             className={clsx(
-              "flex flex-col flex-1 gap-4 bg-white rounded-2xl p-5 min-h-80 text-white",
+              "flex flex-col flex-1 gap-4  rounded-2xl p-5 min-h-80 text-white ",
               item.className
             )}
           >

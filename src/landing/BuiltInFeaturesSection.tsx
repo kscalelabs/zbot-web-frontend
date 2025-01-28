@@ -3,7 +3,11 @@ import { useWindowSize } from "@/components/util/functions";
 import { motion, useMotionValue } from "motion/react";
 import clsx from "clsx";
 
-const FEAT_ITEMS = [
+type FeatItem = {
+  poster: string;
+  src: string;
+};
+const FEAT_ITEMS: FeatItem[] = [
   {
     poster: "",
     src: "",
@@ -17,13 +21,19 @@ const FEAT_ITEMS = [
     src: "",
   },
 ];
-const FeatCard = (item) => {
+
+const FeatCard = ({ item }: { item: FeatItem }) => {
   return (
     <motion.div
-      className={clsx("bg-white rounded-2xl  flex-none cursor-grab aspect-[1.777] w-[60vw]")}
+      className={clsx("  flex-none bg-gray-300 rounded-2xl cursor-grab aspect-[1.777] w-[60vw]")}
       draggable={false}
     >
-      {/*<video src="" className="w-full h-full object-cover" controls muted></video>*/}
+      <video
+        src={item.src}
+        poster={item.poster}
+        className="w-full h-full object-cover rounded-2xl"
+        muted
+      ></video>
     </motion.div>
   );
 };
@@ -57,7 +67,7 @@ const FeatsSwipeCarousel = () => {
       gap: 1.25,
       max: FEAT_ITEMS.length - 1,
     };
-  }, [width]);
+  }, []);
 
   const dragX = useMotionValue(0);
 

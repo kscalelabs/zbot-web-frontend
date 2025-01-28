@@ -1,9 +1,14 @@
-import { motion, useTransform, useScroll, MotionValue, useMotionValueEvent } from "motion/react";
+import { motion, useTransform, useScroll, MotionValue } from "motion/react";
 import clsx from "clsx";
 
 import { createContext, useContext, useRef } from "react";
 
-const TEXT_LIST = [
+type TextItem = {
+  text: string;
+  className: string;
+};
+
+const TEXT_LIST: TextItem[] = [
   {
     text: "Affordable Robotics for All",
     className: "text-heading-lg",
@@ -19,7 +24,15 @@ const TEXT_LIST = [
 ];
 const ScrollContext = createContext(new MotionValue());
 
-const TextItem = ({ item, index, totalItems }) => {
+const TextItem = ({
+  item,
+  index,
+  totalItems,
+}: {
+  item: TextItem;
+  index: number;
+  totalItems: number;
+}) => {
   const scrollYProgress = useContext(ScrollContext);
 
   const num = 1 / totalItems;

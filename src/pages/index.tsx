@@ -1,12 +1,12 @@
 import Footer from "@/components/footer/footer";
 import NavBar from "@/components/navbar/navbar";
 import Script from "next/script";
-import CommunitySection from "@/landing/CommunitySection";
-import GallerySection from "@/landing/GallerySection";
+// import CommunitySection from "@/landing/CommunitySection";
+// import GallerySection from "@/landing/GallerySection";
 import HeaderSection from "@/landing/HeaderSection";
-import ResearchSection from "@/landing/ResearchSection";
-import SpecSection from "@/landing/SpecSection";
-import RobotSection from "@/landing/RobotSection";
+// import ResearchSection from "@/landing/ResearchSection";
+// import SpecSection from "@/landing/SpecSection";
+// import RobotSection from "@/landing/RobotSection";
 import { useLenis } from "lenis/dist/lenis-react";
 import { useEffect } from "react";
 import SubscribeSection from "@/landing/SubscribeSection";

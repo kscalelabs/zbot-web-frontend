@@ -1,6 +1,3 @@
-import Image from "next/image";
-import { photoPathAltText, photoPaths } from "@/components/util/photoPaths";
-
 const SubscribeSection = () => {
   return (
     <section className="col-span-full py-24 text-black">
@@ -14,7 +11,7 @@ const SubscribeSection = () => {
         </div>
         <div className="flex-1 bg-white rounded-2xl min-h-52 flex items-center justify-center flex-col gap-2 text-center p-2">
           <h3 className="">Our Vision</h3>
-          <p className="text-rust">"More than a robot—it’s your creation in every way."</p>
+          <p className="text-rust">&#34;More than a robot—it’s your creation in every way.&#34;</p>
           <p>
             Welcome to the future of robotics, where robots are more than machines—they’re a
             reflection of your creativity, personality, and imagination. Let’s build the future

@@ -16,18 +16,18 @@ const HeaderSection = () => {
           loading="eager"
         />
       </div>
-      <hgroup className="z-10 text-black text-center col-span-full text-filament ">
+      <div className="z-10 text-black text-center col-span-full ">
         <h1 className="text-heading-md md:text-heading-lg">Welcome to the Future of Robots</h1>
 
         <p className="mt-8 text-sm md:text-heading-sm ">
-          "A robot that’s truly yours, in every way."
+          &#34;A robot that’s truly yours, in every way.&#34;
         </p>
         <p className="mt-4 ">
           Welcome to a world where robots are no longer just tools—they are companions, creators,
           and reflections of your imagination. This is the next generation of robotics: personal,
           customizable, and accessible to everyone.
         </p>
-      </hgroup>
+      </div>
     </header>
   );
 };
