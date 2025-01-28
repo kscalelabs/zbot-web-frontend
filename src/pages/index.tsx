@@ -16,6 +16,7 @@ import { TargetCustomersSection } from "@/landing/TargetCustomersSection";
 import { RobotPicturesSection } from "@/landing/RobotPicturesSection";
 import { RotatingBanner } from "@/landing/RotatingBanner";
 import { BuiltInFeaturesSection } from "@/landing/BuiltInFeaturesSection";
+import { InteractiveCarouselSection } from "@/landing/InteractiveCarouselSection";
 
 export default function ZBot() {
   const lenis = useLenis();
@@ -67,6 +68,8 @@ export default function ZBot() {
         <TargetCustomersSection />
         <RobotPicturesSection />
         <BuiltInFeaturesSection />
+
+        <InteractiveCarouselSection />
 
         {/*<ResearchSection />*/}
         {/*<SpecSection />*/}

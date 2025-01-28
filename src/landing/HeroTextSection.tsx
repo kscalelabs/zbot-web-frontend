@@ -1,7 +1,7 @@
-import { motion, useTransform, useScroll, MotionValue } from "motion/react";
+import { motion, useTransform, useScroll, MotionValue, useMotionValueEvent } from "motion/react";
 import clsx from "clsx";
 
-import { createContext, useContext, useEffect, useRef } from "react";
+import { createContext, useContext, useRef } from "react";
 
 const TEXT_LIST = [
   {
@@ -24,15 +24,9 @@ const TextItem = ({ item, index, totalItems }) => {
 
   const num = 1 / totalItems;
 
-  // 为每个文本创建不同的透明度和Y轴位移变换
   const opacity = useTransform(
     scrollYProgress,
-    [
-      index * num, // 开始出现
-      index * num + 0.1, // 完全出现
-      (index + 1) * num - 0.1, // 开始消失
-      (index + 1) * num, // 完全消失
-    ],
+    [index * num, index * num + 0.1, (index + 1) * num - 0.1, (index + 1) * num],
     [0, 1, 1, 0]
   );
 
@@ -55,12 +49,12 @@ export const HeroTextSection = () => {
   const scrollRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
-    offset: ["start start", "end start"],
+    offset: ["50vh end", "end start"],
   });
 
-  useEffect(() => {
-    console.log(scrollYProgress.get());
-  }, [scrollYProgress]);
+  // useMotionValueEvent(scrollYProgress, "change", (latest) => {
+  //   console.log("Page scroll: ", latest);
+  // });
 
   return (
     <div ref={scrollRef} className="col-span-full h-[300vh]">
