@@ -146,6 +146,8 @@ export const ComparisonSection = () => {
           return <ComparisonRow item={item} key={index} index={index} />;
         })}
       </div>
+
+      <video src="" controls className="mx-auto w-2/3 mt-10 rounded-2xl"></video>
     </section>
   );
 };

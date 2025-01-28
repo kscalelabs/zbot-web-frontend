@@ -1,3 +1,7 @@
+import Image from "next/image";
+
+import { photoPathAltText, photoPaths } from "@/components/util/photoPaths";
+
 export const RobotPicturesSection = () => {
   return (
     <section className="col-span-full py-16 relative grid grid-cols-subgrid">
@@ -12,9 +16,33 @@ export const RobotPicturesSection = () => {
         </div>
       </div>
       <div className="col-span-6 flex flex-col gap-10">
-        <div className="aspect-[1.53] bg-white rounded-2xl"></div>
-        <div className="aspect-[1.53] bg-white rounded-2xl"></div>
-        <div className="aspect-[1.53] bg-white rounded-2xl"></div>
+        <div className="aspect-[1.53] bg-white rounded-2xl relative overflow-hidden">
+          <Image
+            src={photoPaths.NEW_UI_ZBOT_1}
+            alt={photoPathAltText.NEW_UI_ZBOT_1}
+            fill
+            className="object-cover"
+            priority={true}
+          />
+        </div>
+        <div className="aspect-[1.53] bg-white rounded-2xl relative overflow-hidden">
+          <Image
+            src={photoPaths.NEW_UI_ZBOT_2}
+            alt={photoPathAltText.NEW_UI_ZBOT_2}
+            fill
+            className="object-cover"
+            priority={true}
+          />
+        </div>
+        <div className="aspect-[1.53] bg-white rounded-2xl relative overflow-hidden">
+          <Image
+            src={photoPaths.NEW_UI_ZBOT_3}
+            alt={photoPathAltText.NEW_UI_ZBOT_3}
+            fill
+            className="object-cover"
+            priority={true}
+          />
+        </div>
       </div>
     </section>
   );

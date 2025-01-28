@@ -6,19 +6,19 @@ const HeaderSection = () => {
     <header className="col-span-full grid grid-cols-subgrid min-h-[100svh] auto-rows-auto items-center text-foreground bg-background relative overflow-hidden -mx-[5vw] px-[5vw]">
       <div className="absolute inset-0">
         <Image
-          sizes="100vw"
-          src={photoPaths.LANDING_IMAGE_2}
-          alt={photoPathAltText.LANDING_IMAGE_ALT_2}
+          src={photoPaths.NEW_UI_HERO_BG}
+          alt={photoPathAltText.NEW_UI_HERO_BG}
           fill
-          className="object-cover brightness-50
+          className="object-cover
             md:object-center
             object-center"
           priority={true}
           loading="eager"
         />
       </div>
-      <hgroup className="z-10 text-center col-span-full text-filament ">
+      <hgroup className="z-10 text-black text-center col-span-full text-filament ">
         <h1 className="text-heading-md md:text-heading-lg">Welcome to the Future of Robots</h1>
+
         <p className="mt-8 text-sm md:text-heading-sm ">
           "A robot that’s truly yours, in every way."
         </p>

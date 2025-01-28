@@ -3,20 +3,17 @@ import { photoPathAltText, photoPaths } from "@/components/util/photoPaths";
 
 const SubscribeSection = () => {
   return (
-    <section className="col-span-full grid grid-cols-subgrid py-8">
+    <section className="col-span-full grid grid-cols-subgrid py-8 text-black">
       <div className="rounded-2xl p-9 col-span-full grid grid-cols-subgrid relative overflow-hidden">
         <div className="absolute inset-0 bg-white">
-          {/* <Image
-            sizes="100vw"
-            src={photoPaths.LANDING_IMAGE_2}
-            alt={photoPathAltText.LANDING_IMAGE_ALT_2}
+          <Image
+            src={photoPaths.NEW_UI_SUBSCRIBE}
+            alt={photoPathAltText.NEW_UI_SUBSCRIBE}
             fill
-            className="object-cover brightness-50
-            md:object-center
-            object-center"
+            className="object-cover"
+            loading={"eager"}
             priority={true}
-            loading="eager"
-          />*/}
+          />
         </div>
 
         <div className="col-span-6 z-10">

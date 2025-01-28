@@ -12,13 +12,17 @@ import { useEffect } from "react";
 import SubscribeSection from "@/landing/SubscribeSection";
 import { HeroTextSection } from "@/landing/HeroTextSection";
 import { SimToRealSection } from "@/landing/SimToRealSection";
-import { TargetCustomersSection } from "@/landing/TargetCustomersSection";
+import { ForWhoSection } from "@/landing/ForWhoSection";
 import { RobotPicturesSection } from "@/landing/RobotPicturesSection";
 import { RotatingBanner } from "@/landing/RotatingBanner";
 import { BuiltInFeaturesSection } from "@/landing/BuiltInFeaturesSection";
 import { InteractiveCarouselSection } from "@/landing/InteractiveCarouselSection";
 import { ForStudentsSection } from "@/landing/ForStudentsSection";
 import { ComparisonSection } from "@/landing/ComparisonSection";
+import { ForHackersSection } from "@/landing/ForHackersSection";
+import { SellingPointsSection } from "@/landing/SellingPointsSection";
+import { ForSTEMSection } from "@/landing/ForSTEMSection";
+import SubscribeFooterSection from "@/landing/SubscribeFooterSection";
 
 export default function ZBot() {
   const lenis = useLenis();
@@ -65,12 +69,16 @@ export default function ZBot() {
         <HeroTextSection />
         <RotatingBanner />
         <SimToRealSection />
-        <TargetCustomersSection />
+        <ForWhoSection />
         <RobotPicturesSection />
         <BuiltInFeaturesSection />
         <InteractiveCarouselSection />
         <ForStudentsSection />
         <ComparisonSection />
+        <ForHackersSection />
+        <SellingPointsSection />
+        <ForSTEMSection />
+        <SubscribeFooterSection />
 
         {/*<ResearchSection />*/}
         {/*<SpecSection />*/}
