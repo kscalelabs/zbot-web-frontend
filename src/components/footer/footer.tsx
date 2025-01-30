@@ -1,7 +1,6 @@
 import { AnimatePresence, cubicBezier, motion } from "motion/react";
 import SocialMediaItem from "@/components/footer/SocialMediaItem";
 import { Discord, Github, Twitter } from "@/components/footer/socialMediaSvgs";
-import FooterLogotype from "@/components/logos/footerLogotype";
 import Link from "next/link";
 import { JSX, useEffect, useState } from "react";
 import { circOut } from "motion";
@@ -13,8 +12,8 @@ const socialMediaSvgs: JSX.Element[] = [
 ];
 
 const socialMediaLinks: { linkURL: string; name: string }[] = [
-  { linkURL: "https://discord.gg/kscale", name: "Discord" },
-  { linkURL: "https://x.com/kscalelabs", name: "Twitter" },
+  { linkURL: "https://discord.gg/G6KP76uha5", name: "Discord" },
+  { linkURL: "https://x.com/zerothbot", name: "Twitter" },
   { linkURL: "https://github.com/kscalelabs", name: "Github" },
 ];
 
@@ -205,7 +204,6 @@ export default function Footer() {
         ]}
         extraStyling={"col-span-2 sm:col-span-3 sm:col-start-4 md:col-span-2"}
       />
-
     </footer>
   );
 }
