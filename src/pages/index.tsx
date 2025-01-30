@@ -1,14 +1,28 @@
 import Footer from "@/components/footer/footer";
 import NavBar from "@/components/navbar/navbar";
 import Script from "next/script";
-import CommunitySection from "@/landing/CommunitySection";
-import GallerySection from "@/landing/GallerySection";
+// import CommunitySection from "@/landing/CommunitySection";
+// import GallerySection from "@/landing/GallerySection";
 import HeaderSection from "@/landing/HeaderSection";
-import ResearchSection from "@/landing/ResearchSection";
-import SpecSection from "@/landing/SpecSection";
-import RobotSection from "@/landing/RobotSection";
+// import ResearchSection from "@/landing/ResearchSection";
+// import SpecSection from "@/landing/SpecSection";
+// import RobotSection from "@/landing/RobotSection";
 import { useLenis } from "lenis/dist/lenis-react";
 import { useEffect } from "react";
+import SubscribeSection from "@/landing/SubscribeSection";
+import { HeroTextSection } from "@/landing/HeroTextSection";
+import { SimToRealSection } from "@/landing/SimToRealSection";
+import { ForWhoSection } from "@/landing/ForWhoSection";
+import { RobotPicturesSection } from "@/landing/RobotPicturesSection";
+import { RotatingBanner } from "@/landing/RotatingBanner";
+import { BuiltInFeaturesSection } from "@/landing/BuiltInFeaturesSection";
+import { InteractiveCarouselSection } from "@/landing/InteractiveCarouselSection";
+import { ForStudentsSection } from "@/landing/ForStudentsSection";
+import { ComparisonSection } from "@/landing/ComparisonSection";
+import { ForHackersSection } from "@/landing/ForHackersSection";
+import { SellingPointsSection } from "@/landing/SellingPointsSection";
+import { ForSTEMSection } from "@/landing/ForSTEMSection";
+import SubscribeFooterSection from "@/landing/SubscribeFooterSection";
 
 export default function ZBot() {
   const lenis = useLenis();
@@ -51,11 +65,26 @@ export default function ZBot() {
       <NavBar href="/" />
       <main className="gap-y-4">
         <HeaderSection />
-        <ResearchSection />
-        <SpecSection />
-        <RobotSection />
-        <GallerySection />
-        <CommunitySection />
+        <SubscribeSection />
+        <HeroTextSection />
+        <RotatingBanner />
+        <SimToRealSection />
+        <ForWhoSection />
+        <RobotPicturesSection />
+        <BuiltInFeaturesSection />
+        <InteractiveCarouselSection />
+        <ForStudentsSection />
+        <ComparisonSection />
+        <ForHackersSection />
+        <SellingPointsSection />
+        <ForSTEMSection />
+        <SubscribeFooterSection />
+
+        {/*<ResearchSection />*/}
+        {/*<SpecSection />*/}
+        {/*<RobotSection />*/}
+        {/*<GallerySection />*/}
+        {/*<CommunitySection />*/}
       </main>
       <Footer />
     </div>

@@ -79,7 +79,7 @@ export default function NavBar({ href = "/" }: { href?: string } = {}) {
                 target={navItem.isExternal ? "_blank" : "_self"}
                 className={clsx(
                   "-col-end-3 md:-col-end-4 2xl:-col-end-4 2xl:text-[0.75rem] lg:text-[1rem] md:text-[0.8rem] flex flex-row gap-2 size-fit items-center select-none self-center pointer-events-auto",
-                  atTop ? "text-white" : "text-foreground"
+                  atTop ? "text-black" : "text-foreground"
                 )}
                 initial="initial"
                 whileHover="hover"
