@@ -25,14 +25,14 @@ export default function App({ Component, pageProps }: AppProps) {
           content="Developing the world's most accessible platform for embodied intelligence. We're hackers, engineers, and researchers that believe in a world where robots are made for everyone."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://kscalelabs.com" />
-        <meta property="og:site_name" content="K-Scale Labs" />
+        <meta property="og:url" content="https://zerothbot.com" />
+        <meta property="og:site_name" content="Zeroth Bot" />
         <meta name="og:image" content="/meta/opengraph-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="K-Scale Labs" />
+        <meta name="twitter:title" content="Zeroth Bot" />
         <meta
           name="twitter:description"
-          content="Developing the world's most accessible platform for embodied intelligence. We're hackers, engineers, and researchers that believe in a world where robots are made for everyone."
+          content="The world's most accessible robot AI for developers. Powerful, affordable, and open-source robotics dev kit. The platform for builders."
         />
         <meta name="twitter:image" content="/meta/twitter-image.png" />
       </Head>
