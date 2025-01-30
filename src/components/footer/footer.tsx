@@ -126,7 +126,7 @@ export default function Footer() {
             whileHover="hover"
             whileTap="tap"
           >
-            <p className="opacity-70 text-sm">inquiries@kscale.dev</p>
+            <p className="opacity-70 text-sm">jingxiangmo@gmail.com</p>
             <motion.button
               className="mt-2 bg-filament text-rust text-code--caption px-1.5 py-[0.15rem] rounded-sm w-20 h-4 flex flex-colitems-center justify-center overflow-hidden"
               variants={{
@@ -206,7 +206,6 @@ export default function Footer() {
         extraStyling={"col-span-2 sm:col-span-3 sm:col-start-4 md:col-span-2"}
       />
 
-      <FooterLogotype />
     </footer>
   );
 }
