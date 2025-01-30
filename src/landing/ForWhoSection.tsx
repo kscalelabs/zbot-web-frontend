@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { photoPaths } from "@/components/util/photoPaths";
+import Image from "next/image";
 
 const CARD_ITEMS = [
   {
@@ -38,7 +39,9 @@ export const ForWhoSection = () => {
             <div className="text-xl">{item.title}</div>
             <div className="text-xs">{item.desc}</div>
 
-            <img src={item.icon} alt="icon" className="absolute left-3 bottom-3 w-16 h-16" />
+            <div className="absolute left-3 bottom-3 w-16 h-16">
+              <Image fill src={item.icon} alt="icon" />
+            </div>
           </div>
         ))}
       </div>

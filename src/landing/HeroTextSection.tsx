@@ -11,11 +11,11 @@ type TextItem = {
 const TEXT_LIST: TextItem[] = [
   {
     text: "Affordable Robotics for All",
-    className: "text-heading-lg",
+    className: "text-heading-md md:text-heading-lg",
   },
   {
     text: "Now you can get started and learn for less than $1000",
-    className: "text-heading-lg",
+    className: "text-heading-md md:text-heading-lg",
   },
   {
     text: "Robotics has always been seen as expensive and exclusive. Not anymore. With our platform, you can own and train a robot for less than $1000, bringing cutting-edge technology within everyone’s reach. Whether you're a student, a hacker, or someone with no prior experience, this is your chance to explore the future.",
@@ -47,10 +47,9 @@ const TextItem = ({
     <motion.div
       className="
    top-0 h-[100vh] overflow-hidden
-    flex items-center justify-center text-center"
+    flex items-center justify-center text-center sticky"
       style={{
         opacity,
-        position: "sticky",
       }}
     >
       <p className={clsx("max-w-5xl leading-tight", item.className)}>{item.text}</p>
@@ -70,13 +69,15 @@ export const HeroTextSection = () => {
   // });
 
   return (
-    <section ref={scrollRef} className="col-span-full h-[300vh]">
+    <section ref={scrollRef} className="col-span-full h-[350vh]">
       <ScrollContext.Provider value={scrollYProgress}>
         {TEXT_LIST.map((item, index) => {
           return (
             <TextItem item={item} index={index} key={item.text} totalItems={TEXT_LIST.length} />
           );
         })}
+
+        <div className="top-0 h-[50vh] overflow-hidden sticky"></div>
       </ScrollContext.Provider>
     </section>
   );

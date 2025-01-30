@@ -148,7 +148,7 @@ export const ComparisonSection = () => {
         competing in hackathons, our platform empowers you to do more.
       </p>
 
-      <div className="bg-white md:rounded-2xl p-2 md:p-5 flex flex-col gap-1 overflow-x-auto">
+      <div className="bg-white md:rounded-2xl p-2 md:p-5 flex flex-col gap-1 overflow-x-auto md:mx-[5vw]">
         {COMPARISON_LIST.map((item, index) => {
           return <ComparisonRow item={item} key={index} index={index} />;
         })}
