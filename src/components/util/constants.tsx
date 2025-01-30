@@ -24,7 +24,7 @@ export const navigationConfig: NavigationConfig[] = [
   },
   {
     name: "Discord",
-    link: "https://discord.com/invite/kscale",
+    link: "https://discord.gg/G6KP76uha5",
     isExternal: true,
   },
 ];
@@ -37,7 +37,7 @@ export const zbotNavigationConfig: NavigationConfig[] = [
   },
   {
     name: "Discord",
-    link: "https://discord.com/invite/kscale",
+    link: "https://discord.gg/G6KP76uha5",
     isExternal: true,
   },
 ];

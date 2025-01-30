@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { motion } from "motion/react";
 import { useRouter } from "next/router";
 
-const CTA_URL = "https://discord.gg/kscale";
+const CTA_URL = "https://discord.gg/G6KP76uha5";
 
 const getVariantClass = (variant: ColorVariant, mode: FillMode): string => {
   if (mode === FillMode.FILL) {
