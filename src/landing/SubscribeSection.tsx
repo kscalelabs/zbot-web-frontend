@@ -10,7 +10,7 @@ const SubscribeSection = () => {
             src={photoPaths.NEW_UI_SUBSCRIBE}
             alt={photoPathAltText.NEW_UI_SUBSCRIBE}
             fill
-            className="object-cover"
+            className="opacity-0 md:opacity-100 md:object-cover"
             loading={"eager"}
             priority={true}
           />

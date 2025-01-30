@@ -110,13 +110,13 @@ const COMPARISON_LIST: ComparisonItem[] = [
 
 const ComparisonRow = ({ item, index }: { item: ComparisonItem; index: number }) => {
   return (
-    <div className="flex flex-row gap-10">
-      <div className="w-1/6 rounded-full bg-background flex items-center justify-center text-xs">
+    <div className="flex flex-row gap-2 md:gap-10 min-w-96">
+      <div className="min-w-24 md:w-1/6 rounded-2xl md:rounded-full bg-background flex items-center justify-center text-xs break-all md:break-normal">
         {item.label}
       </div>
       <div
         className={clsx(
-          "flex flex-row flex-1 rounded-full",
+          "flex flex-row flex-1 rounded-2xl md:rounded-full",
           index !== 0 ? "bg-background" : "gap-4"
         )}
       >
@@ -124,9 +124,9 @@ const ComparisonRow = ({ item, index }: { item: ComparisonItem; index: number })
           return (
             <div
               className={clsx(
-                "text-xs flex-1 p-2 text-center leading-normal flex items-center justify-center",
+                "text-xs flex-1 p-2 text-center leading-normal flex items-center justify-center break-all md:break-normal",
                 childIndex === 0 ? "text-rust" : "",
-                index === 0 ? "rounded-full bg-background" : ""
+                index === 0 ? "rounded-2xl md:rounded-full bg-background" : ""
               )}
               key={childIndex}
               dangerouslySetInnerHTML={{ __html: child.content }}
@@ -140,21 +140,21 @@ const ComparisonRow = ({ item, index }: { item: ComparisonItem; index: number })
 
 export const ComparisonSection = () => {
   return (
-    <section className="col-span-full py-24">
+    <section className="col-span-full py-24 -mx-[5vw]">
       <h2 className="text-center">Competitor Comparison</h2>
-      <p className="text-center mt-2 mb-6">
+      <p className="text-center mt-2 mb-6 mx-[5vw]">
         Unlike traditional robotics platforms, we provide intuitive, affordable tools for students
         to experiment without barriers. Whether it’s programming robots to play football or
         competing in hackathons, our platform empowers you to do more.
       </p>
 
-      <div className="bg-white rounded-2xl p-5 flex flex-col gap-1">
+      <div className="bg-white md:rounded-2xl p-2 md:p-5 flex flex-col gap-1 overflow-x-auto">
         {COMPARISON_LIST.map((item, index) => {
           return <ComparisonRow item={item} key={index} index={index} />;
         })}
       </div>
 
-      <video src="" controls className="mx-auto w-2/3 mt-10 rounded-2xl"></video>
+      <video src="" controls className="mx-auto w-11/12 md:w-2/3 mt-10 rounded-2xl"></video>
     </section>
   );
 };

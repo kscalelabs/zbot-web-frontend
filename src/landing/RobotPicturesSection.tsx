@@ -5,8 +5,8 @@ import { photoPathAltText, photoPaths } from "@/components/util/photoPaths";
 export const RobotPicturesSection = () => {
   return (
     <section className="col-span-full py-16 relative grid grid-cols-subgrid">
-      <div className="col-span-6">
-        <div className="lg:sticky top-32">
+      <div className="col-span-full lg:col-span-6">
+        <div className="lg:sticky top-32 mb-10">
           <h2>See Your Robot in Action</h2>
           <p className="text-sm text-gray-500 mt-4">
             Your robot isn’t just programmable—it’s expressive. Watch it walk, animate, and move
@@ -15,7 +15,7 @@ export const RobotPicturesSection = () => {
           </p>
         </div>
       </div>
-      <div className="col-span-6 flex flex-col gap-10">
+      <div className="lg:mt-0 col-span-full md:col-span-6 flex flex-col gap-10">
         <div className="aspect-[1.53] bg-white rounded-2xl relative overflow-hidden">
           <Image
             src={photoPaths.NEW_UI_ZBOT_1}

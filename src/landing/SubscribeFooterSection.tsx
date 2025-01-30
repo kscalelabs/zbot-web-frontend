@@ -1,15 +1,15 @@
 const SubscribeSection = () => {
   return (
-    <section className="col-span-full py-24 text-black">
-      <div className="w-full flex flex-row gap-4">
-        <div className="flex-1 bg-white rounded-2xl min-h-52 flex items-center justify-center flex-col gap-2 text-center p-2">
+    <section className="col-span-full py-16 md:py-24 text-black">
+      <div className="w-full flex flex-col md:flex-row gap-4">
+        <div className="flex-1 bg-white rounded-2xl min-h-52 flex items-center justify-center flex-col gap-2 text-center py-2 px-4">
           <h3 className="">Powered by K-Scale</h3>
           <p>
             Our robots are powered by advanced K-Scale technology, ensuring precision, performance,
             and endless possibilities.
           </p>
         </div>
-        <div className="flex-1 bg-white rounded-2xl min-h-52 flex items-center justify-center flex-col gap-2 text-center p-2">
+        <div className="flex-1 bg-white rounded-2xl min-h-52 flex items-center justify-center flex-col gap-2 text-center py-2 px-4">
           <h3 className="">Our Vision</h3>
           <p className="text-rust">&#34;More than a robot—it’s your creation in every way.&#34;</p>
           <p>

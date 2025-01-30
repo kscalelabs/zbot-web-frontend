@@ -25,7 +25,9 @@ const FEAT_ITEMS: FeatItem[] = [
 const FeatCard = ({ item }: { item: FeatItem }) => {
   return (
     <motion.div
-      className={clsx("  flex-none bg-gray-300 rounded-2xl cursor-grab aspect-[1.777] w-[60vw]")}
+      className={clsx(
+        "flex-none bg-gray-300 rounded-2xl cursor-grab aspect-[1.4] md:aspect-[1.777] w-[74vw] md:w-[60vw]"
+      )}
       draggable={false}
     >
       <video

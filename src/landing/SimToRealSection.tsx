@@ -3,8 +3,8 @@ import { photoPathAltText, photoPaths } from "@/components/util/photoPaths";
 
 export const SimToRealSection = () => {
   return (
-    <section className="col-span-full grid grid-cols-subgrid py-16 gap-10">
-      <div className="col-span-7">
+    <section className="col-span-full py-16 gap-10 flex flex-col lg:flex-row">
+      <div className="flex-1">
         <h2 className="">What is Sim-to-Real?</h2>
         <p className="text-sm mt-2 mb-4">
           Sim-to-real is the technology that bridges the gap between virtual simulations and
@@ -21,7 +21,7 @@ export const SimToRealSection = () => {
           />
         </div>
       </div>
-      <div className="col-span-5">
+      <div className="w-full lg:w-[39.2%]">
         <div className="aspect-[0.88] bg-white rounded-2xl relative overflow-hidden">
           <Image
             src={photoPaths.NEW_UI_WHAT_IS_2}

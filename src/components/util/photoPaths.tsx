@@ -33,6 +33,9 @@ export const photoPaths = {
   ZBOT_PARTNERS_SVG_WHITE: "/photos/zbotpartnerswhite.svg",
 
   NEW_UI_FOR_BG: "/photos/new-ui/for_bg.jpg",
+  NEW_UI_FOR_ICON_1: "/photos/new-ui/for_icon_1.svg",
+  NEW_UI_FOR_ICON_2: "/photos/new-ui/for_icon_2.svg",
+  NEW_UI_FOR_ICON_3: "/photos/new-ui/for_icon_3.svg",
   NEW_UI_HERO_BG: "/photos/new-ui/hero_bg.jpg",
   NEW_UI_SELLING_POINT_1: "/photos/new-ui/selling_point_1.jpg",
   NEW_UI_SELLING_POINT_2: "/photos/new-ui/selling_point_2.jpg",

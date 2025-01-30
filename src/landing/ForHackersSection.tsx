@@ -14,7 +14,7 @@ export const ForHackersSection = () => {
         />
       </div>
       <div className="min-h-[100vh] sticky top-0">
-        <div className="min-h-[100vh] mr-auto w-1/2 p-14 bg-rust opacity-85 text-white">
+        <div className="min-h-[100vh] mr-auto w-full md:w-1/2 p-6 md:p-14 bg-rust opacity-85 text-white">
           <h3 className="mb-2">For Hackers Who Know the Tools</h3>
           <p className="text-xs mb-10">
             Zeroth Bot is a powerhouse for hackers familiar with advanced AI/ML workflows. It’s
@@ -38,7 +38,7 @@ export const ForHackersSection = () => {
             of robotics and machine learning.
           </p>
         </div>
-        <div className="min-h-[100vh] ml-auto w-1/2 p-14 text-black bg-[rgba(255,255,255,0.9)] flex items-center">
+        <div className="min-h-[100vh] ml-auto w-full md:w-1/2 p-6 md:p-14 text-black bg-[rgba(255,255,255,0.9)] flex items-center">
           <div>
             <h3 className="mb-2">For Beginners with No Robotics Experience</h3>
             <p className="text-xs mb-10">

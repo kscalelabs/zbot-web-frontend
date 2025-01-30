@@ -13,8 +13,8 @@ export const ForStudentsSection = () => {
           priority={true}
         />
       </div>
-      <div className=" sticky top-0">
-        <div className="min-h-[100vh] ml-auto w-1/2 p-14 text-black bg-[rgba(255,255,255,0.9)] ">
+      <div className="sticky top-0">
+        <div className="min-h-[100vh] ml-auto w-full md:w-1/2 p-6 md:p-14 text-black bg-[rgba(255,255,255,0.9)] ">
           <h3 className="mb-2">For Robotics Students</h3>
           <p className="text-xs mb-10">
             This is your chance to dive into the cutting-edge world of robotics with sim-to-real

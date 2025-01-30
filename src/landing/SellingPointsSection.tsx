@@ -26,7 +26,7 @@ export const SellingPointsSection = () => {
   return (
     <section className="py-16 col-span-full">
       <h2 className="">Unique Selling Points</h2>
-      <div className="flex gap-6 mt-8">
+      <div className="flex flex-col md:flex-row gap-6 mt-8">
         {cardItems.map((item, index) => (
           <div key={index} className="flex flex-col flex-1 gap-3 text-rust">
             <div className="bg-gray-950 rounded-2xl aspect-[1.38] relative overflow-hidden">
@@ -38,8 +38,8 @@ export const SellingPointsSection = () => {
                 priority
               />
             </div>
-            <div className="text-md">{item.title}</div>
-            <div className="text-xs">{item.desc}</div>
+            <div className="text-lg md:text-md">{item.title}</div>
+            <div className="text-md md:text-xs">{item.desc}</div>
           </div>
         ))}
       </div>

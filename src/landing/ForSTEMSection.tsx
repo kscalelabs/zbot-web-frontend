@@ -13,7 +13,7 @@ export const ForSTEMSection = () => {
           priority={true}
         />
       </div>
-      <div className="mr-auto w-1/2 p-14 bg-rust text-white opacity-85">
+      <div className="mr-auto w-full md:w-1/2 p-6 md:p-14 bg-rust text-white opacity-85">
         <h3 className="mb-2">For STEM Student</h3>
         <p className="text-xs mb-10">
           Share the Joy of a Self-Trained Robot <br />
