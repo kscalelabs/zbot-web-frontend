@@ -18,7 +18,11 @@ const TEXT_LIST: TextItem[] = [
     className: "text-heading-md md:text-heading-lg",
   },
   {
-    text: "Robotics has always been seen as expensive and exclusive. Not anymore. With our platform, you can own and train a robot for less than $1000, bringing cutting-edge technology within everyone’s reach. Whether you're a student, a hacker, or someone with no prior experience, this is your chance to explore the future.",
+    text: `Robotics has always been seen as expensive and exclusive. <br>
+Not anymore.<br>
+With our platform, you can own and train a robot for less than $1000, bringing cutting-edge technology within everyone’s reach.<br>
+<br>
+Whether you're a student, a hacker, or someone with no prior experience, this is your chance to explore the future.<br>`,
     className: "text-heading-sm",
   },
 ];
@@ -52,7 +56,10 @@ const TextItem = ({
         opacity,
       }}
     >
-      <p className={clsx("max-w-5xl leading-tight", item.className)}>{item.text}</p>
+      <p
+        className={clsx("max-w-5xl leading-tight", item.className)}
+        dangerouslySetInnerHTML={{ __html: item.text }}
+      ></p>
     </motion.div>
   );
 };

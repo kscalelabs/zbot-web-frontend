@@ -9,38 +9,30 @@ type ComparisonItem = {
 
 const COMPARISON_LIST: ComparisonItem[] = [
   {
-    label: "型号",
+    label: "Model",
     children: [{ content: "Zeroth Bot" }, { content: "Bruce" }, { content: "OP3" }],
   },
   {
-    label: "厂商",
-    children: [
-      { content: "乐享智能科技" },
-      { content: "Westwood Robotics" },
-      { content: "ROBOTICS" },
-    ],
-  },
-  {
-    label: "身高(cm)",
+    label: "Height (cm)",
     children: [{ content: "50cm" }, { content: "70cm" }, { content: "51cm" }],
   },
   {
-    label: "宽度(cm)",
+    label: "Width (cm)",
     children: [{ content: "23cm" }, { content: "-" }, { content: "-" }],
   },
   {
-    label: "厚度(cm)",
+    label: "Thickness (cm)",
     children: [{ content: "15cm" }, { content: "-" }, { content: "-" }],
   },
   {
-    label: "体重(kg)",
+    label: "Weight (kg)",
     children: [{ content: "2.8kg" }, { content: "-" }, { content: "-" }],
   },
   {
-    label: "自由度",
+    label: "Degress of Freedom",
     children: [
-      { content: "18<br>手4*2<br>腿5*2" },
-      { content: "16<br>手臂3*2<br>腿5*2" },
+      { content: "18<br>Arm DoF 4*2<br>Leg DoF 5*2" },
+      { content: "16<br>Arm DoF 3*2<br>Leg DoF 5*2" },
       { content: "20" },
     ],
   },
@@ -53,58 +45,50 @@ const COMPARISON_LIST: ComparisonItem[] = [
     ],
   },
   {
-    label: "算力(TOPS)",
+    label: "Computing power (TOPS)",
     children: [{ content: "0.5" }, { content: "-" }, { content: "-" }],
   },
   {
-    label: "内存(G)",
+    label: "Memory (GB)",
     children: [{ content: "0.5" }, { content: "-" }, { content: "8" }],
   },
   {
-    label: "存储(G)",
+    label: "Storage (GB)",
     children: [{ content: "32" }, { content: "-" }, { content: "128" }],
   },
   {
-    label: "速度(m/s)",
+    label: "Speed (m/s)",
     children: [{ content: "0.35" }, { content: "-" }, { content: "-" }],
   },
   {
-    label: "最大关节力矩(N·m)",
+    label: "Max Joint Torque (N·m)",
     children: [{ content: "3" }, { content: "8" }, { content: "-" }],
   },
   {
-    label: "电池(mAh)",
+    label: "Battery (mAh)",
     children: [{ content: "TBD" }, { content: "3000" }, { content: "1800" }],
   },
   {
-    label: "续航(h)",
+    label: "Battery life (h)",
     children: [{ content: "TBD" }, { content: "-" }, { content: "-" }],
   },
   {
-    label: "感知",
-    children: [{ content: "广角摄像头" }, { content: "-" }, { content: "高清网络摄像头" }],
+    label: "Perception",
+    children: [{ content: "Wide-angle camera" }, { content: "-" }, { content: "HD webcam" }],
   },
   {
-    label: "功能",
+    label: "Features",
     children: [
-      { content: "少内容" },
-      { content: "动态行走、奔跑、跳跃<br>Wifi或蓝牙控制" },
-      { content: "可以进行足球赛" },
-    ],
-  },
-  {
-    label: "特点",
-    children: [
-      { content: "第一款端到端机器人" },
+      { content: "The first end-to-end robot" },
       {
-        content: "独立的无线急停装置<br>膝关节驱动器液态冷却<br>碳纤维骨架",
+        content: `Independent wireless emergency stop device<br>Knee drive liquid cooling<br>carbon fiber skeleton`,
       },
-      { content: "小型化<br>高度可编程" },
+      { content: `miniaturization<br>Highly programmable` },
     ],
   },
   {
-    label: "价格",
-    children: [{ content: "少内容" }, { content: "$15290" }, { content: "$11000" }],
+    label: "Price",
+    children: [{ content: "$999" }, { content: "$15,290" }, { content: "$11,000" }],
   },
 ];
 
@@ -148,13 +132,18 @@ export const ComparisonSection = () => {
         competing in hackathons, our platform empowers you to do more.
       </p>
 
-      <div className="bg-white md:rounded-2xl p-2 md:p-5 flex flex-col gap-1 overflow-x-auto md:mx-[5vw]">
+      <div className="bg-background-card md:rounded-2xl p-2 md:p-5 flex flex-col gap-1 overflow-x-auto md:mx-[5vw]">
         {COMPARISON_LIST.map((item, index) => {
           return <ComparisonRow item={item} key={index} index={index} />;
         })}
       </div>
 
-      <video src="" controls className="mx-auto w-11/12 md:w-2/3 mt-10 rounded-2xl"></video>
+      {/*<video src="" controls className="mx-auto w-11/12 md:w-2/3 mt-10 rounded-2xl"></video>*/}
+      {/*<iframe
+        src="https://www.youtube.com/embed/Zts1I2FRP90"
+        allowFullScreen
+        className="aspect-[1.4] md:aspect-[1.777] mx-auto w-11/12 md:w-2/3 mt-10 rounded-2xl"
+      />*/}
     </section>
   );
 };

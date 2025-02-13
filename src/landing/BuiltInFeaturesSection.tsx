@@ -4,21 +4,14 @@ import { motion, useMotionValue } from "motion/react";
 import clsx from "clsx";
 
 type FeatItem = {
-  poster: string;
-  src: string;
+  embed: string;
 };
 const FEAT_ITEMS: FeatItem[] = [
   {
-    poster: "",
-    src: "",
+    embed: "https://www.youtube.com/embed/PFRsyrRrCwk",
   },
   {
-    poster: "",
-    src: "",
-  },
-  {
-    poster: "",
-    src: "",
+    embed: "https://www.youtube.com/embed/4h6jpXjAWcE",
   },
 ];
 
@@ -30,12 +23,13 @@ const FeatCard = ({ item }: { item: FeatItem }) => {
       )}
       draggable={false}
     >
-      <video
+      {/*<video
         src={item.src}
         poster={item.poster}
         className="w-full h-full object-cover rounded-2xl"
         muted
-      ></video>
+      ></video>*/}
+      <iframe src={item.embed} allowFullScreen className="w-full h-full rounded-2xl" />
     </motion.div>
   );
 };

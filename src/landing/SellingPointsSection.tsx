@@ -25,7 +25,7 @@ export const SellingPointsSection = () => {
 
   return (
     <section className="py-16 col-span-full">
-      <h2 className="">Unique Selling Points</h2>
+      <h2 className="">Why is Zeroth Bot unique</h2>
       <div className="flex flex-col md:flex-row gap-6 mt-8">
         {cardItems.map((item, index) => (
           <div key={index} className="flex flex-col flex-1 gap-3 text-rust">

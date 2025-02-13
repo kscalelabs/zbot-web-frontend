@@ -7,26 +7,22 @@ const CAROUSEL_ITEMS = [
   {
     title: "Motion-to-motion",
     desc: "Program your robot to replicate complex movements.",
-    src: "",
-    poster: "",
+    embed: "https://www.youtube.com/embed/PFRsyrRrCwk",
   },
   {
     title: "Play with pets",
     desc: "Let your robot keep your pets entertained when you’re not home.",
-    src: "",
-    poster: "",
+    embed: "https://www.youtube.com/embed/5HE8eQSOAzs",
   },
   {
     title: "Boxing for kids",
     desc: "Fun, safe activities for kids to engage with their robot.",
-    src: "",
-    poster: "",
+    embed: "https://www.youtube.com/embed/wFZh34sapL8",
   },
   {
     title: "Gym buddy",
     desc: "Train alongside your robot for motivation and companionship.",
-    src: "",
-    poster: "",
+    embed: "https://www.youtube.com/embed/PFRsyrRrCwk?si=iAq8APPB5Dm4ZVJo&amp;start=15",
   },
 ];
 
@@ -51,7 +47,7 @@ export const InteractiveCarouselSection = () => {
               key={index}
               layout
               className={clsx(
-                "bg-white rounded-2xl p-4 md:p-5 cursor-pointer min-w-32",
+                "bg-background-card rounded-2xl p-4 md:p-5 cursor-pointer min-w-32",
                 index === selectedIndex ? "opacity-100" : "opacity-50"
               )}
               onClick={() => handleItemClick(index)}
@@ -76,16 +72,21 @@ export const InteractiveCarouselSection = () => {
           ))}
         </div>
         <div className="flex-1 px-[5vw] md:px-[0]">
-          <div className="sticky top-16   aspect-[1.77] overflow-hidden">
+          <div className="sticky top-16 aspect-[1.4] md:aspect-[1.777] overflow-hidden">
             {selectedItem && (
-              <video
+              /*<video
                 muted
                 autoPlay
                 className="w-full h-full object-cover rounded-2xl"
                 src={selectedItem.src}
                 poster={selectedItem.poster}
                 controls
-              ></video>
+              ></video>*/
+              <iframe
+                src={selectedItem.embed}
+                allowFullScreen
+                className="w-full h-full rounded-2xl"
+              />
             )}
           </div>
         </div>

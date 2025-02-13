@@ -1,17 +1,41 @@
+import { useRef } from "react";
+import { motion, useTransform, useScroll } from "motion/react";
+
 const SubscribeSection = () => {
+  const scrollRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: scrollRef,
+    offset: ["start center", "center center"],
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
   return (
-    <section className="col-span-full py-16 md:py-24 text-black">
+    <section className="col-span-full py-16 md:py-24 ">
+      <motion.div
+        ref={scrollRef}
+        className="w-full pt-16 pb-36"
+        style={{
+          opacity,
+        }}
+      >
+        <p className="text-heading-lg text-center leading-tight">
+          &#34;More than a robot—it’s your
+          <br />
+          creation in every way.&#34;
+        </p>
+      </motion.div>
+
       <div className="w-full flex flex-col md:flex-row gap-4">
-        <div className="flex-1 bg-white rounded-2xl min-h-52 flex items-center justify-center flex-col gap-2 text-center py-2 px-4">
+        <div className="flex-1 bg-background-card rounded-2xl min-h-52 flex items-center justify-center flex-col gap-2 text-center py-2 px-4">
           <h3 className="">Powered by K-Scale</h3>
           <p>
             Our robots are powered by advanced K-Scale technology, ensuring precision, performance,
             and endless possibilities.
           </p>
         </div>
-        <div className="flex-1 bg-white rounded-2xl min-h-52 flex items-center justify-center flex-col gap-2 text-center py-2 px-4">
+        <div className="flex-1 bg-background-card rounded-2xl min-h-52 flex items-center justify-center flex-col gap-2 text-center py-2 px-4">
           <h3 className="">Our Vision</h3>
-          <p className="text-rust">&#34;More than a robot—it’s your creation in every way.&#34;</p>
           <p>
             Welcome to the future of robotics, where robots are more than machines—they’re a
             reflection of your creativity, personality, and imagination. Let’s build the future
@@ -19,9 +43,9 @@ const SubscribeSection = () => {
           </p>
         </div>
       </div>
-      <div className="mt-4 bg-white rounded-2xl py-10 px-4 col-span-full relative overflow-hidden text-center">
+      <div className="mt-4 bg-background-card rounded-2xl py-10 px-4 col-span-full relative overflow-hidden text-center">
         <h3 className="mb-4 ">Expand Your Imagination for Only $1000</h3>
-        <p>
+        <p className="text-lg">
           With our affordable pricing, anyone can explore the world of robotics without breaking the
           bank.
         </p>
