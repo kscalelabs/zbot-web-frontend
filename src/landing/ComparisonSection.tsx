@@ -94,8 +94,8 @@ const COMPARISON_LIST: ComparisonItem[] = [
 
 const ComparisonRow = ({ item, index }: { item: ComparisonItem; index: number }) => {
   return (
-    <div className="flex flex-row gap-2 md:gap-10 min-w-96">
-      <div className="min-w-24 md:w-1/6 rounded-2xl md:rounded-full bg-background flex items-center justify-center text-xs break-all md:break-normal">
+    <div className="flex flex-row gap-2 md:gap-6 lg:gap-10 min-w-96">
+      <div className="min-w-24 md:w-1/6 rounded-2xl md:rounded-full bg-background flex items-center justify-center text-xs break-all md:break-normal text-center">
         {item.label}
       </div>
       <div
