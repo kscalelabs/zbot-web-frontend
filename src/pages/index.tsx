@@ -9,20 +9,16 @@ import HeaderSection from "@/landing/HeaderSection";
 // import RobotSection from "@/landing/RobotSection";
 import { useLenis } from "lenis/dist/lenis-react";
 import { useEffect } from "react";
-import SubscribeSection from "@/landing/SubscribeSection";
 import { HeroTextSection } from "@/landing/HeroTextSection";
 import { SimToRealSection } from "@/landing/SimToRealSection";
-import { ForWhoSection } from "@/landing/ForWhoSection";
 import { RobotPicturesSection } from "@/landing/RobotPicturesSection";
-import { RotatingBanner } from "@/landing/RotatingBanner";
-import { BuiltInFeaturesSection } from "@/landing/BuiltInFeaturesSection";
 import { InteractiveCarouselSection } from "@/landing/InteractiveCarouselSection";
-import { ForStudentsSection } from "@/landing/ForStudentsSection";
 import { ComparisonSection } from "@/landing/ComparisonSection";
-import { ForHackersSection } from "@/landing/ForHackersSection";
-import { SellingPointsSection } from "@/landing/SellingPointsSection";
-import { ForSTEMSection } from "@/landing/ForSTEMSection";
 import SubscribeFooterSection from "@/landing/SubscribeFooterSection";
+import { ForTitle } from "@/landing/ForTitle";
+import { ForHackersSection } from "@/landing/ForHackersSection";
+import { ForUsersSection } from "@/landing/ForUsersSection";
+import { ForStudentsSection } from "@/landing/ForStudentsSection";
 
 export default function ZBot() {
   const lenis = useLenis();
@@ -65,19 +61,16 @@ export default function ZBot() {
       <NavBar href="/" />
       <main className="gap-y-4">
         <HeaderSection />
-        <SubscribeSection />
         <HeroTextSection />
-        <RotatingBanner />
         <SimToRealSection />
-        <ForWhoSection />
-        <RobotPicturesSection />
-        <BuiltInFeaturesSection />
-        <InteractiveCarouselSection />
-        <ForStudentsSection />
-        <ComparisonSection />
+
         <ForHackersSection />
-        <SellingPointsSection />
-        <ForSTEMSection />
+        <ForStudentsSection />
+        <ForUsersSection />
+
+        <RobotPicturesSection />
+        <InteractiveCarouselSection />
+        <ComparisonSection />
         <SubscribeFooterSection />
 
         {/*<ResearchSection />*/}

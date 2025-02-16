@@ -39,7 +39,7 @@ export const InteractiveCarouselSection = () => {
 
   return (
     <section className="py-16 col-span-full -mx-[5vw] md:px-[5vw]">
-      <h2 className="text-center">Interactive Carousel</h2>
+      <h2 className="text-center">Project examples</h2>
       <div className="mt-6 flex flex-col md:flex-row gap-4 relative">
         <div className="w-full md:w-[26vw] flex flex-row md:flex-col gap-2 overflow-auto px-[5vw] md:px-[0]">
           {CAROUSEL_ITEMS.map((item, index) => (

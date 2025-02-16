@@ -1,17 +1,42 @@
 import { useRef } from "react";
 import { motion, useTransform, useScroll } from "motion/react";
 
+export const SubscribeForm = ({ inputClassName } = { inputClassName: "" }) => {
+  return (
+    <form
+      action="https://dev.us22.list-manage.com/subscribe/post?u=a090115c9a76e96d327360f7d&amp;id=8a6ee81bb8&amp;f_id=00c3dce1f0"
+      method="post"
+      target="_blank"
+      className="flex gap-4"
+    >
+      <input type="email" name="EMAIL" className={inputClassName} placeholder="Email" />
+      <div aria-hidden="true" style={{ position: "absolute", left: "-5000px" }}>
+        <input type="text" name="b_a090115c9a76e96d327360f7d_8a6ee81bb8" tabIndex={-1} />
+      </div>
+      <input
+        type="submit"
+        value="Sign Up Now!"
+        name="subscribe"
+        className="px-4 text-sm rounded-full bg-rust text-filament font-medium cursor-pointer hover:opacity-90 transition-opacity"
+      />
+      <a className="px-4 text-sm rounded-full border-current border flex items-center font-medium cursor-pointer hover:bg-rust hover:text-white">
+        Buy
+      </a>
+    </form>
+  );
+};
+
 const SubscribeSection = () => {
   const scrollRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
-    offset: ["start center", "center center"],
+    offset: ["start end", "center center"],
   });
 
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <section className="col-span-full py-16 md:py-24 ">
+    <section className="col-span-full pb-16 md:pb-24 ">
       <motion.div
         ref={scrollRef}
         className="w-full pt-16 pb-36"
@@ -50,29 +75,8 @@ const SubscribeSection = () => {
           bank.
         </p>
 
-        <div className="mt-8 mx-auto max-w-80 text-center">
-          <form
-            action="https://dev.us22.list-manage.com/subscribe/post?u=a090115c9a76e96d327360f7d&amp;id=8a6ee81bb8&amp;f_id=00c3dce1f0"
-            method="post"
-            target="_blank"
-            className="flex flex-col gap-2"
-          >
-            <input
-              type="email"
-              name="EMAIL"
-              className="w-full px-4 py-2 text-sm rounded-md bg-background/10 border border-filament/20 backdrop-blur-sm text-rust placeholder:text-filament/50"
-              placeholder="Email"
-            />
-            <div aria-hidden="true" style={{ position: "absolute", left: "-5000px" }}>
-              <input type="text" name="b_a090115c9a76e96d327360f7d_8a6ee81bb8" tabIndex={-1} />
-            </div>
-            <input
-              type="submit"
-              value="Sign Up Now!"
-              name="subscribe"
-              className="w-full px-6 py-2 text-sm rounded-full bg-rust text-filament font-medium cursor-pointer hover:opacity-90 transition-opacity"
-            />
-          </form>
+        <div className="mt-8 mx-auto flex justify-center">
+          <SubscribeForm inputClassName="w-80 px-4 py-2 text-sm rounded-md bg-[#F8F4F2] border text-rust placeholder:text-filament/50 text-center" />
         </div>
       </div>
     </section>

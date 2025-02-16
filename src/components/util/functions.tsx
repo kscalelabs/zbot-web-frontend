@@ -22,3 +22,30 @@ export function useWindowSize() {
   }, []);
   return windowSize;
 }
+
+export const useSystemDarkMode = () => {
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    return false; // Default to light mode on the server
+  });
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+      const handleChange = (event) => {
+        setIsDarkMode(event.matches);
+      };
+
+      mediaQuery.addEventListener('change', handleChange);
+
+      return () => {
+        mediaQuery.removeEventListener('change', handleChange);
+      };
+    }
+  }, []);
+
+  return isDarkMode;
+};

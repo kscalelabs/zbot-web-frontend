@@ -36,7 +36,6 @@ export const photoPaths = {
   NEW_UI_FOR_ICON_1: "/photos/new-ui/for_icon_1.svg",
   NEW_UI_FOR_ICON_2: "/photos/new-ui/for_icon_2.svg",
   NEW_UI_FOR_ICON_3: "/photos/new-ui/for_icon_3.svg",
-  NEW_UI_HERO_BG: "/photos/new-ui/hero_bg.jpg",
   NEW_UI_SELLING_POINT_1: "/photos/new-ui/selling_point_1.jpg",
   NEW_UI_SELLING_POINT_2: "/photos/new-ui/selling_point_2.jpg",
   NEW_UI_SELLING_POINT_3: "/photos/new-ui/selling_point_3.jpg",
@@ -46,6 +45,41 @@ export const photoPaths = {
   NEW_UI_ZBOT_1: "/photos/new-ui/zbot_1.jpg",
   NEW_UI_ZBOT_2: "/photos/new-ui/zbot_2.jpg",
   NEW_UI_ZBOT_3: "/photos/new-ui/zbot_3.jpg",
+
+  NEW_UI_HERO_BG_LIGHT: "/photos/new-ui/v2/hero_bg_light.jpg",
+  NEW_UI_HERO_BG_DARK: "/photos/new-ui/v2/hero_bg_dark.jpg",
+
+  NEW_UI_ICON_PYTORCH_LIGHT: "/photos/new-ui/v2/icon_pytorch_light.png",
+  NEW_UI_ICON_PYTORCH_DARK: "/photos/new-ui/v2/icon_pytorch_dark.png",
+  NEW_UI_ICON_ROS_LIGHT: "/photos/new-ui/v2/icon_ros_light.png",
+  NEW_UI_ICON_ROS_DARK: "/photos/new-ui/v2/icon_ros_dark.png",
+  NEW_UI_ICON_NVIDIA_LIGHT: "/photos/new-ui/v2/icon_nvidia_light.png",
+  NEW_UI_ICON_NVIDIA_DARK: "/photos/new-ui/v2/icon_nvidia_dark.png",
+  NEW_UI_ICON_PYTHON: "/photos/new-ui/v2/icon_python.png",
+
+  NEW_UI_ROBOT_1_DARK: "/photos/new-ui/v2/pic_robot_1_dark.jpg",
+  NEW_UI_ROBOT_1_LIGHT: "/photos/new-ui/v2/pic_robot_1_light.jpg",
+  NEW_UI_ROBOT_2_DARK: "/photos/new-ui/v2/pic_robot_2_dark.jpg",
+  NEW_UI_ROBOT_2_LIGHT: "/photos/new-ui/v2/pic_robot_2_light.jpg",
+  NEW_UI_ROBOT_3_DARK: "/photos/new-ui/v2/pic_robot_3_dark.jpg",
+  NEW_UI_ROBOT_3_LIGHT: "/photos/new-ui/v2/pic_robot_3_light.jpg",
+  NEW_UI_ROBOT_4_DARK: "/photos/new-ui/v2/pic_robot_4_dark.jpg",
+  NEW_UI_ROBOT_4_LIGHT: "/photos/new-ui/v2/pic_robot_4_light.jpg",
+
+  NEW_UI_AI_1: "/photos/new-ui/v2/pic_ai_1.jpg",
+  NEW_UI_AI_2: "/photos/new-ui/v2/pic_ai_2.jpg",
+  NEW_UI_AI_3: "/photos/new-ui/v2/pic_ai_3.jpg",
+  NEW_UI_AI_4: "/photos/new-ui/v2/pic_ai_4.jpg",
+
+  NEW_UI_USER_1: "/photos/new-ui/v2/pic_user_1.jpg",
+  NEW_UI_USER_2: "/photos/new-ui/v2/pic_user_2.jpg",
+  NEW_UI_USER_3: "/photos/new-ui/v2/pic_user_3.jpg",
+  NEW_UI_USER_4: "/photos/new-ui/v2/pic_user_4.jpg",
+
+  NEW_UI_STUDENTS_1: "/photos/new-ui/v2/pic_students_1.jpg",
+  NEW_UI_STUDENTS_2: "/photos/new-ui/v2/pic_students_2.jpg",
+  NEW_UI_STUDENTS_3: "/photos/new-ui/v2/pic_students_3.jpg",
+  NEW_UI_STUDENTS_4: "/photos/new-ui/v2/pic_students_4.jpg",
 };
 export const photoPathAltText = {
   LANDING_IMAGE_ALT: "Header",

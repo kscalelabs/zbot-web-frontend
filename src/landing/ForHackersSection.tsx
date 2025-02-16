@@ -1,55 +1,101 @@
+import { photoPaths } from "@/components/util/photoPaths";
 import Image from "next/image";
-import { photoPathAltText, photoPaths } from "@/components/util/photoPaths";
+import { useSystemDarkMode } from "@/components/util/functions";
+import { ForTitle } from "@/landing/ForTitle";
+import { SliderSection } from "@/landing/SliderSection";
 
 export const ForHackersSection = () => {
+  const isDarkMode = useSystemDarkMode();
+
+  const cardItems = [
+    {
+      imageSrc: isDarkMode ? photoPaths.NEW_UI_ROBOT_1_DARK : photoPaths.NEW_UI_ROBOT_1_LIGHT,
+    },
+    {
+      imageSrc: isDarkMode ? photoPaths.NEW_UI_ROBOT_2_DARK : photoPaths.NEW_UI_ROBOT_2_LIGHT,
+    },
+    {
+      imageSrc: isDarkMode ? photoPaths.NEW_UI_ROBOT_3_DARK : photoPaths.NEW_UI_ROBOT_3_LIGHT,
+    },
+    {
+      imageSrc: isDarkMode ? photoPaths.NEW_UI_ROBOT_4_DARK : photoPaths.NEW_UI_ROBOT_4_LIGHT,
+    },
+  ];
+
+  const toolItems = [
+    {
+      imageSrc: isDarkMode
+        ? photoPaths.NEW_UI_ICON_PYTORCH_DARK
+        : photoPaths.NEW_UI_ICON_PYTORCH_LIGHT,
+    },
+    {
+      imageSrc: isDarkMode ? photoPaths.NEW_UI_ICON_ROS_DARK : photoPaths.NEW_UI_ICON_ROS_LIGHT,
+    },
+    {
+      imageSrc: isDarkMode
+        ? photoPaths.NEW_UI_ICON_NVIDIA_DARK
+        : photoPaths.NEW_UI_ICON_NVIDIA_LIGHT,
+    },
+    {
+      imageSrc: photoPaths.NEW_UI_ICON_PYTHON,
+    },
+  ];
+
   return (
-    <section className="-mx-[5vw] relative col-span-full">
-      <div className="h-[100vh] sticky top-0 relative">
-        <Image
-          src={photoPaths.NEW_UI_FOR_BG}
-          alt={photoPathAltText.NEW_UI_FOR_BG}
-          fill
-          className="object-cover"
-          priority={true}
-        />
-      </div>
-      <div className="min-h-[100vh] sticky top-0">
-        <div className="min-h-[100vh] mr-auto w-full md:w-1/2 p-6 md:p-14 bg-rust opacity-85 text-white">
-          <h3 className="mb-2">For Hackers Who Know the Tools</h3>
-          <p className="text-xs mb-10">
-            Zeroth Bot is a powerhouse for hackers familiar with advanced AI/ML workflows. It’s
-            capable of learning-based control and running the latest end-to-end AI/ML models. With
-            its fully open-source code available on GitHub, Zeroth Bot integrates seamlessly with
-            platforms like Python, Nvidia, ROS, and PyTorch, enabling limitless functionality across
-            systems.
-            <br />
-            <br />
-            Hackers are further empowered by a thriving community of world-class ML researchers who
-            actively share data, models, and code to accelerate development and innovation.
-          </p>
-          <h4 className="mb-2">Zeroth Bot excels in cutting-edge AI tasks, including</h4>
-          <p className="text-xs mb-10">
-            · Language-Action Models <br />
-            · Voice Control <br />
-            · Computer Vision (CV) <br />
-            · LLM-Based Conversational AI <br />
-            <br />
-            With Zeroth Bot, you gain the tools, flexibility, and community to push the boundaries
-            of robotics and machine learning.
-          </p>
+    <>
+      <ForTitle title="Developers" subtitle="Who is it for?" />
+      <section className="py-16 col-span-full">
+        <h2>For Hackers Who Know the Tools</h2>
+        <p className="mt-4 leading-5 max-w-3xl">
+          Zeroth Bot is a powerhouse for hackers familiar with advanced AI/ML workflows. It’s
+          capable of learning-based control and running the latest end-to-end AI/ML models. With its
+          fully open-source code available on GitHub, Zeroth Bot integrates seamlessly with
+          platforms like Python, Nvidia, ROS, and PyTorch, enabling limitless functionality across
+          systems.
+        </p>
+
+        <div className="mt-6 bg-background-card p-6 rounded-2xl flex gap-6 justify-center items-center">
+          {toolItems.map((item, index) => (
+            <div key={index}>
+              <img src={item.imageSrc} alt="icon" className="h-10 w-auto" />
+            </div>
+          ))}
+          <div className="text-2xl">More...</div>
         </div>
-        <div className="min-h-[100vh] ml-auto w-full md:w-1/2 p-6 md:p-14 text-black bg-[rgba(255,255,255,0.9)] flex items-center">
-          <div>
-            <h3 className="mb-2">For Beginners with No Robotics Experience</h3>
-            <p className="text-xs mb-10">
-              <span className="text-rust">Today, you can define and own your own robot.</span>{" "}
-              <br />
-              No prior experience? No problem. Our platform is designed to make robotics accessible
-              to everyone. Start small, learn as you go, and create something unique.
-            </p>
-          </div>
+
+        <div className="flex flex-col md:flex-row gap-6 mt-6">
+          {cardItems.map((item, index) => (
+            <div key={index} className="flex flex-col flex-1 gap-3 text-rust">
+              <div className=" rounded-2xl aspect-[0.975] relative overflow-hidden">
+                <Image src={item.imageSrc} alt="robot" fill className="object-cover" priority />
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-    </section>
+      </section>
+      <SliderSection
+        title="Zeroth Bot excels in cutting-edge AI tasks"
+        desc="With Zeroth Bot, you gain the tools, flexibility, and community to push the boundaries of robotics and machine learning."
+        list={[
+          {
+            src: photoPaths.NEW_UI_AI_1,
+            title: "Language-Action Models",
+          },
+          {
+            src: photoPaths.NEW_UI_AI_2,
+            title: "Language-Action Models",
+          },
+          {
+            src: photoPaths.NEW_UI_AI_3,
+            title: "Computer Vision (CV)",
+          },
+          {
+            src: photoPaths.NEW_UI_AI_4,
+            title: "LLM-Based Conversational AI",
+          },
+        ]}
+        aspectRatio={1.77}
+      />
+    </>
   );
 };

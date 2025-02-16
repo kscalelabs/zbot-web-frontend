@@ -126,7 +126,7 @@ export const ComparisonSection = () => {
   return (
     <section className="col-span-full py-24 -mx-[5vw]">
       <h2 className="text-center">Competitor Comparison</h2>
-      <p className="text-center mt-2 mb-6 mx-[5vw]">
+      <p className="text-center mt-4 mb-6 max-w-4xl mx-auto leading-5">
         Unlike traditional robotics platforms, we provide intuitive, affordable tools for students
         to experiment without barriers. Whether it’s programming robots to play football or
         competing in hackathons, our platform empowers you to do more.

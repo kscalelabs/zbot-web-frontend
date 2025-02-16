@@ -8,7 +8,7 @@ export const RobotPicturesSection = () => {
       <div className="col-span-full lg:col-span-6">
         <div className="lg:sticky top-32 mb-10">
           <h2>See Your Robot in Action</h2>
-          <p className="text-sm text-gray-500 mt-4">
+          <p className="text-sm  mt-4">
             Your robot isn’t just programmable—it’s expressive. Watch it walk, animate, and move
             from every angle: side-view, upper-view, and more. The possibilities are endless when
             you define the way it interacts with the world.

@@ -10,20 +10,12 @@ type TextItem = {
 
 const TEXT_LIST: TextItem[] = [
   {
-    text: "Affordable Robotics for All",
-    className: "text-heading-md md:text-heading-lg",
+    text: "Purpose-Built AI Hardware",
+    className: "text-heading-md md:text-6xl",
   },
   {
-    text: "Now you can get started and learn for less than $1000",
-    className: "text-heading-md md:text-heading-lg",
-  },
-  {
-    text: `Robotics has always been seen as expensive and exclusive. <br>
-Not anymore.<br>
-With our platform, you can own and train a robot for less than $1000, bringing cutting-edge technology within everyone’s reach.<br>
-<br>
-Whether you're a student, a hacker, or someone with no prior experience, this is your chance to explore the future.<br>`,
-    className: "text-heading-sm",
+    text: "Industrial-grade robotics now accessible at $999",
+    className: "text-heading-md md:text-6xl",
   },
 ];
 const ScrollContext = createContext(new MotionValue());
@@ -76,7 +68,7 @@ export const HeroTextSection = () => {
   // });
 
   return (
-    <section ref={scrollRef} className="col-span-full h-[350vh]">
+    <section ref={scrollRef} className="col-span-full h-[250vh]">
       <ScrollContext.Provider value={scrollYProgress}>
         {TEXT_LIST.map((item, index) => {
           return (
