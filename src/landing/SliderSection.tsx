@@ -155,7 +155,7 @@ const FeatsSwipeCarousel = ({
           <motion.button
             onClick={decrement}
             aria-label="Previous article"
-            className="select-none rounded-full bg-[rgba(0,0,0,0.16)] w-7 h-7 flex items-center justify-center text-white shadow-md
+            className="select-none rounded-full bg-[rgba(0,0,0,0.16)] dark:bg-[rgba(255,255,255,0.16)] w-7 h-7 flex items-center justify-center text-white shadow-md
           "
             initial={{ opacity: 1 }}
             animate={{ opacity: imgIndex > 0 ? 1 : 0.5 }}
@@ -175,7 +175,7 @@ const FeatsSwipeCarousel = ({
           <motion.button
             onClick={increment}
             aria-label="Next article"
-            className="select-none rounded-full bg-[rgba(0,0,0,0.16)] w-7 h-7 flex items-center justify-center text-white shadow-md
+            className="select-none rounded-full bg-[rgba(0,0,0,0.16)] dark:bg-[rgba(255,255,255,0.16)] w-7 h-7 flex items-center justify-center text-white shadow-md
           "
             initial={{ opacity: 1 }}
             animate={{ opacity: imgIndex < dimensions.max ? 1 : 0.5 }}

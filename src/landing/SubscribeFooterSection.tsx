@@ -7,7 +7,7 @@ export const SubscribeForm = ({ inputClassName } = { inputClassName: "" }) => {
       action="https://dev.us22.list-manage.com/subscribe/post?u=a090115c9a76e96d327360f7d&amp;id=8a6ee81bb8&amp;f_id=00c3dce1f0"
       method="post"
       target="_blank"
-      className="flex flex-col md:flex-row gap-4 w-full"
+      className="flex flex-col md:flex-row gap-4 w-full md:w-auto"
     >
       <input type="email" name="EMAIL" className={inputClassName} placeholder="Email" />
       <div aria-hidden="true" style={{ position: "absolute", left: "-5000px" }}>
