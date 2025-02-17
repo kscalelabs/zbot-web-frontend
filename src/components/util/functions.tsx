@@ -33,7 +33,7 @@ export const useSystemDarkMode = () => {
 
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-      const handleChange = (event) => {
+      const handleChange = (event: MediaQueryListEvent) => {
         setIsDarkMode(event.matches);
       };
 
