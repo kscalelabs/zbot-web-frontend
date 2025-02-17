@@ -40,14 +40,14 @@ const FeatCard = ({
         />
       )}
       {item.title && (
-        <div className="absolute inset-0 flex flex-col justify-end p-5">
-          <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+        <div className="absolute inset-0 flex flex-col justify-end p-3 md:p-5">
+          <h3 className="text-base md:text-xl font-semibold text-white">{item.title}</h3>
         </div>
       )}
       {item.html && (
         <div className="flex h-full items-center p-10">
           <div
-            className="text-2xl text-rust font-semibold"
+            className="text-lg md:text-2xl text-rust font-semibold"
             dangerouslySetInnerHTML={{ __html: item.html }}
           ></div>
         </div>
@@ -109,14 +109,14 @@ const FeatsSwipeCarousel = ({
       const rect = card.getBoundingClientRect();
       cardWidth.current = (rect.width / width) * 100;
     }
-  }, [width]);
+  }, [width, className]);
 
   const dimensions = useMemo(() => {
     return {
       gap: 1.25,
       max: list.length - 1,
     };
-  }, []);
+  }, [list]);
 
   const dragX = useMotionValue(0);
 
@@ -146,7 +146,7 @@ const FeatsSwipeCarousel = ({
   }, [width]);
 
   return (
-    <div className={clsx("col-span-full -mx-[5vw] px-[5vw] relative ", className)}>
+    <div className={clsx("col-span-full relative mt-5 md:mt-0", className)}>
       {/*<div className="fixed top-0 left-0 z-50 text-molten">
         {imgIndex} {dimensions.gap}
       </div>*/}
@@ -233,7 +233,7 @@ export const SliderSection = (
   } = { title: "", desc: "", list: [], aspectRatio: 1 }
 ) => {
   return (
-    <section className="col-span-full py-16 grid grid-cols-subgrid">
+    <section className="col-span-full py-16 grid grid-cols-subgrid -mx-[5vw] px-[5vw]  overflow-hidden">
       <div className="col-span-6">
         <h2>{title}</h2>
         <p className="mt-4 mb-4 leading-5 max-w-3xl">{desc}</p>

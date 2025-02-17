@@ -24,15 +24,13 @@ export function useWindowSize() {
 }
 
 export const useSystemDarkMode = () => {
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    }
-    return false; // Default to light mode on the server
-  });
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
+      const is =  window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setIsDarkMode(is);
+
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
       const handleChange = (event) => {

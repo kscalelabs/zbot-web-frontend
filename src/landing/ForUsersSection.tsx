@@ -28,7 +28,7 @@ export const ForUsersSection = () => {
           },
         ]}
         aspectRatio={1.3636}
-        itemClassName="w-[34vw] md:w-[35w]"
+        itemClassName="w-[80vw] md:w-[35vw]"
       />
     </>
   );

@@ -20,7 +20,7 @@ const HeaderSection = () => {
           loading="eager"
         />
       </div>
-      <div className="z-10   col-span-full flex justify-between items-end">
+      <div className="z-10 col-span-full flex gap-5 justify-between md:items-end flex-col md:flex-row">
         <div className="max-w-lg">
           <h1 className="text-heading-md md:text-heading-lg">Embodying the new wave of AI</h1>
 
@@ -28,7 +28,7 @@ const HeaderSection = () => {
         </div>
 
         <div className="flex items-center p-5 bg-[#ffffff66] dark:bg-[#00000066] backdrop-blur rounded-3xl">
-          <SubscribeForm inputClassName="w-60 px-4 py-2 text-sm rounded-md bg-background/10 border border-filament/20 backdrop-blur-sm text-rust placeholder:text-filament/50 text-center" />
+          <SubscribeForm inputClassName="w-auto md:w-60 px-4 py-2 text-sm rounded-md bg-background/10 border border-filament/20 backdrop-blur-sm text-rust placeholder:text-filament/50 text-center" />
         </div>
       </div>
     </header>

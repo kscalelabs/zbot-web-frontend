@@ -7,7 +7,7 @@ export const SubscribeForm = ({ inputClassName } = { inputClassName: "" }) => {
       action="https://dev.us22.list-manage.com/subscribe/post?u=a090115c9a76e96d327360f7d&amp;id=8a6ee81bb8&amp;f_id=00c3dce1f0"
       method="post"
       target="_blank"
-      className="flex gap-4"
+      className="flex flex-col md:flex-row gap-4 w-full"
     >
       <input type="email" name="EMAIL" className={inputClassName} placeholder="Email" />
       <div aria-hidden="true" style={{ position: "absolute", left: "-5000px" }}>
@@ -17,9 +17,9 @@ export const SubscribeForm = ({ inputClassName } = { inputClassName: "" }) => {
         type="submit"
         value="Sign Up Now!"
         name="subscribe"
-        className="px-4 text-sm rounded-full bg-rust text-filament font-medium cursor-pointer hover:opacity-90 transition-opacity"
+        className="px-4 py-2 text-sm rounded-full bg-rust text-filament font-medium cursor-pointer hover:opacity-90 transition-opacity"
       />
-      <a className="px-4 text-sm rounded-full border-current border flex items-center font-medium cursor-pointer hover:bg-rust hover:text-white">
+      <a className="px-4 py-2 text-sm rounded-full border-current border flex items-center justify-center font-medium cursor-pointer hover:bg-rust hover:text-white">
         Buy
       </a>
     </form>
@@ -39,19 +39,19 @@ const SubscribeSection = () => {
     <section className="col-span-full pb-16 md:pb-24 ">
       <motion.div
         ref={scrollRef}
-        className="w-full pt-16 pb-36"
+        className="w-full pt-8 md:pt-16 pb-24 md:pb-36"
         style={{
           opacity,
         }}
       >
-        <p className="text-heading-lg text-center leading-tight">
+        <p className="text-xl md:text-heading-lg text-center leading-tight">
           &#34;More than a robot—it’s your
           <br />
           creation in every way.&#34;
         </p>
       </motion.div>
 
-      <div className="w-full flex flex-col md:flex-row gap-4">
+      <div className="w-full flex flex-col md:flex-row gap-4 ">
         <div className="flex-1 bg-background-card rounded-2xl min-h-52 flex items-center justify-center flex-col gap-2 text-center py-2 px-4">
           <h3 className="">Powered by K-Scale</h3>
           <p>
@@ -69,14 +69,14 @@ const SubscribeSection = () => {
         </div>
       </div>
       <div className="mt-4 bg-background-card rounded-2xl py-10 px-4 col-span-full relative overflow-hidden text-center">
-        <h3 className="mb-4 ">Expand Your Imagination for Only $1000</h3>
-        <p className="text-lg">
+        <h3 className="mb-4">Expand Your Imagination for Only $1000</h3>
+        <p className="md:text-lg">
           With our affordable pricing, anyone can explore the world of robotics without breaking the
           bank.
         </p>
 
         <div className="mt-8 mx-auto flex justify-center">
-          <SubscribeForm inputClassName="w-80 px-4 py-2 text-sm rounded-md bg-[#F8F4F2] border text-rust placeholder:text-filament/50 text-center" />
+          <SubscribeForm inputClassName="md:w-80 px-4 py-2 text-sm rounded-md bg-[#F8F4F2] border text-rust placeholder:text-filament/50 text-center" />
         </div>
       </div>
     </section>

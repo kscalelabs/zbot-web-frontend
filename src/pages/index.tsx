@@ -15,7 +15,6 @@ import { RobotPicturesSection } from "@/landing/RobotPicturesSection";
 import { InteractiveCarouselSection } from "@/landing/InteractiveCarouselSection";
 import { ComparisonSection } from "@/landing/ComparisonSection";
 import SubscribeFooterSection from "@/landing/SubscribeFooterSection";
-import { ForTitle } from "@/landing/ForTitle";
 import { ForHackersSection } from "@/landing/ForHackersSection";
 import { ForUsersSection } from "@/landing/ForUsersSection";
 import { ForStudentsSection } from "@/landing/ForStudentsSection";

@@ -1,10 +1,11 @@
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 
 import { photoPaths } from "@/components/util/photoPaths";
 import { ForTitle } from "@/landing/ForTitle";
-import { useMemo, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useMotionValueEvent } from "motion/react";
+import { useWindowSize } from "@/components/util/functions";
 
 const ForStudentList = [
   {
@@ -30,6 +31,8 @@ const ForStudentList = [
 ];
 
 export const ForStudentsSection = () => {
+  const width = useWindowSize().width;
+
   const [imgIndex, setImgIndex] = useState(0);
   const scrollRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -40,46 +43,73 @@ export const ForStudentsSection = () => {
     // set index
     const index = Math.round(latest * (ForStudentList.length - 1));
     setImgIndex(index);
-    console.log("Page scroll: ", latest, index);
+    // console.log("Page scroll: ", latest, index);
   });
   return (
     <>
       <ForTitle title="Students" subtitle="Who is it for?" />
 
       <section className="col-span-full" ref={scrollRef}>
-        <div className="flex gap-10">
-          <div className="flex-1 h-[100vh] flex items-center sticky top-0">
-            <div className="w-full aspect-[1.53] relative rounded-2xl overflow-hidden">
+        {width >= 512 ? (
+          <div className="flex gap-10">
+            <div className="flex-1 h-[100vh] flex items-center sticky top-0">
+              <div className="w-full aspect-[1.53] relative rounded-2xl overflow-hidden">
+                {ForStudentList.map((item, index) => {
+                  return (
+                    <motion.div
+                      key={index}
+                      className="absolute inset-0"
+                      transition={{ duration: 1 }}
+                      animate={{
+                        opacity: index === imgIndex ? 1 : 0,
+                      }}
+                    >
+                      <Image
+                        key={index}
+                        src={item.src}
+                        alt={item.title || ""}
+                        layout="fill"
+                        className="object-cover"
+                      />
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="flex-1">
               {ForStudentList.map((item, index) => {
                 return (
-                  <motion.div
-                    key={index}
-                    className="absolute inset-0"
-                    transition={{ duration: 1 }}
-                    animate={{
-                      opacity: index === imgIndex ? 1 : 0,
-                    }}
-                  >
-                    <Image
-                      key={index}
-                      src={item.src}
-                      alt={item.title || ""}
-                      layout="fill"
-                      className="object-cover"
-                    />
-                  </motion.div>
+                  <div key={index} className=" flex items-center h-[100vh]">
+                    <div className="py-16">
+                      <h2 className=" ">{item.title}</h2>
+                      <p
+                        className="mt-4 leading-5 max-w-3xl"
+                        dangerouslySetInnerHTML={{ __html: item.desc }}
+                      ></p>
+                    </div>
+                  </div>
                 );
               })}
             </div>
           </div>
-          <div className="flex-1">
+        ) : (
+          <div className="flex flex-col gap-10">
             {ForStudentList.map((item, index) => {
               return (
-                <div key={index} className=" flex items-center h-[100vh]">
-                  <div className="py-16">
-                    <h2 className=" ">{item.title}</h2>
+                <div key={index} className="">
+                  <div className="">
+                    <div className="w-full aspect-[1.53] relative rounded-2xl overflow-hidden">
+                      <Image
+                        key={index}
+                        src={item.src}
+                        alt={item.title || ""}
+                        layout="fill"
+                        className="object-cover"
+                      />
+                    </div>
+                    <h3 className="mt-5">{item.title}</h3>
                     <p
-                      className="mt-4 leading-5 max-w-3xl"
+                      className="mt-3 leading-5 text-sm opacity-60"
                       dangerouslySetInnerHTML={{ __html: item.desc }}
                     ></p>
                   </div>
@@ -87,7 +117,7 @@ export const ForStudentsSection = () => {
               );
             })}
           </div>
-        </div>
+        )}
       </section>
     </>
   );

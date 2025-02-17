@@ -25,7 +25,7 @@ const Logotype = ({
         xmlns="http://www.w3.org/2000/svg"
         initial={{ fill: "var(--filament)" }}
         animate={{
-          fill: isMenuOpen ? "var(--filament)" : atTop ? "var(--filament)" : "var(--filament)",
+          fill: isMenuOpen ? "var(--filament)" : atTop ? "var(--foreground)" : "var(--foreground)",
         }}
       >
         <motion.path

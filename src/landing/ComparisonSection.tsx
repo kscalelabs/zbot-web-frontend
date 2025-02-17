@@ -39,7 +39,7 @@ const COMPARISON_LIST: ComparisonItem[] = [
   {
     label: "CPU",
     children: [
-      { content: "C906@1Ghz+C906@700Mhz<br>Cortex-A53@1GHz" },
+      { content: "C906@1Ghz + C906@700Mhz<br>Cortex-A53@1GHz" },
       { content: "-" },
       { content: "Intel Core i3*2" },
     ],
@@ -95,7 +95,7 @@ const COMPARISON_LIST: ComparisonItem[] = [
 const ComparisonRow = ({ item, index }: { item: ComparisonItem; index: number }) => {
   return (
     <div className="flex flex-row gap-2 md:gap-6 lg:gap-10 min-w-96">
-      <div className="min-w-24 md:w-1/6 rounded-2xl md:rounded-full bg-background flex items-center justify-center text-xs break-all md:break-normal text-center">
+      <div className="w-24 md:w-1/6 rounded-2xl md:rounded-full bg-background flex items-center justify-center text-xs  md:break-normal text-center px-4 py-2">
         {item.label}
       </div>
       <div
@@ -108,7 +108,7 @@ const ComparisonRow = ({ item, index }: { item: ComparisonItem; index: number })
           return (
             <div
               className={clsx(
-                "text-xs flex-1 p-2 text-center leading-normal flex items-center justify-center break-all md:break-normal",
+                "text-xs flex-1 p-2 text-center leading-normal flex items-center justify-center break-words md:break-normal",
                 childIndex === 0 ? "text-rust" : "",
                 index === 0 ? "rounded-2xl md:rounded-full bg-background" : ""
               )}
@@ -124,9 +124,9 @@ const ComparisonRow = ({ item, index }: { item: ComparisonItem; index: number })
 
 export const ComparisonSection = () => {
   return (
-    <section className="col-span-full py-24 -mx-[5vw]">
+    <section className="col-span-full py-16 -mx-[5vw]">
       <h2 className="text-center">Competitor Comparison</h2>
-      <p className="text-center mt-4 mb-6 max-w-4xl mx-auto leading-5">
+      <p className="text-center mt-4 mb-6 max-w-4xl mx-auto leading-5 px-[5vw]">
         Unlike traditional robotics platforms, we provide intuitive, affordable tools for students
         to experiment without barriers. Whether it’s programming robots to play football or
         competing in hackathons, our platform empowers you to do more.

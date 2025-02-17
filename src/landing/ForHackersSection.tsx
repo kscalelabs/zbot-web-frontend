@@ -44,7 +44,7 @@ export const ForHackersSection = () => {
   return (
     <>
       <ForTitle title="Developers" subtitle="Who is it for?" />
-      <section className="py-16 col-span-full">
+      <section className="py-16 col-span-full ">
         <h2>For Hackers Who Know the Tools</h2>
         <p className="mt-4 leading-5 max-w-3xl">
           Zeroth Bot is a powerhouse for hackers familiar with advanced AI/ML workflows. It’s
@@ -54,7 +54,7 @@ export const ForHackersSection = () => {
           systems.
         </p>
 
-        <div className="mt-6 bg-background-card p-6 rounded-2xl flex gap-6 justify-center items-center">
+        <div className="mt-6 bg-background-card p-6 rounded-2xl flex gap-6 justify-center items-center flex-wrap">
           {toolItems.map((item, index) => (
             <div key={index}>
               <img src={item.imageSrc} alt="icon" className="h-10 w-auto" />

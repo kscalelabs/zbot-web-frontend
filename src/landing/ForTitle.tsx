@@ -10,7 +10,7 @@ export const ForTitle = ({ title, subtitle } = { title: "", subtitle: "" }) => {
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <div className="col-span-full py-24 ">
+    <div className="col-span-full py-24 text-center">
       <motion.div
         ref={scrollRef}
         className="flex flex-col items-center justify-center"
@@ -18,8 +18,8 @@ export const ForTitle = ({ title, subtitle } = { title: "", subtitle: "" }) => {
           opacity,
         }}
       >
-        <p className="text-subtitle-md md:text-xl mb-2">{subtitle}</p>
-        <h1 className="text-heading-md md:text-6xl">{title}</h1>
+        <p className="text-lg md:text-xl mb-2">{subtitle}</p>
+        <h1 className="text-heading-lg md:text-6xl">{title}</h1>
       </motion.div>
     </div>
   );
