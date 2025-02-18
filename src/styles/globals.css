@@ -55,6 +55,7 @@
 
   :root {
     --background: #f8f4f2ff;
+    --background-card: #ffffffff;
     --foreground: #120e15ff;
     --logotype: #120e15ff;
     --background-0: #f8f4f200;
@@ -77,6 +78,7 @@
   @media (prefers-color-scheme: dark) {
     :root {
       --background: #0f0f10ff;
+      --background-card: #191919ff;
       --foreground: #ede6e1ff;
       --logotype: #de4208ff;
       --background-0: #0f0f1000;

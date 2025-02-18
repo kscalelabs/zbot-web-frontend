@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { motion } from "motion/react";
 
 const BurgerOpenButton = ({ atTop = true, ...props }: BurgerOpenButtonProps) => {
+  const fill = atTop && !props.isOpen ? "var(--filament)" : "var(--filament)";
   return (
     <button
       className={clsx("cursor-pointer h-fit", props.className)}
@@ -31,7 +32,7 @@ const BurgerOpenButton = ({ atTop = true, ...props }: BurgerOpenButtonProps) => 
           animate={{
             rotate: props.isOpen ? 15 : 0,
             y: props.isOpen ? -2 : 0,
-            fill: atTop && !props.isOpen ? "var(--filament)" : "var(--foreground)",
+            fill: fill,
           }}
         />
         <motion.rect
@@ -43,7 +44,7 @@ const BurgerOpenButton = ({ atTop = true, ...props }: BurgerOpenButtonProps) => 
             fill: "var(--filament)",
           }}
           animate={{
-            fill: atTop && !props.isOpen ? "var(--filament)" : "var(--foreground)",
+            fill: fill,
           }}
         />
         <motion.rect
@@ -55,7 +56,7 @@ const BurgerOpenButton = ({ atTop = true, ...props }: BurgerOpenButtonProps) => 
             fill: "var(--filament)",
           }}
           animate={{
-            fill: atTop && !props.isOpen ? "var(--filament)" : "var(--foreground)",
+            fill: fill,
           }}
         />
       </svg>
