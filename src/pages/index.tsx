@@ -18,6 +18,7 @@ import SubscribeFooterSection from "@/landing/SubscribeFooterSection";
 import { ForHackersSection } from "@/landing/ForHackersSection";
 import { ForUsersSection } from "@/landing/ForUsersSection";
 import { ForStudentsSection } from "@/landing/ForStudentsSection";
+import CapabilitiesSection from "@/landing/Capabilities";
 
 export default function ZBot() {
   const lenis = useLenis();
@@ -60,23 +61,16 @@ export default function ZBot() {
       <NavBar href="/" />
       <main className="gap-y-4">
         <HeaderSection />
+        <CapabilitiesSection />
         <HeroTextSection />
         <SimToRealSection />
-
         <ForHackersSection />
         <ForStudentsSection />
         <ForUsersSection />
-
         <RobotPicturesSection />
         <InteractiveCarouselSection />
         <ComparisonSection />
         <SubscribeFooterSection />
-
-        {/*<ResearchSection />*/}
-        {/*<SpecSection />*/}
-        {/*<RobotSection />*/}
-        {/*<GallerySection />*/}
-        {/*<CommunitySection />*/}
       </main>
       <Footer />
     </div>

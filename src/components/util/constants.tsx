@@ -6,6 +6,14 @@ export type NavigationConfig = {
   isExternal: boolean;
 };
 
+export type CapabilitiesData = {
+  photoLink: string;
+  photoLinkAlt: string;
+  title: string;
+  description: string;
+  key: number;
+};
+
 export const navigationConfig: NavigationConfig[] = [
   {
     name: "Docs",
