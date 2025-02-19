@@ -154,7 +154,7 @@ export const NavCTAButton = ({
   ) : (
     <motion.button
       className={clsx(
-        "font-planar font-normal px-2 2xl:text-md xl:text-md text-md whitespace-nowrap select-none flex flex-row " +
+        "font-planar font-normal px-2 2xl:text-md xl:text-md text-sm whitespace-nowrap select-none flex flex-row " +
           "gap-1 justify-center items-center pointer pointer-events-auto z-20",
         size === Size.THIN ? "py-1" : "py-2",
         "cursor-pointer select-none",

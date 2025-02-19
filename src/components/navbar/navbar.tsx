@@ -1,12 +1,13 @@
 import Logotype from "@/components/logos/logotype";
 import BurgerMenu from "@/components/navbar/burgerMenu";
 import BurgerOpenButton from "@/components/navbar/burgerOpenButton";
-import { navigationConfig } from "@/components/util/constants";
+import { ColorVariant, FillMode, Size, zbotNavigationConfig } from "@/components/util/constants";
 import { useWindowSize } from "@/components/util/functions";
 import clsx from "clsx";
 import { useLenis } from "lenis/dist/lenis-react";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useEffect, useState } from "react";
+import { NavCTAButton } from "@/components/buttons/CTAButtons";
 
 export default function NavBar({ href = "/" }: { href?: string } = {}) {
   const { scrollY } = useScroll();
@@ -68,17 +69,17 @@ export default function NavBar({ href = "/" }: { href?: string } = {}) {
         <Logotype atTop={atTop} isMenuOpen={mobileShouldOpenBurger} href={href} />
         <div
           className={
-            "flex flex-row gap-6 items-center 2xl:-col-end-3 xl:-col-end-3 lg:-col-end-3 md:-col-end-3"
+            "flex flex-row gap-6 items-start col-span-3 3xl:-col-end-1 2xl:-col-end-2 lg:-col-end-1 -col-end-2"
           }
         >
-          {navigationConfig.map((navItem, index) => {
+          {zbotNavigationConfig.map((navItem, index) => {
             return (
               <motion.a
                 key={index}
                 href={navItem.link}
                 target={navItem.isExternal ? "_blank" : "_self"}
                 className={clsx(
-                  "-col-end-3 md:-col-end-4 2xl:-col-end-4 2xl:text-[0.75rem] lg:text-[1rem] md:text-[0.8rem] flex flex-row gap-2 size-fit items-center select-none self-center pointer-events-auto",
+                  "-col-end-2 md:-col-end-3 2xl:-col-end-3 2xl:text-[0.75rem] lg:text-[1rem] md:text-[0.8rem] flex flex-row gap-2 size-fit items-center select-none self-center pointer-events-auto",
                   atTop ? "text-black dark:text-white" : "text-foreground"
                 )}
                 initial="initial"
@@ -109,6 +110,16 @@ export default function NavBar({ href = "/" }: { href?: string } = {}) {
               </motion.a>
             );
           })}
+          <NavCTAButton
+            href={"https://shop.kscale.dev"}
+            target="_blank"
+            className="font-planar mt-auto w-fit px-2 "
+            variant={ColorVariant.MOLTEN}
+            mode={FillMode.DEFAULT}
+            size={Size.NORMAL}
+          >
+            PRE-ORDER NOW
+          </NavCTAButton>
         </div>
       </>
     );
@@ -130,7 +141,10 @@ export default function NavBar({ href = "/" }: { href?: string } = {}) {
 
   return (
     <motion.nav
-      className="fixed top-0 inset-x-0 z-50 h-[100dvh] md:h-auto md:py-4 grid-a grid-rows-[min-content_auto] pointer-events-none"
+      className={
+        "fixed top-0 inset-x-0 z-50 h-[100dvh] md:h-auto md:py-4" +
+        " grid-a grid-rows-[min-content_auto] pointer-events-none items-center"
+      }
       initial={{
         backgroundColor: "var(--background-0)",
       }}

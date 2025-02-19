@@ -38,11 +38,11 @@ export const navigationConfig: NavigationConfig[] = [
 ];
 
 export const zbotNavigationConfig: NavigationConfig[] = [
-  {
-    name: "Docs",
-    link: "https://docs.kscale.dev/",
-    isExternal: true,
-  },
+  // {
+  //   name: "Docs",
+  //   link: "https://docs.kscale.dev/",
+  //   isExternal: true,
+  // },
   {
     name: "Discord",
     link: "https://discord.gg/G6KP76uha5",
