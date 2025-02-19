@@ -1,11 +1,10 @@
 import { photoPaths } from "@/components/util/photoPaths";
 import Image from "next/image";
-import { useSystemDarkMode } from "@/components/util/functions";
 import { ForTitle } from "@/landing/ForTitle";
 import { SliderSection } from "@/landing/SliderSection";
 
 export const ForHackersSection = () => {
-  const isDarkMode = useSystemDarkMode();
+  const isDarkMode = true;
 
   const cardItems = [
     {
@@ -43,9 +42,8 @@ export const ForHackersSection = () => {
 
   return (
     <>
-      <ForTitle title="Developers" subtitle="Who is it for?" />
       <section className="py-16 col-span-full ">
-        <h2>For Hackers Who Know the Tools</h2>
+        <h2>Developer Tools to enable</h2>
         <p className="mt-4 leading-5 max-w-3xl">
           Zeroth Bot is a powerhouse for hackers familiar with advanced AI/ML workflows. It’s
           capable of learning-based control and running the latest end-to-end AI/ML models. With its
