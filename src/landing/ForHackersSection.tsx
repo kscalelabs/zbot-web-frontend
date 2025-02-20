@@ -1,6 +1,5 @@
 import { photoPaths } from "@/components/util/photoPaths";
 import Image from "next/image";
-import { ForTitle } from "@/landing/ForTitle";
 import { SliderSection } from "@/landing/SliderSection";
 
 export const ForHackersSection = () => {
