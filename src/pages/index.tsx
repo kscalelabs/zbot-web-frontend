@@ -38,8 +38,8 @@ export default function ZBot() {
       <main className="gap-y-4">
         <HeaderSection />
         <VisionStatement />
-        <CapabilitiesSection />
-        <ForHackersSection />
+        {/*<CapabilitiesSection />*/}
+        {/*<ForHackersSection />*/}
         <CommunitySection />
       </main>
       <Footer />

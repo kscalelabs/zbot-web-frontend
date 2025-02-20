@@ -23,13 +23,13 @@ const HeaderSection = () => {
         <div className="max-w-lg">
           <h1 className="text-heading-md md:text-heading-lg whitespace-pre-line">{`Intelligent Robot,\nToday`}</h1>
 
-          <p className="mt-4 text-base whitespace-pre-line">{`The worlds most accessible AI \nhumanoid robot platform`}</p>
+          <p className="mt-4 text-base whitespace-pre-line">{`The world's most accessible AI \nhumanoid robot platform`}</p>
         </div>
 
         <CTAButton
           href={"https://shop.kscale.dev"}
           target="_blank"
-          className="font-apparat font-bold mt-auto w-fit px-2 text-3xl border-2"
+          className="font-apparat font-bold mt-auto w-fit px-2 whitespace-nowrap 2xl:text-3xl xl:text-2xl sm:text-xl text-2xl border-2"
           variant={ColorVariant.FILAMENT}
           mode={FillMode.STROKE}
           size={Size.NORMAL}
