@@ -57,7 +57,7 @@ export enum IconMode {
 
 export enum Size {
   THIN,
-  NORMAL,
+  NORMAL
 }
 
 export enum ColorVariant {

@@ -34,7 +34,53 @@ export default function NavBar({ href = "/" }: { href?: string } = {}) {
     return isDesktop ? desktopNavBar() : mobileNavBar();
   };
 
-  const atTop = scrollY.get() < 100;
+  const atTop = scrollY.get() < 500;
+
+  const navItems = () => {
+    return (
+      <>
+        {zbotNavigationConfig.map((navItem, index) => {
+          return (
+            <motion.a
+              key={index}
+              href={navItem.link}
+              target={navItem.isExternal ? "_blank" : "_self"}
+              className={clsx(
+                "-col-end-2 md:-col-end-3 2xl:-col-end-3 2xl:text-[0.75rem] lg:text-[1rem] md:text-[0.8rem] flex flex-row gap-2 ",
+                " size-fit items-center select-none self-center pointer-events-auto",
+                " text-foreground"
+              )}
+              initial="initial"
+              whileHover="hover"
+              transition={{ duration: 0.2, ease: "circOut" }}
+            >
+              {navItem.name}
+              {navItem.isExternal && (
+                <motion.svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  variants={{
+                    initial: { x: 0 },
+                    hover: { x: 4 },
+                  }}
+                >
+                  <path d="M7 17L17 7" />
+                  <path d="M7 7h10v10" />
+                </motion.svg>
+              )}
+            </motion.a>
+          );
+        })}
+      </>
+    );
+  };
 
   const mobileNavBar = () => {
     return (
@@ -67,60 +113,31 @@ export default function NavBar({ href = "/" }: { href?: string } = {}) {
     return (
       <>
         <Logotype atTop={atTop} isMenuOpen={mobileShouldOpenBurger} href={href} />
-        <div
+        <motion.div
+          layout
+          transition={{ duration: 0.5, ease: "circOut" }}
           className={
-            "flex flex-row gap-6 items-start col-span-3 3xl:-col-end-1 2xl:-col-end-2 lg:-col-end-1 -col-end-2"
+            "flex flex-row gap-6 items-start 3xl:-col-end-1 2xl:-col-end-2 lg:-col-end-1 -col-end-2 " +
+            (atTop ? "col-span-1 " : "col-span-3 ")
           }
         >
-          {zbotNavigationConfig.map((navItem, index) => {
-            return (
-              <motion.a
-                key={index}
-                href={navItem.link}
-                target={navItem.isExternal ? "_blank" : "_self"}
-                className={clsx(
-                  "-col-end-2 md:-col-end-3 2xl:-col-end-3 2xl:text-[0.75rem] lg:text-[1rem] md:text-[0.8rem] flex flex-row gap-2 size-fit items-center select-none self-center pointer-events-auto",
-                  atTop ? "text-black dark:text-white" : "text-foreground"
-                )}
-                initial="initial"
-                whileHover="hover"
-                transition={{ duration: 0.2, ease: "circOut" }}
-              >
-                {navItem.name}
-                {navItem.isExternal && (
-                  <motion.svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    variants={{
-                      initial: { x: 0 },
-                      hover: { x: 4 },
-                    }}
-                  >
-                    <path d="M7 17L17 7" />
-                    <path d="M7 7h10v10" />
-                  </motion.svg>
-                )}
-              </motion.a>
-            );
-          })}
-          <NavCTAButton
-            href={"https://shop.kscale.dev"}
-            target="_blank"
-            className="font-planar mt-auto w-fit px-2 "
-            variant={ColorVariant.MOLTEN}
-            mode={FillMode.DEFAULT}
-            size={Size.NORMAL}
+          {navItems()}
+          <motion.div
+            animate={{ opacity: atTop ? 0 : 1, y: atTop ? 20 : 0 }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
           >
-            PRE-ORDER NOW
-          </NavCTAButton>
-        </div>
+            <NavCTAButton
+              href={"https://shop.kscale.dev"}
+              target="_blank"
+              className={"font-planar mt-auto w-fit px-2 " + (atTop ? " hidden" : " visible")}
+              variant={ColorVariant.MOLTEN}
+              mode={FillMode.DEFAULT}
+              size={Size.NORMAL}
+            >
+              PRE-ORDER NOW
+            </NavCTAButton>
+          </motion.div>
+        </motion.div>
       </>
     );
   };
@@ -143,7 +160,7 @@ export default function NavBar({ href = "/" }: { href?: string } = {}) {
     <motion.nav
       className={
         "fixed top-0 inset-x-0 z-50 h-[100dvh] md:h-auto md:py-4" +
-        " grid-a grid-rows-[min-content_auto] pointer-events-none items-center"
+        " grid-a grid-rows-[min-content_auto] pointer-events-none items-center "
       }
       initial={{
         backgroundColor: "var(--background-0)",

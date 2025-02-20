@@ -4,11 +4,11 @@ import { CapabilitiesData } from "@/components/util/constants";
 
 const RowCol = (rowItem: CapabilitiesData) => {
   return (
-    <div className={"flex flex-col gap-2"}>
+    <div className={"flex flex-col gap-2 "}>
       <Image
         width={389}
         height={389}
-        className={"w-[17vw] h-[17vw]"}
+        className={"w-[17vw] h-[17vw] rounded"}
         src={rowItem.photoLink}
         alt={rowItem.photoLinkAlt}
         loading={"lazy"}

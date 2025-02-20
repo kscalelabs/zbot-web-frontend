@@ -36,12 +36,11 @@ export default function ZBot() {
     <div className="min-h-screen flex flex-col">
       <NavBar href="/" />
       <main className="gap-y-4">
-        {/*<HeaderSection />*/}
+        <HeaderSection />
         <VisionStatement />
         <CapabilitiesSection />
         <ForHackersSection />
         <CommunitySection />
-        <SubscribeFooterSection />
       </main>
       <Footer />
     </div>
