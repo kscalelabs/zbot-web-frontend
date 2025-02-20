@@ -14,9 +14,9 @@ export const SubscribeForm = ({ inputClassName } = { inputClassName: "" }) => {
         type="submit"
         value="Sign Up Now!"
         name="subscribe"
-        className="px-4 py-2 text-sm rounded-full bg-rust text-filament font-medium cursor-pointer hover:opacity-90 transition-opacity"
+        className="px-4 py-2 text-sm rounded-lg bg-rust text-filament font-medium cursor-pointer hover:text-rust hover:bg-foreground transition-opacity"
       />
-      <a className="px-4 py-2 text-sm rounded-full border-current border flex items-center justify-center font-medium cursor-pointer hover:bg-rust hover:text-white">
+      <a className="px-4 py-2 text-sm rounded-lg border-current border flex items-center justify-center font-medium cursor-pointer hover:border-transparent hover:bg-rust hover:text-white">
         Buy
       </a>
     </form>

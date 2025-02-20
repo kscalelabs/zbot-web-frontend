@@ -10,7 +10,7 @@ const RowCol = (rowItem: CapabilitiesData) => {
         width={389}
         height={389}
         className={
-          "xl:w-[17vw] xl:h-[17vw] lg:w-[20vw] lg:h-[20vw] sm:w-[25vw] sm:h-[25vw] w-[35vw] h-[35vw] rounded"
+          "xl:w-[17vw] xl:h-[17vw] lg:w-[20vw] lg:h-[20vw] sm:w-[25vw] sm:h-[25vw] w-[35vw] h-[35vw] rounded-lg"
         }
         src={rowItem.photoLink}
         alt={rowItem.photoLinkAlt}

@@ -98,15 +98,15 @@ export const ForHackersSection = () => {
         desc="Whether you’re a student, engineer, or some someone with no prior experience, this is your change to explore the future."
         list={[
           {
-            src: photoPaths.NEW_UI_AI_1,
+            src: photoPaths.FOR_STUDENTS_1,
             title: "Learning Python",
           },
           {
-            src: photoPaths.NEW_UI_AI_2,
+            src: photoPaths.FOR_STUDENTS_2,
             title: "Implementing ML Models",
           },
           {
-            src: photoPaths.NEW_UI_AI_3,
+            src: photoPaths.FOR_STUDENTS_3,
             title: "Train your first robot",
           },
         ]}
@@ -117,15 +117,15 @@ export const ForHackersSection = () => {
         desc="Control robot by voice. Physically present personal assistant"
         list={[
           {
-            src: photoPaths.NEW_UI_AI_1,
+            src: photoPaths.FOR_EVERYDAY_1,
             title: "Personal Assistant",
           },
           {
-            src: photoPaths.NEW_UI_AI_2,
+            src: photoPaths.FOR_EVERYDAY_2,
             title: "Intelligent voice control",
           },
           {
-            src: photoPaths.NEW_UI_AI_3,
+            src: photoPaths.FOR_EVERYDAY_3,
             title: "Computer Vision (CV)",
           },
         ]}

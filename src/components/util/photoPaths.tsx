@@ -80,6 +80,14 @@ export const photoPaths = {
   NEW_UI_STUDENTS_2: "/photos/new-ui/v2/pic_students_2.jpg",
   NEW_UI_STUDENTS_3: "/photos/new-ui/v2/pic_students_3.jpg",
   NEW_UI_STUDENTS_4: "/photos/new-ui/v2/pic_students_4.jpg",
+
+  FOR_STUDENTS_1: "/photos/zbotgal3.jpeg",
+  FOR_STUDENTS_2: "/photos/zbotbeepbop.png",
+  FOR_STUDENTS_3: "/photos/landing.webp",
+
+  FOR_EVERYDAY_1: "/photos/new-ui/zbot_3.jpg",
+  FOR_EVERYDAY_2: "/photos/zbot1.jpeg",
+  FOR_EVERYDAY_3: "/photos/new-ui/v2/pic_ai_1.jpg",
 };
 
 export const photoPathAltText = {
