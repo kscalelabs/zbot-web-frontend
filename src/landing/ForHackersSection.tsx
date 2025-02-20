@@ -94,6 +94,44 @@ export const ForHackersSection = () => {
         ]}
         aspectRatio={1.77}
       />
+      <SliderSection
+        title="For Students"
+        desc="Whether you’re a student, engineer, or some someone with no prior experience, this is your change to explore the future."
+        list={[
+          {
+            src: photoPaths.NEW_UI_AI_1,
+            title: "Learning Python",
+          },
+          {
+            src: photoPaths.NEW_UI_AI_2,
+            title: "Implementing ML Models",
+          },
+          {
+            src: photoPaths.NEW_UI_AI_3,
+            title: "Train your first robot",
+          },
+        ]}
+        aspectRatio={1.77}
+      />
+      <SliderSection
+        title="For Everyday users"
+        desc="Control robot by voice. Physically present personal assistant"
+        list={[
+          {
+            src: photoPaths.NEW_UI_AI_1,
+            title: "Personal Assistant",
+          },
+          {
+            src: photoPaths.NEW_UI_AI_2,
+            title: "Intelligent voice control",
+          },
+          {
+            src: photoPaths.NEW_UI_AI_3,
+            title: "Computer Vision (CV)",
+          },
+        ]}
+        aspectRatio={1.77}
+      />
     </>
   );
 };

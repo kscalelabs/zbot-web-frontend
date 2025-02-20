@@ -39,8 +39,9 @@ export default function ZBot() {
         <HeaderSection />
         <VisionStatement />
         <CapabilitiesSection />
-        {/*<ForHackersSection />*/}
+        <ForHackersSection />
         <CommunitySection />
+        <SubscribeFooterSection />
       </main>
       <Footer />
     </div>
