@@ -15,7 +15,7 @@ const Logotype = ({
     <Link
       href={href}
       aria-label="zeroth "
-      className="col-start-1 col-span-1 lg:col-start-1 lg:col-span-2 pointer-events-auto"
+      className="col-start-1 col-span-2 lg:col-start-1 lg:col-span-2 pointer-events-auto"
     >
       <motion.svg
         width="299"
