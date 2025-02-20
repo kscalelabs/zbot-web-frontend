@@ -1,6 +1,5 @@
 import Footer from "@/components/footer/footer";
 import NavBar from "@/components/navbar/navbar";
-import Script from "next/script";
 import HeaderSection from "@/landing/HeaderSection";
 import { useLenis } from "lenis/dist/lenis-react";
 import { useEffect } from "react";
