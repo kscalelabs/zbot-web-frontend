@@ -1,11 +1,9 @@
 import { photoPaths } from "@/components/util/photoPaths";
 import Image from "next/image";
-import { useSystemDarkMode } from "@/components/util/functions";
-import { ForTitle } from "@/landing/ForTitle";
 import { SliderSection } from "@/landing/SliderSection";
 
 export const ForHackersSection = () => {
-  const isDarkMode = useSystemDarkMode();
+  const isDarkMode = true;
 
   const cardItems = [
     {
@@ -43,9 +41,8 @@ export const ForHackersSection = () => {
 
   return (
     <>
-      <ForTitle title="Developers" subtitle="Who is it for?" />
       <section className="py-16 col-span-full ">
-        <h2>For Hackers Who Know the Tools</h2>
+        <h2>Developer Tools to enable</h2>
         <p className="mt-4 leading-5 max-w-3xl">
           Zeroth Bot is a powerhouse for hackers familiar with advanced AI/ML workflows. It’s
           capable of learning-based control and running the latest end-to-end AI/ML models. With its
@@ -92,6 +89,44 @@ export const ForHackersSection = () => {
           {
             src: photoPaths.NEW_UI_AI_4,
             title: "LLM-Based Conversational AI",
+          },
+        ]}
+        aspectRatio={1.77}
+      />
+      <SliderSection
+        title="For Students"
+        desc="Whether you’re a student, engineer, or some someone with no prior experience, this is your change to explore the future."
+        list={[
+          {
+            src: photoPaths.FOR_STUDENTS_1,
+            title: "Learning Python",
+          },
+          {
+            src: photoPaths.FOR_STUDENTS_2,
+            title: "Implementing ML Models",
+          },
+          {
+            src: photoPaths.FOR_STUDENTS_3,
+            title: "Train your first robot",
+          },
+        ]}
+        aspectRatio={1.77}
+      />
+      <SliderSection
+        title="For Everyday users"
+        desc="Control robot by voice. Physically present personal assistant"
+        list={[
+          {
+            src: photoPaths.FOR_EVERYDAY_1,
+            title: "Personal Assistant",
+          },
+          {
+            src: photoPaths.FOR_EVERYDAY_2,
+            title: "Intelligent voice control",
+          },
+          {
+            src: photoPaths.FOR_EVERYDAY_3,
+            title: "Computer Vision (CV)",
           },
         ]}
         aspectRatio={1.77}

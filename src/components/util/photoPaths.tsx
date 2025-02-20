@@ -80,7 +80,16 @@ export const photoPaths = {
   NEW_UI_STUDENTS_2: "/photos/new-ui/v2/pic_students_2.jpg",
   NEW_UI_STUDENTS_3: "/photos/new-ui/v2/pic_students_3.jpg",
   NEW_UI_STUDENTS_4: "/photos/new-ui/v2/pic_students_4.jpg",
+
+  FOR_STUDENTS_1: "/photos/zbotgal3.jpeg",
+  FOR_STUDENTS_2: "/photos/zbotbeepbop.png",
+  FOR_STUDENTS_3: "/photos/landing.webp",
+
+  FOR_EVERYDAY_1: "/photos/new-ui/zbot_3.jpg",
+  FOR_EVERYDAY_2: "/photos/zbot1.jpeg",
+  FOR_EVERYDAY_3: "/photos/new-ui/v2/pic_ai_1.jpg",
 };
+
 export const photoPathAltText = {
   LANDING_IMAGE_ALT: "Header",
   LANDING_IMAGE_ALT_2: "Header",
@@ -119,4 +128,22 @@ export const photoPathAltText = {
   NEW_UI_ZBOT_1: "ZBot photo",
   NEW_UI_ZBOT_2: "ZBot photo",
   NEW_UI_ZBOT_3: "ZBot photo",
+};
+
+export const photoPathCapabilities = {
+  LOCO_MANIP: "/photos/capabilities/0_footsteps.svg",
+  AI_ENABLED: "/photos/capabilities/1_aiEnabled.svg",
+  FLEX_AND_AGILE: "/photos/capabilities/2_flexAndAgile.svg",
+  HARDWARE: "/photos/capabilities/3_hardware.svg",
+  OPEN_SOURCE: "/photos/capabilities/4_openSource.svg",
+  ECOSYSTEM: "/photos/capabilities/5_ecosystem.svg",
+};
+
+export const photoPathCapabilitiesAltText = {
+  LOCO_MANIP_ALT: "Z-Bot robot in the center of the photo walking with pencil in hand.",
+  AI_ENABLED_ALT: "Close up of Z-Bot robot head with conversation bubbles to show the capabilities of communication.",
+  FLEX_AND_AGILE_ALT: "Z-Bot robot dancing in a pirouette stance to show the flexibility of the robot.",
+  HARDWARE_ALT: "A close up and internal map of the Z-Bot robot's leg to show the hardware that makes up the foot.",
+  OPEN_SOURCE_ALT: "Z-Bot robot against a background of connecting lines to different nodes to show the community aspect of building the robot together. ",
+  ECOSYSTEM_ALT: "Z-Bot robot head against a black background with the Python, a cloud, and Pytorch logo to show the internal software ecosystem.",
 };

@@ -6,6 +6,14 @@ export type NavigationConfig = {
   isExternal: boolean;
 };
 
+export type CapabilitiesData = {
+  photoLink: string;
+  photoLinkAlt: string;
+  title: string;
+  description: string;
+  key: number;
+};
+
 export const navigationConfig: NavigationConfig[] = [
   {
     name: "Docs",
@@ -30,11 +38,11 @@ export const navigationConfig: NavigationConfig[] = [
 ];
 
 export const zbotNavigationConfig: NavigationConfig[] = [
-  {
-    name: "Docs",
-    link: "https://docs.kscale.dev/",
-    isExternal: true,
-  },
+  // {
+  //   name: "Docs",
+  //   link: "https://docs.kscale.dev/",
+  //   isExternal: true,
+  // },
   {
     name: "Discord",
     link: "https://discord.gg/G6KP76uha5",
@@ -49,7 +57,7 @@ export enum IconMode {
 
 export enum Size {
   THIN,
-  NORMAL,
+  NORMAL
 }
 
 export enum ColorVariant {
