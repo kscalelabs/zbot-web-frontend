@@ -101,3 +101,5 @@ export const CursorTypes = {
 export const TeamCol1 = () => ["Aaron", "Ali", "Benjamin", "Denys", "Jingxiang"];
 
 export const TeamCol2 = () => ["Paweł", "Rui", "Viraj", "Wesley"];
+
+export const videoBlobUrl:string = "https://oedvyksc71asjkij.public.blob.vercel-storage.com/header_render_video-9xHnFP8sBKD7XMPICtZ7WALXFVKf4o.mp4";

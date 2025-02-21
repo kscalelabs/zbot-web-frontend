@@ -12,21 +12,29 @@ const ForStudentList = [
     src: photoPaths.NEW_UI_STUDENTS_1,
     title: "For Robotics Students",
     desc: "This is your chance to dive into the cutting-edge world of robotics with sim-to-real technology.",
+    width: 2880,
+    height: 1800,
   },
   {
     src: photoPaths.NEW_UI_STUDENTS_2,
     title: "Test Your First Sim-to-Real Model",
     desc: "· Build and test robotic actions seamlessly from simulation to physical reality.<br>· Features like an 18-degree range of motion give you ultimate flexibility.",
+    width: 2880,
+    height: 1800,
   },
   {
     src: photoPaths.NEW_UI_STUDENTS_3,
     title: "Create Complex Actions",
     desc: "· Develop advanced actions and behaviours for your robot with intuitive tools.<br>· Upload and share your creations with the community.",
+    width: 2880,
+    height: 1800,
   },
   {
     src: photoPaths.NEW_UI_STUDENTS_4,
     title: "Collaborative Robotics",
     desc: "· Connect multiple robots to interact with each other in real time.<br>· Design group activities like robot football and collaborative dances.",
+    width: 2880,
+    height: 1800,
   },
 ];
 
@@ -68,7 +76,8 @@ export const ForStudentsSection = () => {
                         key={index}
                         src={item.src}
                         alt={item.title || ""}
-                        fill={true}
+                        width={item.width}
+                        height={item.height}
                         className="object-cover"
                       />
                     </motion.div>
@@ -103,7 +112,8 @@ export const ForStudentsSection = () => {
                         key={index}
                         src={item.src}
                         alt={item.title || ""}
-                        fill={true}
+                        width={item.width}
+                        height={item.height}
                         className="object-cover"
                       />
                     </div>

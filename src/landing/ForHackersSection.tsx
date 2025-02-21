@@ -8,15 +8,23 @@ export const ForHackersSection = () => {
   const cardItems = [
     {
       imageSrc: isDarkMode ? photoPaths.NEW_UI_ROBOT_1_DARK : photoPaths.NEW_UI_ROBOT_1_LIGHT,
+      width: 1170,
+      height: 1200,
     },
     {
       imageSrc: isDarkMode ? photoPaths.NEW_UI_ROBOT_2_DARK : photoPaths.NEW_UI_ROBOT_2_LIGHT,
+      width: 1170,
+      height: 1200,
     },
     {
       imageSrc: isDarkMode ? photoPaths.NEW_UI_ROBOT_3_DARK : photoPaths.NEW_UI_ROBOT_3_LIGHT,
+      width: 1170,
+      height: 1200,
     },
     {
       imageSrc: isDarkMode ? photoPaths.NEW_UI_ROBOT_4_DARK : photoPaths.NEW_UI_ROBOT_4_LIGHT,
+      width: 1170,
+      height: 1200,
     },
   ];
 
@@ -64,7 +72,14 @@ export const ForHackersSection = () => {
           {cardItems.map((item, index) => (
             <div key={index} className="flex flex-col flex-1 gap-3 text-rust">
               <div className=" rounded-2xl aspect-[0.975] relative overflow-hidden">
-                <Image src={item.imageSrc} alt="robot" fill className="object-cover" priority />
+                <Image
+                  src={item.imageSrc}
+                  alt="robot"
+                  className="object-cover"
+                  width={item.width}
+                  height={item.height}
+                  priority
+                />
               </div>
             </div>
           ))}
@@ -77,18 +92,26 @@ export const ForHackersSection = () => {
           {
             src: photoPaths.NEW_UI_AI_1,
             title: "Language-Action Models",
+            width: 3000,
+            height: 1800,
           },
           {
             src: photoPaths.NEW_UI_AI_2,
             title: "Language-Action Models",
+            width: 3000,
+            height: 1800,
           },
           {
             src: photoPaths.NEW_UI_AI_3,
             title: "Computer Vision (CV)",
+            width: 3000,
+            height: 1800,
           },
           {
             src: photoPaths.NEW_UI_AI_4,
             title: "LLM-Based Conversational AI",
+            width: 3000,
+            height: 1800,
           },
         ]}
         aspectRatio={1.77}
@@ -100,14 +123,20 @@ export const ForHackersSection = () => {
           {
             src: photoPaths.FOR_STUDENTS_1,
             title: "Learning Python",
+            width: 2256,
+            height: 1692,
           },
           {
             src: photoPaths.FOR_STUDENTS_2,
             title: "Implementing ML Models",
+            width: 2392,
+            height: 2038,
           },
           {
             src: photoPaths.FOR_STUDENTS_3,
             title: "Train your first robot",
+            width: 2304,
+            height: 1536,
           },
         ]}
         aspectRatio={1.77}
@@ -119,14 +148,20 @@ export const ForHackersSection = () => {
           {
             src: photoPaths.FOR_EVERYDAY_1,
             title: "Personal Assistant",
+            width: 2304,
+            height: 1536,
           },
           {
             src: photoPaths.FOR_EVERYDAY_2,
             title: "Intelligent voice control",
+            width: 1374,
+            height: 2060,
           },
           {
             src: photoPaths.FOR_EVERYDAY_3,
             title: "Computer Vision (CV)",
+            width: 3000,
+            height: 1800,
           },
         ]}
         aspectRatio={1.77}

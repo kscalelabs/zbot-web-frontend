@@ -1,9 +1,32 @@
 import { CTAButton } from "@/components/buttons/CTAButtons";
-import { ColorVariant, FillMode, Size } from "@/components/util/constants";
+import { ColorVariant, FillMode, Size, videoBlobUrl } from "@/components/util/constants";
+import { useEffect, useState } from "react";
+
+const useCheckVideoUrl = (
+  url: string,
+  setVideoUrl: React.Dispatch<React.SetStateAction<string>>
+) => {
+  useEffect(() => {
+    if (!url) return;
+
+    const checkUrl = async () => {
+      try {
+        const response = await fetch(url, { method: "HEAD" });
+        if (!response.ok) {
+          setVideoUrl(""); // Clear the videoUrl if it's not valid
+        }
+      } catch (error) {
+        setVideoUrl(""); // Clear the videoUrl if there's an error
+      }
+    };
+
+    checkUrl();
+  }, [url, setVideoUrl]);
+};
 
 const HeaderSection = () => {
-  const videoUrl: string = "./video/header_render_video.mp4";
-  const vercelUrl: string = "";
+  const [videoUrl, setVideoUrl] = useState("./video/header_render_video.mp4");
+  useCheckVideoUrl(videoBlobUrl, setVideoUrl);
 
   return (
     <section
