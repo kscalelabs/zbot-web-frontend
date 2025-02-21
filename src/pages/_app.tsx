@@ -4,6 +4,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -56,6 +57,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <ReactLenis root>
         <Component {...pageProps} />
         <Analytics />
+        <SpeedInsights />
       </ReactLenis>
     </>
   );
