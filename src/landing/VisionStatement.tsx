@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { motion, useScroll } from "framer-motion";
-
 import { photoPaths } from "@/components/util/photoPaths";
-import { ForTitle } from "@/landing/ForTitle";
 import { useRef, useState } from "react";
 import { useMotionValueEvent } from "motion/react";
 import { useWindowSize } from "@/components/util/functions";
