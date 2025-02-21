@@ -316,28 +316,28 @@ html.lenis body {
     pointer-events: none;
 }
 
-html::-webkit-scrollbar {
-    display: none;
-}
+/*html::-webkit-scrollbar {*/
+/*    display: none;*/
+/*}*/
 
-body::-webkit-scrollbar {
-    overflow: inherit;
-    scrollbar-gutter: stable;
-}
+/*body::-webkit-scrollbar {*/
+/*    overflow: inherit;*/
+/*    scrollbar-gutter: stable;*/
+/*}*/
 
-body.scroll-bar::-webkit-scrollbar-thumb,
-body::-webkit-scrollbar-thumb:hover {
-    background: var(--rust);
-    border-radius: 1rem;
-}
+/*body.scroll-bar::-webkit-scrollbar-thumb,*/
+/*body::-webkit-scrollbar-thumb:hover {*/
+/*    background: var(--rust);*/
+/*    border-radius: 1rem;*/
+/*}*/
 
-body::-webkit-scrollbar-track {
-    border-radius: 4px;
-}
+/*body::-webkit-scrollbar-track {*/
+/*    border-radius: 4px;*/
+/*}*/
 
-body::-webkit-scrollbar-button {
-    display: none;
-}
+/*body::-webkit-scrollbar-button {*/
+/*    display: none;*/
+/*}*/
 
 .rfm-child {
     padding: 1rem;
