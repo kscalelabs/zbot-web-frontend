@@ -12,11 +12,15 @@ const useCheckVideoUrl = (
     const checkUrl = async () => {
       try {
         const response = await fetch(url, { method: "HEAD" });
-        if (!response.ok) {
-          setVideoUrl(""); // Clear the videoUrl if it's not valid
+        if (response.ok) {
+          setVideoUrl(url);
+        } else {
+          console.log("Response not ok!");
+          setVideoUrl("./video/header_render_video.mp4");
         }
       } catch (error) {
-        setVideoUrl(""); // Clear the videoUrl if there's an error
+        console.log("Error", error);
+        setVideoUrl("./video/header_render_video.mp4");
       }
     };
 
