@@ -327,7 +327,7 @@ body::-webkit-scrollbar {
 
 body.scroll-bar::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb:hover {
-    background: var(--molten);
+    background: var(--rust);
     border-radius: 1rem;
 }
 
