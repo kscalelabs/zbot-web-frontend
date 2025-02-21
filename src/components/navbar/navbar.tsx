@@ -8,6 +8,7 @@ import { useLenis } from "lenis/dist/lenis-react";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useEffect, useState } from "react";
 import { NavCTAButton } from "@/components/buttons/CTAButtons";
+import { GTMTags } from "@/gtm/TagNames";
 
 export default function NavBar({ href = "/" }: { href?: string } = {}) {
   const { scrollY } = useScroll();
@@ -89,11 +90,9 @@ export default function NavBar({ href = "/" }: { href?: string } = {}) {
           className={clsx(
             "col-span-full grid grid-cols-subgrid overflow-hidden py-4 items-end h-fit px-[5vw] -mx-[5vw]"
           )}
-          initial={{ backgroundColor: "var(--carbon)" }}
           animate={{
-            backgroundColor: "var(--carbon)",
+            backgroundColor: atTop ? "var(--background-0)" : "var(--background)",
           }}
-          exit={{ backgroundColor: "var(--carbon)" }}
           transition={{ duration: 0.2, ease: "circOut" }}
         >
           <Logotype atTop={atTop} isMenuOpen={mobileShouldOpenBurger} href={href} />
@@ -127,7 +126,7 @@ export default function NavBar({ href = "/" }: { href?: string } = {}) {
             transition={{ duration: 0.75, ease: "easeOut" }}
           >
             <NavCTAButton
-              href={"https://shop.kscale.dev"}
+              href={"https://shop.kscale.dev/products/zbot"}
               target="_blank"
               className={"font-planar mt-auto w-fit px-2 " + (atTop ? " hidden" : " visible")}
               variant={ColorVariant.RUST}
