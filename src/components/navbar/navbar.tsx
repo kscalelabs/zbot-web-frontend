@@ -8,7 +8,6 @@ import { useLenis } from "lenis/dist/lenis-react";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useEffect, useState } from "react";
 import { NavCTAButton } from "@/components/buttons/CTAButtons";
-import { GTMTags } from "@/gtm/TagNames";
 
 export default function NavBar({ href = "/" }: { href?: string } = {}) {
   const { scrollY } = useScroll();
