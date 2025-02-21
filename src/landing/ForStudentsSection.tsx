@@ -68,7 +68,7 @@ export const ForStudentsSection = () => {
                         key={index}
                         src={item.src}
                         alt={item.title || ""}
-                        layout="fill"
+                        fill={true}
                         className="object-cover"
                       />
                     </motion.div>
@@ -103,7 +103,7 @@ export const ForStudentsSection = () => {
                         key={index}
                         src={item.src}
                         alt={item.title || ""}
-                        layout="fill"
+                        fill={true}
                         className="object-cover"
                       />
                     </div>

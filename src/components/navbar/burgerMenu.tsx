@@ -47,7 +47,7 @@ const BurgerMenu = (isOpen: boolean) => {
         href={"https://shop.kscale.dev"}
         target="_blank"
         className="font-planar mt-auto w-fit px-2 text-2xl"
-        variant={ColorVariant.MOLTEN}
+        variant={ColorVariant.RUST}
         mode={FillMode.DEFAULT}
         size={Size.NORMAL}
       >

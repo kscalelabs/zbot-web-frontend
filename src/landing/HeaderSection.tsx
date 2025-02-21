@@ -29,9 +29,9 @@ const HeaderSection = () => {
         <CTAButton
           href={"https://shop.kscale.dev"}
           target="_blank"
-          className="font-apparat font-bold mt-auto w-fit px-2 whitespace-nowrap 2xl:text-3xl xl:text-2xl sm:text-xl text-2xl border-2"
-          variant={ColorVariant.FILAMENT}
-          mode={FillMode.STROKE}
+          className="font-apparat font-bold mt-auto w-fit px-2 whitespace-nowrap 2xl:text-3xl xl:text-2xl sm:text-xl text-2xl"
+          variant={ColorVariant.RUST}
+          mode={FillMode.DEFAULT}
           size={Size.NORMAL}
         >
           PRE-ORDER NOW

@@ -130,7 +130,7 @@ export default function NavBar({ href = "/" }: { href?: string } = {}) {
               href={"https://shop.kscale.dev"}
               target="_blank"
               className={"font-planar mt-auto w-fit px-2 " + (atTop ? " hidden" : " visible")}
-              variant={ColorVariant.MOLTEN}
+              variant={ColorVariant.RUST}
               mode={FillMode.DEFAULT}
               size={Size.NORMAL}
             >

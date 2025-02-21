@@ -35,7 +35,7 @@ const FeatCard = ({
         <Image
           src={item.src}
           alt={item.title || ""}
-          layout="fill"
+          fill={true}
           className="object-cover pointer-events-none"
         />
       )}
