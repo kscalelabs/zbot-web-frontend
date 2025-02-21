@@ -49,17 +49,17 @@ const HeaderSection = () => {
         <source src={videoUrl} type="video/mp4" />
       </video>
 
-      <div className="z-10 col-span-full flex gap-5 justify-between md:items-end flex-col md:flex-row">
+      <div className="z-10 col-span-full flex gap-5 justify-between md:items-end flex-col sm:flex-row">
         <div className="max-w-lg">
-          <h1 className="text-heading-md md:text-heading-lg whitespace-pre-line">{`Intelligent Robot,\nToday`}</h1>
+          <h1 className="text-heading-md md:text-heading-md ">{`Intelligent Robot, Today`}</h1>
 
-          <p className="mt-4 text-base whitespace-pre-line">{`The world's most accessible AI \nhumanoid robot platform`}</p>
+          <p className="mt-4 text-base md:whitespace-pre-line ">{`The world's most accessible AI \nhumanoid robot platform`}</p>
         </div>
 
         <CTAButton
           href={"https://shop.kscale.dev/products/zbot"}
           target="_blank"
-          className="font-apparat font-bold mt-auto w-fit px-2 whitespace-nowrap 2xl:text-2xl xl:text-xl sm:text-xl text-xl"
+          className="font-apparat font-bold mt-auto w-fit px-2 whitespace-nowrap 2xl:text-xl xl:text-lg sm:text-lg text-lg"
           variant={ColorVariant.RUST}
           mode={FillMode.DEFAULT}
           size={Size.NORMAL}
