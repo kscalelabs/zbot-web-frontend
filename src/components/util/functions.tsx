@@ -27,20 +27,20 @@ export const useSystemDarkMode = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const is =  window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (typeof window !== "undefined") {
+      const is = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
       setIsDarkMode(is);
 
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
       const handleChange = (event: MediaQueryListEvent) => {
         setIsDarkMode(event.matches);
       };
 
-      mediaQuery.addEventListener('change', handleChange);
+      mediaQuery.addEventListener("change", handleChange);
 
       return () => {
-        mediaQuery.removeEventListener('change', handleChange);
+        mediaQuery.removeEventListener("change", handleChange);
       };
     }
   }, []);

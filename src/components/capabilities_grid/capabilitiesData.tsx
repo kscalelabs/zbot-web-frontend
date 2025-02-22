@@ -37,9 +37,7 @@ export const capabilitiesData: CapabilitiesData[] = [
     photoLinkAlt: photoPathCapabilitiesAltText.HARDWARE_ALT,
     title: "Robust\nHardware",
     description:
-      "18 DOF & integrated sensors\n" +
-      "Aerospace-grade materials\n" +
-      "Durable and lightweight",
+      "18 DOF & integrated sensors\n" + "Aerospace-grade materials\n" + "Durable and lightweight",
     key: 3,
   },
   {

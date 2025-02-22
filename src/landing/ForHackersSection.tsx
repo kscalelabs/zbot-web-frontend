@@ -47,7 +47,8 @@ export const ForHackersSection = () => {
           Zeroth Bot is a powerhouse for hackers familiar with advanced AI/ML workflows. It`s
           capable of learning-based control and running the latest end-to-end AI/ML models. With its
           fully open-source code available on GitHub, Zeroth Bot integrates seamlessly with
-          platforms like MuJoCo, NVIDIA Isaac Sim, Genesis to enable limitless functionality across systems.
+          platforms like MuJoCo, NVIDIA Isaac Sim, Genesis to enable limitless functionality across
+          systems.
         </p>
 
         <div className="mt-6 bg-background-card p-6 rounded-2xl flex gap-6 justify-center items-center flex-wrap">
