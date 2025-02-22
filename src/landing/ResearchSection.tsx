@@ -108,7 +108,7 @@ const ResearchCard = ({ title, description, link, index, icon, variant }: Resear
           <CTAButton
             href={link}
             target="_blank"
-            className="mt-auto w-fit px-2"
+            className="mt-auto w-fit px-2 font-planar font-normal text-body"
             variant={variant}
             mode={FillMode.INVERT}
             size={Size.NORMAL}

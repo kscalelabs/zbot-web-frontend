@@ -28,7 +28,7 @@ const CommunitySection = () => {
           size={Size.NORMAL}
           mode={FillMode.FILL}
           target="_blank"
-          className="max-md:w-full pointer-events-auto"
+          className="max-md:w-full pointer-events-auto font-planar font-normal text-body "
         >
           Join the Discord <Discord mode={IconMode.SET} />
         </CTAButton>
@@ -73,7 +73,7 @@ const CommunitySection = () => {
         </figure>
       </aside>
 
-      <article className="col-span-full grid grid-cols-subgrid gap-y-4">
+      {/* <article className="col-span-full grid grid-cols-subgrid gap-y-4">
         <span className="text-caption uppercase text-foreground70 col-span-full px-4 sm:px-0 sm:col-span-8 sm:col-start-2 md:col-span-10 md:col-start-2 lg:col-span-10 lg:col-start-2 2xl:col-span-10 2xl:col-start-2">
           About
         </span>
@@ -90,24 +90,15 @@ const CommunitySection = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
             </figure>
-            <div className="flex flex-col items-center mt-4 mb-12 sm:mb-8">
-              <h3 className="text-heading-sm font-medium">Our Partners</h3>
-              <figure className="w-full h-20 relative rounded-md overflow-hidden translate-x-8 mr-16">
+            <div className="flex flex-col items-start mt-4 mb-12 sm:mb-8">
+              <figcaption className="text-caption font-medium">Our Partners</figcaption>
+              <figure className="w-full h-20 relative rounded-md overflow-hidden ">
                 <Image
                   src={photoPaths.ZBOT_PARTNERS_SVG_WHITE}
                   alt={photoPathAltText.ZBOT_PARTNERS_SVG_WHITE_ALT}
                   width={2688}
                   height={768}
-                  className="w-full h-full object-cover object-[10%_30%] hidden dark:block"
-                  quality={100}
-                  priority
-                />
-                <Image
-                  src={photoPaths.ZBOT_PARTNERS_SVG_BLACK}
-                  alt={photoPathAltText.ZBOT_PARTNERS_SVG_BLACK_ALT}
-                  width={2688}
-                  height={768}
-                  className="w-full h-full object-cover object-[10%_30%] dark:hidden"
+                  className="w-full h-full object-cover object-[10%_30%]"
                   quality={100}
                   priority
                 />
@@ -137,7 +128,7 @@ const CommunitySection = () => {
             </div>
           </div>
         </div>
-      </article>
+      </article> */}
     </section>
   );
 };

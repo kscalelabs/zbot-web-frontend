@@ -31,6 +31,63 @@ export const photoPaths = {
   ZBOT_TEAM: "/photos/zbotteam.png",
   ZBOT_PARTNERS_SVG_BLACK: "/photos/zbotpartnersblack.svg",
   ZBOT_PARTNERS_SVG_WHITE: "/photos/zbotpartnerswhite.svg",
+
+  NEW_UI_FOR_BG: "/photos/new-ui/for_bg.jpg",
+  NEW_UI_FOR_ICON_1: "/photos/new-ui/for_icon_1.svg",
+  NEW_UI_FOR_ICON_2: "/photos/new-ui/for_icon_2.svg",
+  NEW_UI_FOR_ICON_3: "/photos/new-ui/for_icon_3.svg",
+  NEW_UI_SELLING_POINT_1: "/photos/new-ui/selling_point_1.jpg",
+  NEW_UI_SELLING_POINT_2: "/photos/new-ui/selling_point_2.jpg",
+  NEW_UI_SELLING_POINT_3: "/photos/new-ui/selling_point_3.jpg",
+  NEW_UI_SUBSCRIBE: "/photos/new-ui/subscribe-bg.jpg",
+  NEW_UI_WHAT_IS_1: "/photos/new-ui/what_is_1.jpg",
+  NEW_UI_WHAT_IS_2: "/photos/new-ui/what_is_2.jpg",
+  NEW_UI_ZBOT_1: "/photos/new-ui/zbot_1.jpg",
+  NEW_UI_ZBOT_2: "/photos/new-ui/zbot_2.jpg",
+  NEW_UI_ZBOT_3: "/photos/new-ui/zbot_3.jpg",
+
+  NEW_UI_HERO_BG_LIGHT: "/photos/new-ui/v2/hero_bg_light.jpg",
+  NEW_UI_HERO_BG_DARK: "/photos/new-ui/v2/hero_bg_dark.jpg",
+
+  NEW_UI_ICON_PYTORCH_LIGHT: "/photos/new-ui/v2/icon_pytorch_light.png",
+  NEW_UI_ICON_PYTORCH_DARK: "/photos/new-ui/v2/icon_pytorch_dark.png",
+  NEW_UI_ICON_ROS_LIGHT: "/photos/new-ui/v2/icon_ros_light.png",
+  NEW_UI_ICON_ROS_DARK: "/photos/new-ui/v2/icon_ros_dark.png",
+  NEW_UI_ICON_NVIDIA_LIGHT: "/photos/new-ui/v2/icon_nvidia_light.png",
+  NEW_UI_ICON_NVIDIA_DARK: "/photos/new-ui/v2/icon_nvidia_dark.png",
+  NEW_UI_ICON_PYTHON: "/photos/new-ui/v2/icon_python.png",
+
+  NEW_UI_ROBOT_1_DARK: "/photos/new-ui/v2/pic_robot_1_dark.jpg",
+  NEW_UI_ROBOT_1_LIGHT: "/photos/new-ui/v2/pic_robot_1_light.jpg",
+  NEW_UI_ROBOT_2_DARK: "/photos/new-ui/v2/pic_robot_2_dark.jpg",
+  NEW_UI_ROBOT_2_LIGHT: "/photos/new-ui/v2/pic_robot_2_light.jpg",
+  NEW_UI_ROBOT_3_DARK: "/photos/new-ui/v2/pic_robot_3_dark.jpg",
+  NEW_UI_ROBOT_3_LIGHT: "/photos/new-ui/v2/pic_robot_3_light.jpg",
+  NEW_UI_ROBOT_4_DARK: "/photos/new-ui/v2/pic_robot_4_dark.jpg",
+  NEW_UI_ROBOT_4_LIGHT: "/photos/new-ui/v2/pic_robot_4_light.jpg",
+
+  NEW_UI_AI_1: "/photos/new-ui/v2/pic_ai_1.jpg",
+  NEW_UI_AI_2: "/photos/new-ui/v2/pic_ai_2.jpg",
+  NEW_UI_AI_3: "/photos/new-ui/v2/pic_ai_3.jpg",
+  NEW_UI_AI_4: "/photos/new-ui/v2/pic_ai_4.jpg",
+
+  NEW_UI_USER_1: "/photos/new-ui/v2/pic_user_1.jpg",
+  NEW_UI_USER_2: "/photos/new-ui/v2/pic_user_2.jpg",
+  NEW_UI_USER_3: "/photos/new-ui/v2/pic_user_3.jpg",
+  NEW_UI_USER_4: "/photos/new-ui/v2/pic_user_4.jpg",
+
+  NEW_UI_STUDENTS_1: "/photos/new-ui/v2/pic_students_1.jpg",
+  NEW_UI_STUDENTS_2: "/photos/new-ui/v2/pic_students_2.jpg",
+  NEW_UI_STUDENTS_3: "/photos/new-ui/v2/pic_students_3.jpg",
+  NEW_UI_STUDENTS_4: "/photos/new-ui/v2/pic_students_4.jpg",
+
+  FOR_STUDENTS_1: "/photos/zbotgal3.jpeg",
+  FOR_STUDENTS_2: "/photos/zbotbeepbop.png",
+  FOR_STUDENTS_3: "/photos/landing.webp",
+
+  FOR_EVERYDAY_1: "/photos/new-ui/zbot_3.jpg",
+  FOR_EVERYDAY_2: "/photos/zbot1.jpeg",
+  FOR_EVERYDAY_3: "/photos/new-ui/v2/pic_ai_1.jpg",
 };
 
 export const photoPathAltText = {
@@ -59,4 +116,39 @@ export const photoPathAltText = {
   ZBOT_TEAM_ALT: "Photo: Zeroth Bot team members",
   ZBOT_PARTNERS_SVG_BLACK_ALT: "Photo: Our partners: k-scale labs and Grand Journey",
   ZBOT_PARTNERS_SVG_WHITE_ALT: "Photo: Our partners: k-scale labs and Grand Journey",
+
+  NEW_UI_FOR_BG: "ZBot background",
+  NEW_UI_HERO_BG: "Header background",
+  NEW_UI_SELLING_POINT_1: "Selling point 1",
+  NEW_UI_SELLING_POINT_2: "Selling point 2",
+  NEW_UI_SELLING_POINT_3: "Selling point 3",
+  NEW_UI_SUBSCRIBE: "Subscribe",
+  NEW_UI_WHAT_IS_1: "ZBot background",
+  NEW_UI_WHAT_IS_2: "ZBot background",
+  NEW_UI_ZBOT_1: "ZBot photo",
+  NEW_UI_ZBOT_2: "ZBot photo",
+  NEW_UI_ZBOT_3: "ZBot photo",
+};
+
+export const photoPathCapabilities = {
+  LOCO_MANIP: "/photos/capabilities/0_footsteps.svg",
+  AI_ENABLED: "/photos/capabilities/1_aiEnabled.svg",
+  FLEX_AND_AGILE: "/photos/capabilities/2_flexAndAgile.svg",
+  HARDWARE: "/photos/capabilities/3_hardware.svg",
+  OPEN_SOURCE: "/photos/capabilities/4_openSource.svg",
+  ECOSYSTEM: "/photos/capabilities/5_ecosystem.svg",
+};
+
+export const photoPathCapabilitiesAltText = {
+  LOCO_MANIP_ALT: "Z-Bot robot in the center of the photo walking with pencil in hand.",
+  AI_ENABLED_ALT:
+    "Close up of Z-Bot robot head with conversation bubbles to show the capabilities of communication.",
+  FLEX_AND_AGILE_ALT:
+    "Z-Bot robot dancing in a pirouette stance to show the flexibility of the robot.",
+  HARDWARE_ALT:
+    "A close up and internal map of the Z-Bot robot's leg to show the hardware that makes up the foot.",
+  OPEN_SOURCE_ALT:
+    "Z-Bot robot against a background of connecting lines to different nodes to show the community aspect of building the robot together. ",
+  ECOSYSTEM_ALT:
+    "Z-Bot robot head against a black background with the Python, a cloud, and Pytorch logo to show the internal software ecosystem.",
 };

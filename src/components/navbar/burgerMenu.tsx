@@ -1,18 +1,25 @@
 import { ExpressiveArrow } from "@/components/iconography/Iconography";
-import { navigationConfig, transitionEaseLinearDuration300 } from "@/components/util/constants";
+import {
+  zbotNavigationConfig,
+  transitionEaseLinearDuration300,
+  ColorVariant,
+  FillMode,
+  Size,
+} from "@/components/util/constants";
 import { motion } from "motion/react";
 import Link from "next/link";
+import { NavCTAButton } from "@/components/buttons/CTAButtons";
 
 const BurgerMenu = (isOpen: boolean) => {
   return isOpen ? (
     <motion.div
-      className={"flex flex-col col-span-full list-none justify-evenly"}
+      className={"flex flex-col  col-span-full list-none justify-evenly gap-28"}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2, ease: "circOut" }}
     >
-      {navigationConfig.map((navItem, index) => {
+      {zbotNavigationConfig.map((navItem, index) => {
         return (
           <motion.button
             key={index}
@@ -36,6 +43,16 @@ const BurgerMenu = (isOpen: boolean) => {
           </motion.button>
         );
       })}
+      <NavCTAButton
+        href={"https://shop.kscale.dev/products/zbot"}
+        target="_blank"
+        className="font-planar mt-auto w-fit px-2 text-2xl"
+        variant={ColorVariant.RUST}
+        mode={FillMode.DEFAULT}
+        size={Size.NORMAL}
+      >
+        PRE-ORDER NOW
+      </NavCTAButton>
     </motion.div>
   ) : (
     <></>

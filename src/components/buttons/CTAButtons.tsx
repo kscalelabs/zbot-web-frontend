@@ -125,7 +125,7 @@ export const NavCTAButton = ({
   return target === "_blank" ? (
     <motion.button
       className={clsx(
-        "font-planar font-normal 2xl:text-md xl:text-md text-md whitespace-nowrap select-none rounded pointer pointer-events-auto z-20",
+        "font-apparat font-bold 2xl:text-md xl:text-md text-md whitespace-nowrap select-none rounded pointer pointer-events-auto z-20",
         getVariantClass(variant, mode),
         className
       )}
@@ -144,7 +144,7 @@ export const NavCTAButton = ({
         href={href}
         target={target}
         className={clsx(
-          "flex flex-row gap-1 justify-center items-center px-2 pointer select-none pointer-events-auto",
+          " font-apparat font-bold flex flex-row gap-1 justify-center items-center px-2 pointer select-none pointer-events-auto",
           size === Size.THIN ? "py-1" : "py-2"
         )}
       >
@@ -154,7 +154,7 @@ export const NavCTAButton = ({
   ) : (
     <motion.button
       className={clsx(
-        "font-planar font-normal px-2 2xl:text-md xl:text-md text-md whitespace-nowrap select-none flex flex-row " +
+        "font-apparat font-bold px-2 2xl:text-md xl:text-md text-sm whitespace-nowrap select-none flex flex-row " +
           "gap-1 justify-center items-center pointer pointer-events-auto z-20",
         size === Size.THIN ? "py-1" : "py-2",
         "cursor-pointer select-none",
@@ -201,7 +201,7 @@ export const CTAButton = ({
   return target === "_blank" ? (
     <motion.button
       className={clsx(
-        "font-planar font-normal text-body select-none rounded pointer pointer-events-auto z-20",
+        " select-none rounded pointer pointer-events-auto z-20",
         getVariantClass(variant, mode),
         className
       )}
@@ -230,7 +230,7 @@ export const CTAButton = ({
   ) : (
     <motion.button
       className={clsx(
-        "font-planar font-normal text-body px-2 select-none flex flex-row gap-1 justify-center items-center pointer pointer-events-auto z-20",
+        " px-2 select-none flex flex-row gap-1 justify-center items-center pointer pointer-events-auto z-20",
         size === Size.THIN ? "py-1" : "py-2",
         "cursor-pointer select-none",
         "rounded",

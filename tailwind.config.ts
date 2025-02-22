@@ -75,6 +75,7 @@ const config: Config = {
       },
       colors: {
         background: "var(--background)",
+        "background-card": "var(--background-card)",
         filament60: "var(--filament-60)",
         filament70: "var(--filament-70)",
         foreground60: "var(--foreground-60)",
