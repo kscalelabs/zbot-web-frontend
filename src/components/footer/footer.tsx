@@ -188,7 +188,7 @@ export default function Footer() {
       <FooterSectionList
         title={"Product"}
         items={[
-          { title: "K-Bot", url: "https://shop.kscale.dev/collections/all" },
+          { title: "Z-Bot", url: "https://shop.kscale.dev/products/zbot-founders-edition" },
           {
             title: "Send feedback",
             url: "https://docs.google.com/forms/d/e/1FAIpQLSemVaJ6HfieS9xDKv7SqWYArHyHLV-kraraiT_VEmPL_6lkPw/viewform",

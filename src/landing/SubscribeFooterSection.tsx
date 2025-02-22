@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const SubscribeForm = ({ inputClassName } = { inputClassName: "" }) => {
   return (
     <form
@@ -16,9 +18,13 @@ export const SubscribeForm = ({ inputClassName } = { inputClassName: "" }) => {
         name="subscribe"
         className="px-4 py-2 text-sm rounded-lg bg-rust text-filament font-medium cursor-pointer hover:text-rust hover:bg-foreground transition-opacity"
       />
-      <a className="px-4 py-2 text-sm rounded-lg border-current border flex items-center justify-center font-medium cursor-pointer hover:border-transparent hover:bg-rust hover:text-white">
-        Buy
-      </a>
+      <Link
+        className="px-4 py-2 text-sm rounded-lg border-current border flex items-center justify-center font-medium cursor-pointer hover:border-transparent hover:bg-rust hover:text-white"
+        href={"https://shop.kscale.dev/products/zbot-founders-edition"}
+        target={"_blank"}
+      >
+        PRE-ORDER NOW
+      </Link>
     </form>
   );
 };

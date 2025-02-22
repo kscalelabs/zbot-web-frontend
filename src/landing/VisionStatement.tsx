@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { motion, useScroll } from "framer-motion";
-
 import { photoPaths } from "@/components/util/photoPaths";
-import { ForTitle } from "@/landing/ForTitle";
 import { useRef, useState } from "react";
 import { useMotionValueEvent } from "motion/react";
 import { useWindowSize } from "@/components/util/functions";
@@ -12,16 +10,22 @@ const ForStudentList = [
     src: photoPaths.NEW_UI_STUDENTS_1,
     title: "Voice to action",
     desc: "Personal assistant to help out with tasks. The \nvoice to action dream...",
+    width: 1800,
+    height: 1320,
   },
   {
     src: photoPaths.NEW_UI_STUDENTS_2,
     title: "Limitless Capabilities",
     desc: "Autonomously explore, navigate and interact with its\nenvironment...",
+    width: 1800,
+    height: 1320,
   },
   {
     src: photoPaths.NEW_UI_STUDENTS_3,
     title: "Community built and\nsupported",
     desc: "Build on features alongside an active Open Source\ncommunity of +1000...",
+    width: 1800,
+    height: 1320,
   },
 ];
 
@@ -60,7 +64,8 @@ export const VisionStatement = () => {
                       key={index}
                       src={item.src}
                       alt={item.title || ""}
-                      layout="fill"
+                      width={item.width}
+                      height={item.height}
                       className="object-cover"
                     />
                   </motion.div>
@@ -95,7 +100,8 @@ export const VisionStatement = () => {
                       key={index}
                       src={item.src}
                       alt={item.title || ""}
-                      layout="fill"
+                      width={item.width}
+                      height={item.height}
                       className="object-cover"
                     />
                   </div>
