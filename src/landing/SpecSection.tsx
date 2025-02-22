@@ -11,7 +11,7 @@ const SpecSection = () => {
               What is ZerothBot?
             </span>
             <h2 className="text-heading-md">
-              The world&apos;s most accessible robot AI for developers.
+              The world&apos;s most accessible end-to-end AI robot platform.
             </h2>
           </hgroup>
           {/* <InlineCTA href="https://docs.kscale.dev/robot/intro">

@@ -51,13 +51,13 @@ const HeaderSection = () => {
 
       <div className="z-10 col-span-full flex gap-5 justify-between md:items-end flex-col sm:flex-row">
         <div className="max-w-lg">
-          <h1 className="text-heading-md md:text-heading-md ">{`Intelligent Robot, Today`}</h1>
+          <h1 className="text-heading-lg md:text-heading-xl ">{`Intelligent Robot, Today`}</h1>
 
-          <p className="mt-4 text-base md:whitespace-pre-line ">{`The world's most accessible AI \nhumanoid robot platform`}</p>
+          <p className="mt-4 text-base-lg md:text-heading-sm md:whitespace-pre-line ">{`The world's most accessible AI \nhumanoid robot platform for builders`}</p>
         </div>
 
         <CTAButton
-          href={"https://shop.kscale.dev/products/zbot"}
+          href={"https://shop.kscale.dev/products/z-bot-founders-edition"}
           target="_blank"
           className="font-apparat font-bold mt-auto w-fit px-2 whitespace-nowrap 2xl:text-xl xl:text-lg sm:text-lg text-lg"
           variant={ColorVariant.RUST}

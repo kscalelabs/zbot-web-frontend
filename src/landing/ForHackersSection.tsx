@@ -31,14 +31,6 @@ export const ForHackersSection = () => {
   const toolItems = [
     {
       imageSrc: isDarkMode
-        ? photoPaths.NEW_UI_ICON_PYTORCH_DARK
-        : photoPaths.NEW_UI_ICON_PYTORCH_LIGHT,
-    },
-    {
-      imageSrc: isDarkMode ? photoPaths.NEW_UI_ICON_ROS_DARK : photoPaths.NEW_UI_ICON_ROS_LIGHT,
-    },
-    {
-      imageSrc: isDarkMode
         ? photoPaths.NEW_UI_ICON_NVIDIA_DARK
         : photoPaths.NEW_UI_ICON_NVIDIA_LIGHT,
     },
@@ -52,11 +44,10 @@ export const ForHackersSection = () => {
       <section className="py-16 col-span-full ">
         <h2>Developer Tools to enable</h2>
         <p className="mt-4 leading-5 max-w-3xl">
-          Zeroth Bot is a powerhouse for hackers familiar with advanced AI/ML workflows. It’s
+          Zeroth Bot is a powerhouse for hackers familiar with advanced AI/ML workflows. It`s
           capable of learning-based control and running the latest end-to-end AI/ML models. With its
           fully open-source code available on GitHub, Zeroth Bot integrates seamlessly with
-          platforms like Python, Nvidia, ROS, and PyTorch, enabling limitless functionality across
-          systems.
+          platforms like MuJoCo, NVIDIA Isaac Sim, Genesis to enable limitless functionality across systems.
         </p>
 
         <div className="mt-6 bg-background-card p-6 rounded-2xl flex gap-6 justify-center items-center flex-wrap">
@@ -65,7 +56,6 @@ export const ForHackersSection = () => {
               <img src={item.imageSrc} alt="icon" className="h-10 w-auto" />
             </div>
           ))}
-          <div className="text-2xl">More...</div>
         </div>
 
         <div className="flex flex-col md:flex-row gap-6 mt-6">
@@ -97,7 +87,7 @@ export const ForHackersSection = () => {
           },
           {
             src: photoPaths.NEW_UI_AI_2,
-            title: "Language-Action Models",
+            title: "Computer Vision",
             width: 3000,
             height: 1800,
           },
@@ -118,11 +108,11 @@ export const ForHackersSection = () => {
       />
       <SliderSection
         title="For Students"
-        desc="Whether you’re a student, engineer, or some someone with no prior experience, this is your change to explore the future."
+        desc="Whether you're a student, engineer, or some someone with no prior experience, this is your change to explore the future."
         list={[
           {
             src: photoPaths.FOR_STUDENTS_1,
-            title: "Learning Python",
+            title: "Learning Robotics with Python and Rust",
             width: 2256,
             height: 1692,
           },
@@ -133,8 +123,8 @@ export const ForHackersSection = () => {
             height: 2038,
           },
           {
-            src: photoPaths.FOR_STUDENTS_3,
-            title: "Train your first robot",
+            src: photoPaths.NEW_UI_ZBOT_1,
+            title: "Join Competitions",
             width: 2304,
             height: 1536,
           },

@@ -20,10 +20,10 @@ export const SubscribeForm = ({ inputClassName } = { inputClassName: "" }) => {
       />
       <Link
         className="px-4 py-2 text-sm rounded-lg border-current border flex items-center justify-center font-medium cursor-pointer hover:border-transparent hover:bg-rust hover:text-white"
-        href={"https://shop.kscale.dev/products/zbot"}
+        href={"https://shop.kscale.dev/products/zbot-founders-edition"}
         target={"_blank"}
       >
-        Buy
+        PRE-ORDER NOW
       </Link>
     </form>
   );

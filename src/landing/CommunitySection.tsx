@@ -73,7 +73,7 @@ const CommunitySection = () => {
         </figure>
       </aside>
 
-      <article className="col-span-full grid grid-cols-subgrid gap-y-4">
+      {/* <article className="col-span-full grid grid-cols-subgrid gap-y-4">
         <span className="text-caption uppercase text-foreground70 col-span-full px-4 sm:px-0 sm:col-span-8 sm:col-start-2 md:col-span-10 md:col-start-2 lg:col-span-10 lg:col-start-2 2xl:col-span-10 2xl:col-start-2">
           About
         </span>
@@ -128,7 +128,7 @@ const CommunitySection = () => {
             </div>
           </div>
         </div>
-      </article>
+      </article> */}
     </section>
   );
 };

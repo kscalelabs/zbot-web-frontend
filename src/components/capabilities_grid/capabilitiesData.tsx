@@ -5,48 +5,61 @@ export const capabilitiesData: CapabilitiesData[] = [
   {
     photoLink: photoPathCapabilities.LOCO_MANIP,
     photoLinkAlt: photoPathCapabilitiesAltText.LOCO_MANIP_ALT,
-    title: "Locomotion and \nManipulation",
-    description: "Omnidirectional PPO walking\n" + "Pick up objects\n" + "Use objects",
+    title: "RL Locomotion\n& Manipulation",
+    description:
+      "Reinforcement learning (RL) controllers\n" +
+      "Sim-to-real walking & object pickup\n" +
+      "Adapt to pushes & unexpected terrain",
     key: 0,
   },
   {
     photoLink: photoPathCapabilities.AI_ENABLED,
     photoLinkAlt: photoPathCapabilitiesAltText.AI_ENABLED_ALT,
-    title: "AI Enabled",
-    description: "Sim-to-Real\n" + "LLM Integration\n" + "Computer Vision",
+    title: "AI-Enabled\n(V2A + LLM)",
+    description:
+      "Voice-to-Action commands\n" +
+      "Conversational LLM responses\n" +
+      "Real-time Computer Vision (CV)",
     key: 1,
   },
   {
     photoLink: photoPathCapabilities.FLEX_AND_AGILE,
     photoLinkAlt: photoPathCapabilitiesAltText.FLEX_AND_AGILE_ALT,
-    title: "Flexibility and \nAgility",
+    title: "Flexible &\nAgile",
     description:
-      "LLM Integration\n" + "Computer Vision\n" + "Challenging Poses " + "\nlike Squatting",
+      "Human motion imitation\n" +
+      "Challenging poses & dynamic balance\n" +
+      "Natural motion control",
     key: 2,
   },
   {
     photoLink: photoPathCapabilities.HARDWARE,
     photoLinkAlt: photoPathCapabilitiesAltText.HARDWARE_ALT,
-    title: "Hardware",
-    description: "18 DOF\n" + "-- TOPS with a dual \n" + "core processor\n" + "Sensors",
+    title: "Robust\nHardware",
+    description:
+      "18 DOF & integrated sensors\n" +
+      "Aerospace-grade materials\n" +
+      "Durable and lightweight",
     key: 3,
   },
   {
     photoLink: photoPathCapabilities.OPEN_SOURCE,
     photoLinkAlt: photoPathCapabilitiesAltText.OPEN_SOURCE_ALT,
-    title: "Open-Source \nCommunity of 1000+",
+    title: "Open-Source\nCommunity",
     description:
-      "Building new things with\n" +
-      "robots isn’t always easy, but\n" +
-      "with Zeroth Bot, you’ll never\n" +
-      "be doing it alone",
+      "Join 2000+ developers on Discord\n" +
+      "Collaborative development on GitHub\n" +
+      "Sim & real deployment examples",
     key: 4,
   },
   {
     photoLink: photoPathCapabilities.ECOSYSTEM,
     photoLinkAlt: photoPathCapabilitiesAltText.ECOSYSTEM_ALT,
-    title: "K-Scale Software \nEcosystem",
-    description: "Python SDK\n" + "Over-The-Air Updates\n" + "Pytorch and Nvidia",
+    title: "Made for Developers",
+    description:
+      "Python and Rust SDKs\n" +
+      "Over-the-Air Updates\n" +
+      "Fully integrated sim2real and ML stack",
     key: 5,
   },
 ];
