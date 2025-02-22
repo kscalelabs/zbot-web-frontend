@@ -23,19 +23,19 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>K-Scale Labs</title>
+        <title>Zeroth Bot</title>
         <meta
           name="description"
-          content="Developing the world's most accessible platform for embodied intelligence. We're hackers, engineers, and researchers that believe in a world where robots are made for everyone."
+          content="The world's most accessible robot AI for developers. Powerful, affordable, and open-source robotics dev kit. The platform for builders."
         />
         <meta
           name="keywords"
-          content="K-Scale Labs, Robot, Robots, Humanoid Robots, robotics, humanoid robotics, humanoids, Droids, droid, Androids, android, AI, Embodied intelligence, Embodied AI, Artificial intelligence, embodied artificial intelligence, AI robots, AI robotics, open source, open-source, open source robot, open-source robotics, open source AI, open-source AI, open source artificial intelligence, open-source artificial intelligence, open source humanoid, open-source humanoid, k scale, kscale, kscale labs, k scale labs, k-scale, kscale ai, k-scale ai, k-scale labs ai"
+          content="Zeroth Bot, Robot, Robots, Humanoid Robots, robotics, humanoid robotics, humanoids, Droids, droid, Androids, android, AI, Embodied intelligence, Embodied AI, Artificial intelligence, embodied artificial intelligence, AI robots, AI robotics, open source, open-source, open source robot, open-source robotics, open source AI, open-source AI, open source artificial intelligence, open-source artificial intelligence, open source humanoid, open-source humanoid, k scale, kscale, kscale labs, k scale labs, k-scale, kscale ai, k-scale ai, k-scale labs ai"
         />
-        <meta property="og:title" content="K-Scale Labs" />
+        <meta property="og:title" content="Zeroth Bot" />
         <meta
           property="og:description"
-          content="Developing the world's most accessible platform for embodied intelligence. We're hackers, engineers, and researchers that believe in a world where robots are made for everyone."
+          content="The world's most accessible robot AI for developers. Powerful, affordable, and open-source robotics dev kit. The platform for builders."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zerothbot.com" />
