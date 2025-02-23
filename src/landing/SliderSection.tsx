@@ -8,8 +8,6 @@ type SliderItem = {
   src?: string;
   title?: string;
   html?: string;
-  width?: number;
-  height?: number;
 };
 
 const FeatCard = ({
@@ -37,8 +35,7 @@ const FeatCard = ({
         <Image
           src={item.src}
           alt={item.title || ""}
-          width={item.width}
-          height={item.height}
+          layout="fill"
           className="object-cover pointer-events-none"
         />
       )}
