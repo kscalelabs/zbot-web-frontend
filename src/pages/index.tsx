@@ -8,7 +8,7 @@ import { ForHackersSection } from "@/landing/ForHackersSection";
 import CapabilitiesSection from "@/landing/Capabilities";
 import { VisionStatement } from "@/landing/VisionStatement";
 import CommunitySection from "@/landing/CommunitySection";
-import SpecSection from "@/landing/SpecSection";
+
 export default function ZBot() {
   const lenis = useLenis();
 
@@ -36,8 +36,7 @@ export default function ZBot() {
       <NavBar href="/" />
       <main className="gap-y-4">
         <HeaderSection />
-        <SpecSection />
-        {/* <VisionStatement /> */}
+        <VisionStatement />
         <CapabilitiesSection />
         <ForHackersSection />
         <CommunitySection />

@@ -141,14 +141,9 @@ export const photoPathCapabilities = {
 
 export const photoPathCapabilitiesAltText = {
   LOCO_MANIP_ALT: "Z-Bot robot in the center of the photo walking with pencil in hand.",
-  AI_ENABLED_ALT:
-    "Close up of Z-Bot robot head with conversation bubbles to show the capabilities of communication.",
-  FLEX_AND_AGILE_ALT:
-    "Z-Bot robot dancing in a pirouette stance to show the flexibility of the robot.",
-  HARDWARE_ALT:
-    "A close up and internal map of the Z-Bot robot's leg to show the hardware that makes up the foot.",
-  OPEN_SOURCE_ALT:
-    "Z-Bot robot against a background of connecting lines to different nodes to show the community aspect of building the robot together. ",
-  ECOSYSTEM_ALT:
-    "Z-Bot robot head against a black background with the Python, a cloud, and Pytorch logo to show the internal software ecosystem.",
+  AI_ENABLED_ALT: "Close up of Z-Bot robot head with conversation bubbles to show the capabilities of communication.",
+  FLEX_AND_AGILE_ALT: "Z-Bot robot dancing in a pirouette stance to show the flexibility of the robot.",
+  HARDWARE_ALT: "A close up and internal map of the Z-Bot robot's leg to show the hardware that makes up the foot.",
+  OPEN_SOURCE_ALT: "Z-Bot robot against a background of connecting lines to different nodes to show the community aspect of building the robot together. ",
+  ECOSYSTEM_ALT: "Z-Bot robot head against a black background with the Python, a cloud, and Pytorch logo to show the internal software ecosystem.",
 };

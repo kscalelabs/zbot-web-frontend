@@ -3,9 +3,9 @@ import { capabilitiesData } from "@/components/capabilities_grid/capabilitiesDat
 import { CapabilitiesData } from "@/components/util/constants";
 import { motion } from "framer-motion";
 
-const RowCol = (rowItem: CapabilitiesData, key: number) => {
+const RowCol = (rowItem: CapabilitiesData) => {
   return (
-    <motion.div className={"flex flex-col gap-2 "} key={key}>
+    <motion.div className={"flex flex-col gap-2 "}>
       <Image
         width={389}
         height={389}
@@ -42,7 +42,7 @@ const CapabilitiesSection = () => {
             "xl:gap-x-32 lg:gap-x-24 md:gap-x-24 gap-x-10 xl:gap-y-14 gap-y-10"
           }
         >
-          {capabilitiesData.map((capabilities, index) => RowCol(capabilities, index))}
+          {capabilitiesData.map((capabilities) => RowCol(capabilities))}
         </motion.div>
       </motion.div>
     </motion.section>

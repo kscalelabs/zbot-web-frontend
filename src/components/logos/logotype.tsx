@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { GTMActions, GTMEvents, GTMTagNames, GTMTags } from "@/gtm/TagNames";
 
 const Logotype = ({
   atTop = true,
@@ -17,9 +16,6 @@ const Logotype = ({
       href={href}
       aria-label="zeroth "
       className="col-start-1 col-span-2 lg:col-start-1 lg:col-span-2 pointer-events-auto"
-      onClick={() => {
-        GTMTags(GTMEvents.NAV_BTN_CLICK, GTMTagNames.NAV_LOGO_HOME, GTMActions.CLICK);
-      }}
     >
       <motion.svg
         width="299"

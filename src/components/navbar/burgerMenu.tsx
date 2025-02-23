@@ -44,10 +44,10 @@ const BurgerMenu = (isOpen: boolean) => {
         );
       })}
       <NavCTAButton
-        href={"https://shop.kscale.dev/products/zbot"}
+        href={"https://shop.kscale.dev"}
         target="_blank"
         className="font-planar mt-auto w-fit px-2 text-2xl"
-        variant={ColorVariant.RUST}
+        variant={ColorVariant.MOLTEN}
         mode={FillMode.DEFAULT}
         size={Size.NORMAL}
       >

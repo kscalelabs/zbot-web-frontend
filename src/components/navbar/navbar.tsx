@@ -89,9 +89,11 @@ export default function NavBar({ href = "/" }: { href?: string } = {}) {
           className={clsx(
             "col-span-full grid grid-cols-subgrid overflow-hidden py-4 items-end h-fit px-[5vw] -mx-[5vw]"
           )}
+          initial={{ backgroundColor: "var(--carbon)" }}
           animate={{
-            backgroundColor: atTop ? "var(--background-0)" : "var(--background)",
+            backgroundColor: "var(--carbon)",
           }}
+          exit={{ backgroundColor: "var(--carbon)" }}
           transition={{ duration: 0.2, ease: "circOut" }}
         >
           <Logotype atTop={atTop} isMenuOpen={mobileShouldOpenBurger} href={href} />
@@ -115,7 +117,7 @@ export default function NavBar({ href = "/" }: { href?: string } = {}) {
           layout
           transition={{ duration: 0.5, ease: "circOut" }}
           className={
-            "flex flex-row gap-6 items-start 3xl:-col-end-2 2xl:-col-end-3 lg:-col-end-2 -col-end-3 " +
+            "flex flex-row gap-6 items-start 3xl:-col-end-1 2xl:-col-end-2 lg:-col-end-1 -col-end-2 " +
             (atTop ? "col-span-1 " : "col-span-3 ")
           }
         >
@@ -125,10 +127,10 @@ export default function NavBar({ href = "/" }: { href?: string } = {}) {
             transition={{ duration: 0.75, ease: "easeOut" }}
           >
             <NavCTAButton
-              href={"https://shop.kscale.dev/products/zbot"}
+              href={"https://shop.kscale.dev"}
               target="_blank"
               className={"font-planar mt-auto w-fit px-2 " + (atTop ? " hidden" : " visible")}
-              variant={ColorVariant.RUST}
+              variant={ColorVariant.MOLTEN}
               mode={FillMode.DEFAULT}
               size={Size.NORMAL}
             >
