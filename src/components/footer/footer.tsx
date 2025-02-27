@@ -125,7 +125,7 @@ export default function Footer() {
             whileHover="hover"
             whileTap="tap"
           >
-            <p className="opacity-70 text-sm">jingxiangmo@gmail.com</p>
+            <p className="opacity-70 text-sm">inquiries@kscale.dev</p>
             <motion.button
               className="mt-2 bg-filament text-rust text-code--caption px-1.5 py-[0.15rem] rounded-sm w-20 h-4 flex flex-colitems-center justify-center overflow-hidden"
               variants={{
@@ -188,7 +188,7 @@ export default function Footer() {
       <FooterSectionList
         title={"Product"}
         items={[
-          { title: "Z-Bot", url: "https://shop.kscale.dev/products/zbot-founders-edition" },
+          { title: "K-Bot", url: "https://kscale.dev/" },
           {
             title: "Send feedback",
             url: "https://docs.google.com/forms/d/e/1FAIpQLSemVaJ6HfieS9xDKv7SqWYArHyHLV-kraraiT_VEmPL_6lkPw/viewform",

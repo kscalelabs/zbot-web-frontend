@@ -49,23 +49,35 @@ const HeaderSection = () => {
         <source src={videoUrl} type="video/mp4" />
       </video>
 
-      <div className="z-10 col-span-full flex gap-5 justify-between md:items-end flex-col sm:flex-row">
+      <div className="z-10 col-span-full flex gap-5 justify-between flex-col lg:flex-row lg:items-end">
         <div className="max-w-lg">
           <h1 className="text-heading-lg md:text-heading-xl ">{`Intelligent Robot, Today`}</h1>
 
           <p className="mt-4 text-base-lg md:text-heading-sm md:whitespace-pre-line ">{`The world's most accessible AI \nhumanoid robot platform for builders`}</p>
         </div>
 
-        <CTAButton
-          href={"https://shop.kscale.dev/products/z-bot-founders-edition"}
+        <form
+          action="https://dev.us22.list-manage.com/subscribe/post?u=a090115c9a76e96d327360f7d&amp;id=8a6ee81bb8&amp;f_id=00c3dce1f0"
+          method="post"
           target="_blank"
-          className="font-apparat font-bold mt-auto w-fit px-2 whitespace-nowrap 2xl:text-xl xl:text-lg sm:text-lg text-lg"
-          variant={ColorVariant.RUST}
-          mode={FillMode.DEFAULT}
-          size={Size.NORMAL}
+          className="flex flex-col gap-2 w-full sm:w-auto md:w-64 lg:w-72 xl:w-80"
         >
-          PRE-ORDER NOW
-        </CTAButton>
+          <input
+            type="email"
+            name="EMAIL"
+            className="w-full px-4 py-1.5 md:px-5 md:py-2 text-sm md:text-base rounded-md bg-background/10 border border-filament/20 backdrop-blur-sm text-rust placeholder:text-filament/50"
+            placeholder="Enter your email for updates"
+          />
+          <div aria-hidden="true" style={{ position: "absolute", left: "-5000px" }}>
+            <input type="text" name="b_a090115c9a76e96d327360f7d_8a6ee81bb8" tabIndex={-1} />
+          </div>
+          <input
+            type="submit"
+            value="Get Early Access"
+            name="subscribe"
+            className="w-full px-5 py-1.5 md:px-6 md:py-2 text-sm md:text-base rounded-md bg-rust text-filament font-medium cursor-pointer hover:opacity-90 transition-opacity"
+          />
+        </form>
       </div>
     </section>
   );
