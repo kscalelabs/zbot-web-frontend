@@ -43,7 +43,7 @@ const BurgerMenu = (isOpen: boolean) => {
           </motion.button>
         );
       })}
-      <NavCTAButton
+      {/* <NavCTAButton
         href={"https://shop.kscale.dev/products/zbot"}
         target="_blank"
         className="font-planar mt-auto w-fit px-2 text-2xl"
@@ -52,7 +52,7 @@ const BurgerMenu = (isOpen: boolean) => {
         size={Size.NORMAL}
       >
         PRE-ORDER NOW
-      </NavCTAButton>
+      </NavCTAButton> */}
     </motion.div>
   ) : (
     <></>
