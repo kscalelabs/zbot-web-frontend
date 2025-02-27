@@ -49,7 +49,7 @@ const HeaderSection = () => {
         <source src={videoUrl} type="video/mp4" />
       </video>
 
-      <div className="z-10 col-span-full flex gap-5 justify-between md:items-end flex-col sm:flex-row">
+      <div className="z-10 col-span-full flex gap-5 justify-between flex-col lg:flex-row lg:items-end">
         <div className="max-w-lg">
           <h1 className="text-heading-lg md:text-heading-xl ">{`Intelligent Robot, Today`}</h1>
 
@@ -60,12 +60,12 @@ const HeaderSection = () => {
           action="https://dev.us22.list-manage.com/subscribe/post?u=a090115c9a76e96d327360f7d&amp;id=8a6ee81bb8&amp;f_id=00c3dce1f0"
           method="post"
           target="_blank"
-          className="flex flex-col gap-2 w-full sm:w-auto md:w-80 lg:w-96 xl:w-[28rem]"
+          className="flex flex-col gap-2 w-full sm:w-auto md:w-64 lg:w-72 xl:w-80"
         >
           <input
             type="email"
             name="EMAIL"
-            className="w-full px-4 py-2 md:px-6 md:py-3 text-sm md:text-base rounded-md bg-background/10 border border-filament/20 backdrop-blur-sm text-rust placeholder:text-filament/50"
+            className="w-full px-4 py-1.5 md:px-5 md:py-2 text-sm md:text-base rounded-md bg-background/10 border border-filament/20 backdrop-blur-sm text-rust placeholder:text-filament/50"
             placeholder="Enter your email for updates"
           />
           <div aria-hidden="true" style={{ position: "absolute", left: "-5000px" }}>
@@ -75,7 +75,7 @@ const HeaderSection = () => {
             type="submit"
             value="Get Early Access"
             name="subscribe"
-            className="w-full px-6 py-2 md:px-8 md:py-3 text-sm md:text-base rounded-md bg-rust text-filament font-medium cursor-pointer hover:opacity-90 transition-opacity"
+            className="w-full px-5 py-1.5 md:px-6 md:py-2 text-sm md:text-base rounded-md bg-rust text-filament font-medium cursor-pointer hover:opacity-90 transition-opacity"
           />
         </form>
       </div>
