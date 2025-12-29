@@ -1,13 +1,12 @@
 import Logotype from "@/components/logos/logotype";
 import BurgerMenu from "@/components/navbar/burgerMenu";
 import BurgerOpenButton from "@/components/navbar/burgerOpenButton";
-import { ColorVariant, FillMode, Size, zbotNavigationConfig } from "@/components/util/constants";
+import { zbotNavigationConfig } from "@/components/util/constants";
 import { useWindowSize } from "@/components/util/functions";
 import clsx from "clsx";
 import { useLenis } from "lenis/dist/lenis-react";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useEffect, useState } from "react";
-import { NavCTAButton } from "@/components/buttons/CTAButtons";
 
 export default function NavBar({ href = "/" }: { href?: string } = {}) {
   const { scrollY } = useScroll();

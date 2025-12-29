@@ -1,14 +1,13 @@
 import Footer from "@/components/footer/footer";
 import NavBar from "@/components/navbar/navbar";
+import CapabilitiesSection from "@/landing/Capabilities";
+import CommunitySection from "@/landing/CommunitySection";
+import { ForHackersSection } from "@/landing/ForHackersSection";
 import HeaderSection from "@/landing/HeaderSection";
+import SpecSection from "@/landing/SpecSection";
+import SubscribeFooterSection from "@/landing/SubscribeFooterSection";
 import { useLenis } from "lenis/dist/lenis-react";
 import { useEffect } from "react";
-import SubscribeFooterSection from "@/landing/SubscribeFooterSection";
-import { ForHackersSection } from "@/landing/ForHackersSection";
-import CapabilitiesSection from "@/landing/Capabilities";
-import { VisionStatement } from "@/landing/VisionStatement";
-import CommunitySection from "@/landing/CommunitySection";
-import SpecSection from "@/landing/SpecSection";
 export default function ZBot() {
   const lenis = useLenis();
 

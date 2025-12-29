@@ -1,21 +1,19 @@
 import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { ReactLenis } from "lenis/dist/lenis-react";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { ReactLenis } from "lenis/dist/lenis-react";
 import Script from "next/script";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import TagManager from "react-gtm-module";
 import { useEffect } from "react";
+import TagManager from "react-gtm-module";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const tagManagerArgs = {
-    gtmId: "GTM-XXXXXXX", // Replace with your GTM ID
-  };
-
   useEffect(() => {
-    TagManager.initialize(tagManagerArgs);
-  }, [tagManagerArgs]);
+    TagManager.initialize({
+      gtmId: "GTM-XXXXXXX", // Replace with your GTM ID
+    });
+  }, []);
 
   return (
     <>

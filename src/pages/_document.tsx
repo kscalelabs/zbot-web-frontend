@@ -1,10 +1,9 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta httpEquiv="refresh" content="0; url=https://zeroth.gg" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon_16x16.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon_32x32.png" />
 

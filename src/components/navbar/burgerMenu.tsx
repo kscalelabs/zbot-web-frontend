@@ -1,14 +1,7 @@
 import { ExpressiveArrow } from "@/components/iconography/Iconography";
-import {
-  zbotNavigationConfig,
-  transitionEaseLinearDuration300,
-  ColorVariant,
-  FillMode,
-  Size,
-} from "@/components/util/constants";
+import { transitionEaseLinearDuration300, zbotNavigationConfig } from "@/components/util/constants";
 import { motion } from "motion/react";
 import Link from "next/link";
-import { NavCTAButton } from "@/components/buttons/CTAButtons";
 
 const BurgerMenu = (isOpen: boolean) => {
   return isOpen ? (

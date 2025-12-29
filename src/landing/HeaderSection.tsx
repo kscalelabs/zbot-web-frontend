@@ -1,5 +1,4 @@
-import { CTAButton } from "@/components/buttons/CTAButtons";
-import { ColorVariant, FillMode, Size, videoBlobUrl } from "@/components/util/constants";
+import { videoBlobUrl } from "@/components/util/constants";
 import { useEffect, useState } from "react";
 
 const useCheckVideoUrl = (
@@ -15,11 +14,9 @@ const useCheckVideoUrl = (
         if (response.ok) {
           setVideoUrl(url);
         } else {
-          console.log("Response not ok!");
           setVideoUrl("./video/header_render_video.mp4");
         }
-      } catch (error) {
-        console.log("Error", error);
+      } catch {
         setVideoUrl("./video/header_render_video.mp4");
       }
     };
