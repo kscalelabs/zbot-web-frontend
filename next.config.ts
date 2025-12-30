@@ -6,7 +6,8 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/:path*",
-        destination: "https://zeroth.gg/:path*",
+        // destination: "https://zeroth.gg/:path*",
+        destination: "https://zeroth0.com/:path*",
         permanent: false,
       },
     ];
